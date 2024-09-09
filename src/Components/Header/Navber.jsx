@@ -3,9 +3,19 @@
 
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FaBars, FaTimes, FaMoon, FaSun } from 'react-icons/fa';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+import { FaBars, FaTimes, FaMoon, FaSun, FaGithub } from 'react-icons/fa';
 
 export default function Navbar() {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // Duration is optional
+  }, []);
+
+
   const [isOpen, setIsOpen] = useState(false); // Start with the menu closed
   const [darkMode, setDarkMode] = useState(false);
   const location = useLocation();
@@ -52,7 +62,9 @@ export default function Navbar() {
     <nav className="w-full cursor-pointer fixed top-0 p-4 shadow-lg z-50 backdrop-blur-lg  rounded-lg">
 
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-gray-500 text-lg font-bold dark:text-gray-100">My Portfolio</div>
+        <div className="text-blue-500 text-lg font-bold " data-aos="fade-down" style={{ overflow: 'hidden' }}>
+          Mangesh
+        </div>
         <div className="md:hidden">
           <button onClick={toggleMenu} aria-label="Toggle menu">
             {isOpen ? (
@@ -71,11 +83,11 @@ export default function Navbar() {
         )}
 
         <ul
-          className={`flex flex-col  md:translate-x-1 md:flex-row justify-center bg-gray-800 md:bg-transparent text-center md:space-x-8 items-center fixed md:static top-0 left-0 h-screen w-1/2 md:w-auto md:h-auto transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out z-50`}
+          className={`flex flex-col  md:translate-x-1 md:flex-row justify-center bg-gray-800 md:bg-transparent text-center md:space-x-8 items-center fixed md:static top-0 left-0 h-screen w-1/2 md:w-auto md:h-auto transform  mr-20 ${isOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out z-50`}
         >
           {['/', '/about', '/projects', '/contact'].map((path, index) => (
 
-            <li key={index} className="md:mt-0 mt-10">
+            <li key={index} className="md:mt-0 mt-10" data-aos="fade-down" style={{ overflow: 'hidden' }}>
               <Link
                 to={path}
                 className={`block text-lg md:text-base font-medium hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200 ${location.pathname === path ? 'font-semibold text-blue-500' : 'text-gray-500'
@@ -91,13 +103,21 @@ export default function Navbar() {
 
         </ul>
 
-        <button onClick={toggleDarkMode} aria-label="Toggle Dark Mode" className="ml-4">
-          {darkMode ? (
-            <FaSun className="h-6 w-6 text-gray-800 dark:text-yellow-400 transition-transform duration-300" />
-          ) : (
-            <FaMoon className="h-6 w-6 text-gray-200 dark:text-gray-100 transition-transform duration-300" />
-          )}
-        </button>
+        {/* <a
+          href={}
+          className={`block text-lg md:text-base font-medium hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200 ${location.pathname === path ? 'font-semibold text-blue-500' : 'text-gray-500'}`}
+        >
+
+          <button className="ml-4">
+            gitHub
+          </button>
+        </a> */}
+
+
+
+
+
+
 
       </div>
 

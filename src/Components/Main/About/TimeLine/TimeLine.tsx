@@ -3,6 +3,10 @@
 import React from "react";
 import { Timeline } from "./TimeLineConf";
 
+import SSC from '../../../../assets/SSCMarks.pdf'
+import HSC from '../../../../assets/HSCMarks.pdf'
+
+
 export default function TimelineDemo() {
 
     const data = [
@@ -10,11 +14,15 @@ export default function TimelineDemo() {
         {
             title: "Skills 📝",
             content: (
-                <div>
-                    <p className="text-neutral-400 dark:text-neutral-400 text-xs md:text-lg font-normal mb-4">
+                <div 
+                // data-aos="fade-down" style={{ overflow: 'hidden' }}
+                data-aos="fade-left"  style={{ overflow: 'hidden' }}
+
+                >
+                    <p className="text-neutral-400 dark:text-neutral-400 text-xs md:text-lg  mb-4">
                         Here are some of the core skills and tools I use in my web development projects:
                     </p>
-                    <div className="mb-8">
+                    <div className="mb-8 ">
                         <table className="w-full text-left border-collapse text-xs md:text-lg">
                             <thead>
                                 <tr className="text-neutral-400 dark:text-neutral-400 border-b">
@@ -56,86 +64,187 @@ export default function TimelineDemo() {
         {
             title: "2024 - 3rd Year 👨‍🎓",
             content: (
-                <div className="flex flex-col items-start space-y-4">
-                    <p className="text-neutral-400 dark:text-neutral-400 text-xs md:text-lg font-normal">
+                <div className="flex flex-col items-start space-y-4"
+                data-aos="fade-left"  style={{ overflow: 'hidden' }}>
+
+                    <p className="text-neutral-400 dark:text-neutral-400 text-xs md:text-lg ">
                         Currently pursuing 3rd year of Bachelor's in Computer Science, At Dr. Babasaheb Ambedkar Marathwada University Aurangabad .
                         focusing on web development and programming.
                     </p>
-                    <div className="grid grid-cols-2 gap-4">
-                        <img
-                            src="https://assets.aceternity.com/pro/bento-grids.png"
-                            alt="Web development project"
-                            width={500}
-                            height={500}
-                            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full transition-transform transform hover:scale-105 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-                        />
-                        <img
-                            src="https://assets.aceternity.com/pro/bento-grids.png"
-                            alt="JavaScript project"
-                            width={500}
-                            height={500}
-                            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full transition-transform transform hover:scale-105 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-                        />
-                    </div>
+
+
+
+                    <a
+                        href="https://carprnterz-com-coders-projects-268005cc.vercel.app/"
+
+                        target="_blank"
+                        className="text-blue-500 text-xs md:text-lg font-medium hover:derline"
+                    >
+                        View Project
+                    </a>
+
+
                 </div>
             ),
         },
         {
             title: "2022 - HSC 📖",
             content: (
-                <div className="flex flex-col items-start space-y-4">
-                    <p className="text-neutral-400 dark:text-neutral-400 text-xs md:text-lg font-normal">
+                <div className="flex flex-col items-start space-y-4"
+                data-aos="fade-left"  style={{ overflow: 'hidden' }}
+
+                >
+                    <p className="text-neutral-400 dark:text-neutral-400 text-xs md:text-lg ">
                         Completed Higher Secondary Education (HSC) with 69% marks, with a focus on Mathematics and Computer Science.
                     </p>
-                    <div className="grid grid-cols-2 gap-4">
-                        <img
-                            src="https://assets.aceternity.com/pro/bento-grids.png"
-                            alt="Web development project"
-                            width={500}
-                            height={500}
-                            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full transition-transform transform hover:scale-105 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-                        />
-                        <img
-                            src="https://assets.aceternity.com/pro/bento-grids.png"
-                            alt="JavaScript project"
-                            width={500}
-                            height={500}
-                            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full transition-transform transform hover:scale-105 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-                        />
+
+                    <div className="mb-8  overflow-x-auto">
+                        <table className="min-w-full text-left border-collapse text-xs md:text-lg">
+                            <thead>
+                                <tr className="text-neutral-400 dark:text-neutral-400 border-b">
+                                    <th className="py-2 px-2 md:px-4">Subject</th>
+                                    <th className="py-2 px-2 md:px-4">Marks Obtained</th>
+                                    <th className="py-2 px-2 md:px-4">Total Marks</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr className="text-neutral-400 dark:text-neutral-400 border-b">
+                                    <td className="py-2 px-2 md:px-4">✅ English</td>
+                                    <td className="py-2 px-2 md:px-4">61</td>
+                                    <td className="py-2 px-2 md:px-4">100</td>
+                                </tr>
+                                <tr className="text-neutral-400 dark:text-neutral-400 border-b">
+                                    <td className="py-2 px-2 md:px-4">✅ HINDI</td>
+                                    <td className="py-2 px-2 md:px-4">70</td>
+                                    <td className="py-2 px-2 md:px-4">100</td>
+                                </tr>
+                                <tr className="text-neutral-400 dark:text-neutral-400 border-b">
+                                    <td className="py-2 px-2 md:px-4">✅ MATHEMATICS & STATISTICS</td>
+                                    <td className="py-2 px-2 md:px-4">68 </td>
+                                    <td className="py-2 px-2 md:px-4">100</td>
+                                </tr>
+                                <tr className="text-neutral-400 dark:text-neutral-400 border-b">
+                                    <td className="py-2 px-2 md:px-4">✅ PHYSICS</td>
+                                    <td className="py-2 px-2 md:px-4">70 </td>
+                                    <td className="py-2 px-2 md:px-4">100</td>
+                                </tr>
+                                <tr className="text-neutral-400 dark:text-neutral-400 border-b">
+                                    <td className="py-2 px-2 md:px-4">✅ CHEMISTRY</td>
+                                    <td className="py-2 px-2 md:px-4">75</td>
+                                    <td className="py-2 px-2 md:px-4">100</td>
+                                </tr>
+                                <tr className="text-neutral-400 dark:text-neutral-400 border-b">
+                                    <td className="py-2 px-2 md:px-4">✅ BIOLOGY</td>
+                                    <td className="py-2 px-2 md:px-4">70</td>
+                                    <td className="py-2 px-2 md:px-4">100</td>
+                                </tr>
+                                <br />
+                                <tr className="text-neutral-400 dark:text-neutral-400 border ">
+                                    {/* <td className="py-2 px-2 md:px-4">✅ PERCENTAGE </td> */}
+                                    <td className="py-2 px-2 md:px-4">✅ PERCENTAGE </td>
+
+                                    <td className="py-2 px-2 md:px-4">69.00%</td>
+
+                                    <td className="py-2 px-2 md:px-4">PASS</td>
+
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
+
+
+
+                    <a
+                        href={HSC}
+
+                        target="_blank"
+                        className="text-blue-500 text-xs md:text-lg font-medium hover:derline"
+                    >
+                        View Project
+                    </a>
                 </div>
             ),
         },
         {
             title: "2020 - SSC 📚",
             content: (
-                <div className="flex flex-col items-start space-y-4">
-                    <p className="text-neutral-400 dark:text-neutral-400 text-xs md:text-lg font-normal">
+                <div className="flex flex-col items-start space-y-4"
+                    data-aos="fade-left"  style={{ overflow: 'hidden' }}
+                >
+
+                    <p className="text-neutral-400 dark:text-neutral-400 text-xs md:text-lg ">
                         Completed Secondary School Certificate (SSC) with 74% marks, excelling in science and mathematics.
                     </p>
-                    <div className="grid grid-cols-2 gap-4">
-                        <img
-                            src="https://assets.aceternity.com/pro/bento-grids.png"
-                            alt="Web development project"
-                            width={500}
-                            height={500}
-                            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full transition-transform transform hover:scale-105 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-                        />
-                        <img
-                            src="https://assets.aceternity.com/pro/bento-grids.png"
-                            alt="JavaScript project"
-                            width={500}
-                            height={500}
-                            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full transition-transform transform hover:scale-105 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-                        />
+
+                    <div className="mb-8  overflow-x-auto">
+                        <table className="min-w-full text-left border-collapse text-xs md:text-lg">
+                            <thead>
+                                <tr className="text-neutral-400 dark:text-neutral-400 border-b">
+                                    <th className="py-2 px-2 md:px-4">Subject</th>
+                                    <th className="py-2 px-2 md:px-4">Marks Obtained</th>
+                                    <th className="py-2 px-2 md:px-4">Total Marks</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr className="text-neutral-400 dark:text-neutral-400 border-b">
+                                    <td className="py-2 px-2 md:px-4">✅ MARATHI</td>
+                                    <td className="py-2 px-2 md:px-4">81</td>
+                                    <td className="py-2 px-2 md:px-4">100</td>
+                                </tr>
+                                <tr className="text-neutral-400 dark:text-neutral-400 border-b">
+                                    <td className="py-2 px-2 md:px-4">✅ HINDI</td>
+                                    <td className="py-2 px-2 md:px-4">72</td>
+                                    <td className="py-2 px-2 md:px-4">100</td>
+                                </tr>
+                                <tr className="text-neutral-400 dark:text-neutral-400 border-b">
+                                    <td className="py-2 px-2 md:px-4">✅ ENGLISH</td>
+                                    <td className="py-2 px-2 md:px-4">67</td>
+                                    <td className="py-2 px-2 md:px-4">100</td>
+                                </tr>
+                                <tr className="text-neutral-400 dark:text-neutral-400 border-b">
+                                    <td className="py-2 px-2 md:px-4">✅ MATHEMATICS</td>
+                                    <td className="py-2 px-2 md:px-4">46</td>
+                                    <td className="py-2 px-2 md:px-4">100</td>
+                                </tr>
+                                <tr className="text-neutral-400 dark:text-neutral-400 border-b">
+                                    <td className="py-2 px-2 md:px-4">✅  SCIENCE & TECHNOLOGY</td>
+                                    <td className="py-2 px-2 md:px-4">74</td>
+                                    <td className="py-2 px-2 md:px-4">100</td>
+                                </tr>
+                                <tr className="text-neutral-400 dark:text-neutral-400 border-b">
+                                    <td className="py-2 px-2 md:px-4">✅ SOCIAL SCIENCES</td>
+                                    <td className="py-2 px-2 md:px-4">77</td>
+                                    <td className="py-2 px-2 md:px-4">100</td>
+                                </tr>
+                                <br />
+                                <tr className="text-neutral-400 dark:text-neutral-400 border ">
+                                    {/* <td className="py-2 px-2 md:px-4">✅ PERCENTAGE </td> */}
+                                    <td className="py-2 px-2 md:px-4">✅ PERCENTAGE </td>
+
+                                    <td className="py-2 px-2 md:px-4">74.00%</td>
+
+                                    <td className="py-2 px-2 md:px-4">PASS</td>
+
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
+
+
+                    <a
+                        href={SSC}
+                        target="_blank"
+                        className="text-blue-500 text-xs md:text-lg font-medium hover:derline"
+                    >
+                        View Project
+                    </a>
                 </div>
             ),
         },
     ];
 
     return (
-        <div className="w-full">
+        <div className="w-full ">
             <Timeline data={data} />
         </div>
     );

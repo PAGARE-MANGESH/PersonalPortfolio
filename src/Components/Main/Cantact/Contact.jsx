@@ -1,13 +1,8 @@
 
 
-
-//    action='https://formspree.io/f/xovabjrp'       Email for Form Data
-
-
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaArrowUp } from 'react-icons/fa';
 
 const ContactInfoItem = ({ icon: Icon, text }) => (
     <motion.div
@@ -64,39 +59,76 @@ const ContactForm = () => {
 };
 
 const ContactPage = () => {
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
+
     return (
         <>
-            <h1 className='text-center mt-20 text-2xl text-blue-500'> Contact </h1>
-            <div className="h-full w-full mt-2 flex flex-col items-center justify-center py-10 px-2">
-                <motion.div
-                    className="w-full max-w-4xl mb-6"
-                    whileHover={{ scale: 1.02 }}
-                    transition={{ duration: 0.3 }}
+            {/* <h1 className='text-center pt-20 text-2xl text-blue-500'> Contact </h1> */}
+            <div className="h-full w-full mt-20 flex flex-col items-center justify-center py-10 px-2">
+
+                {/* <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50482.83394857099!2d75.31261088478634!3d19.87550342981866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb9815a369bc63%3A0x712d538b29a2a73e!2sChhatrapati%20Sambhajinagar%20(Aurangabad)%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1725380343536!5m2!1sen!2sin"
+                    width="100%"
+                    height="450"
+                    className="border-0 rounded-lg mb-20 "
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
                 >
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50482.83394857099!2d75.31261088478634!3d19.87550342981866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb9815a369bc63%3A0x712d538b29a2a73e!2sChhatrapati%20Sambhajinagar%20(Aurangabad)%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1725380343536!5m2!1sen!2sin"
-                        width="100%"
-                        height="450"
-                        className="border-0 rounded-lg"
-                        allowFullScreen=""
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                    ></iframe>
-                </motion.div>
+                </iframe> */}
+
+
+
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50482.83394857099!2d75.31261088478634!3d19.87550342981866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb9815a369bc63%3A0x712d538b29a2a73e!2sChhatrapati%20Sambhajinagar%20(Aurangabad)%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1725380343536!5m2!1sen!2sin"
+                    width="100%"
+                    height="450"
+                    className="border-0 rounded-lg mb-20 opacity-60 transition-opacity duration-300 hover:opacity-80"
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                >
+                </iframe>
+
+
+
+
+
                 <motion.div
-                    className="border shadow-lg rounded-lg p-8 w-full max-w-4xl grid gap-10 grid-cols-1 lg:grid-cols-2"
+                    className="  border shadow-lg rounded-lg p-8 w-full max-w-4xl grid gap-10 grid-cols-1 lg:grid-cols-2"
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <div className="flex flex-col">
+                    <div className="flex flex-col ">
                         <h1 className="text-3xl font-semibold mb-6 text-center lg:text-left text-blue-500">Contact Me</h1>
                         <ContactInfoItem icon={FaPhoneAlt} text="+91 8668325464" />
                         <ContactInfoItem icon={FaEnvelope} text="mangeshpagare011@gmail.com" />
                         <ContactInfoItem icon={FaMapMarkerAlt} text="Chhatrapati Sambhajinagar, 431109 " />
                     </div>
                     <ContactForm />
+                    <h2> Thank You ❤ </h2>
                 </motion.div>
+
+
+
+
+
+                <div className="flex justify-center  pb-10 mt-20">
+                    <button
+                        onClick={scrollToTop}
+                        className="flex items-center justify-center p-2 rounded-full bg-blue-500 hover:bg-blue-600 text-white transition duration-300 transform hover:scale-110 hover:rotate-12"
+                    >
+                        <FaArrowUp className="text-xl animate-bounce" />
+                    </button>
+                </div>
             </div>
         </>
     );

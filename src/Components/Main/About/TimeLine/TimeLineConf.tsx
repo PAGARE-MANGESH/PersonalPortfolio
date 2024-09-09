@@ -1,14 +1,15 @@
 "use client";
+
 import {
     useMotionValueEvent,
     useScroll,
     useTransform,
     motion,
 } from "framer-motion";
+
+import AOS from 'aos';
+
 import React, { useEffect, useRef, useState } from "react";
-import AnimatedModalDemo from '../ShortInfo/ShortInfo'
-
-
 
 
 interface TimelineEntry {
@@ -36,6 +37,12 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
     const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
+
+    useEffect(() => {
+        AOS.init({ duration: 1000 }); // Duration is optional
+    }, []);
+
+
     return (
         <div
             className="w-full  font-sans md:px-10"
@@ -48,10 +55,10 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 <p className=" text-neutral-400 dark:text-neutral-300 text-sm md:text-base max-w-sm">
                     I&apos;ve been working on Aceternity for the past 2 years. Here&apos;s
                     a timeline of my journey.
-                    <AnimatedModalDemo />
                 </p>
             </div>
             <div>
+
 
 
             </div>

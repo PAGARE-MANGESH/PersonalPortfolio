@@ -48,6 +48,7 @@ export const ModalTrigger = ({
     );
 };
 
+
 export const ModalBody = ({
     children,
     className
@@ -120,6 +121,7 @@ export const ModalBody = ({
         </AnimatePresence>)
     );
 };
+
 
 export const ModalContent = ({
     children,
@@ -211,3 +213,5 @@ export const useOutsideClick = (
         };
     }, [ref, callback]);
 };
+
+

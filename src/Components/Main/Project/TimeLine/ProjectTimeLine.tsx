@@ -1,6 +1,12 @@
 
 
-import React from "react";
+
+
+import React, { useEffect } from 'react';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import { ProjectTimeline } from "./ProjectTimeLineConf";
 
 import Project1 from "../../../../assets/Portfolio.jpg"
@@ -18,16 +24,20 @@ import Project3Dark from "../../../../assets/CarPenterzDark.jpg"
 
 
 
-
 export default function ProjectTimelineDemo() {
+
+    useEffect(() => {
+        AOS.init({ duration: 1000 }); // Duration is optional
+      }, []);
+    
 
     const data = [
 
         {
-            title: "Project 3: Blogging Platform ✍️",
+            title: "Project 3: Carpenterz E-commerce Platform 🛒",
             content: (
-                <div className="flex flex-col items-start space-y-4">
-                    <p className="text-neutral-400 dark:text-neutral-400 text-xs md:text-lg font-normal">
+                <div className="flex flex-col items-start space-y-4" data-aos="fade-left">
+                    <p className="text-neutral-400 dark:text-neutral-400 text-xs md:text-lg ">
                         A blogging platform where users can write, edit, and share their blogs with the community.
                     </p>
                     <div className="grid grid-cols-2 gap-4">
@@ -48,7 +58,7 @@ export default function ProjectTimelineDemo() {
                     </div>
 
 
-                    <p className="text-neutral-400 dark:text-neutral-400 text-xs md:text-lg font-normal mt-4">
+                    <p className="text-neutral-400 dark:text-neutral-400 text-xs md:text-lg mt-4">
                         <strong>Technologies:</strong> REACT, TILWIND CSS , JAVASCRIPT
                     </p>
                     <a
@@ -56,6 +66,7 @@ export default function ProjectTimelineDemo() {
 
                         target="_blank"
                         className="text-blue-500 text-xs md:text-lg font-medium hover:derline"
+
                     >
                         View Project
                     </a>
@@ -66,8 +77,8 @@ export default function ProjectTimelineDemo() {
         {
             title: "Project 2: E-commerce Platform 🛒",
             content: (
-                <div className="flex flex-col items-start space-y-4">
-                    <p className="text-neutral-400 dark:text-neutral-400 text-xs md:text-lg font-normal">
+                <div className="flex flex-col items-start space-y-4" data-aos="fade-left">
+                    <p className="text-neutral-400 dark:text-neutral-400 text-xs md:text-lg ">
                         An e-commerce platform where users can browse products, add to cart, and make purchases.
                     </p>
 
@@ -89,14 +100,14 @@ export default function ProjectTimelineDemo() {
                     </div>
 
 
-                    <p className="text-neutral-400 dark:text-neutral-400 text-xs md:text-lg font-normal mt-4">
+                    <p className="text-neutral-400 dark:text-neutral-400 text-xs md:text-lg mt-4">
                         <strong>Technologies:</strong> REACT, TILWIND CSS , JAVASCRIPT
                     </p>
                     <a
                         href="https://head-phones-lovat.vercel.app/"
 
                         target="_blank"
-                        className="text-blue-500 text-xs md:textg font-medium hover:underline"
+                        className="text-blue-500 text-md font-medium hover:underline"
                     >
                         View Project
                     </a>
@@ -108,8 +119,8 @@ export default function ProjectTimelineDemo() {
         {
             title: "Project 1: Portfolio Website 🌐",
             content: (
-                <div className="flex flex-col items-start space-y-4">
-                    <p className="text-neutral-400 dark:text-neutral-400 text-xs md:text-lg font-normal">
+                <div className="flex  flex-col items-start space-y-4" data-aos="fade-left">
+                    <p className="text-neutral-400 dark:text-neutral-400 text-xs md:text-lg ">
                         A personal portfolio website showcasing my web development projects and skills.
                     </p>
 
@@ -131,13 +142,13 @@ export default function ProjectTimelineDemo() {
                     </div>
 
 
-                    <p className="text-neutral-400 dark:text-neutral-400 text-xs md:text-lg font-normal mt-4">
+                    <p className="text-neutral-400 dark:text-neutral-400 text-xs md:text-lg mt-4">
                         <strong>Technologies:</strong> HTML, CSS, JAVASCRIPT , BOOTSTAP
                     </p>
                     <a
                         href="https://pagare-mangesh.github.io/FirstPortfolio/"
                         target="_blank"
-                        className="text-blue-500 text-xs md:text-lg font-medium hover:underline"
+                        className="text-blue-500 text-md font-medium hover:underline"
                     >
                         View Project
                     </a>

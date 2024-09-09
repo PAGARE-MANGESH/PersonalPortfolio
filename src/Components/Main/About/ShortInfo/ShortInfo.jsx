@@ -18,11 +18,13 @@ import Img1 from '../../../../assets/Img1.jpg'
 
 
 export default function AnimatedModalDemo() {
+
   const images = [
     Img1
-   ];
+  ];
+
   return (
-    (<div className=" mt-4 items-center justify-center">
+    (<div>
       <Modal>
         <ModalTrigger
           className="bg-black border dark:bg-white dark:text-black text-white flex justify-center group/modal-btn">
@@ -132,3 +134,11 @@ export default function AnimatedModalDemo() {
 
   );
 }
+
+
+
+
+
+
+
+
