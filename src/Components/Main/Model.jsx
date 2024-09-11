@@ -6,6 +6,7 @@ import Robot from '../../../public/Robot'
 
 
 
+
 function Model() {
   return (
 
@@ -13,26 +14,26 @@ function Model() {
       <Canvas>
         <ambientLight />
         <OrbitControls enableZoom={false} autoRotate={false} autoRotateSpeed={2} />
-        <Suspense fallback={null}>
+        <Suspense fallback={'loading...'}>
 
 
           <Robot
-            scale={[0.5, 0.5, 0.5]}
+            scale={[0.4, 0.4, 0.4]}
             position={[0, -1, 0]}
             rotation={[6.70, 12, 0]}
           />
 
 
-
-
-
         </Suspense>
-        {/* <Environment preset='sunset' /> */}
+        <Environment preset='sunset' />
       </Canvas>
     </div>
   );
 }
 
 export default Model;
+
+
+
 
 

@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -14,41 +13,3 @@
 .animate-fadeIn {
   animation: fadeIn 2s ease-in-out forwards;
 }
-
-
-
-
-
-
-
-
-
-
-.border-animation {
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: linear-gradient(90deg, blue, lightpink, blue);
-  background-size: 300% 300%;
-  border-radius: 12px;
-  z-index: -1;
-  animation: borderMove 5s linear infinite;
-}
-
-@keyframes borderMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-
-
-

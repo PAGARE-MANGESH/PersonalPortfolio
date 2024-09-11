@@ -150,7 +150,7 @@ export default function FrontPage() {
     ];
 
     return (
-        <div className="flex flex-col items-center justify-center h-screen-80 pt-20" >
+        <div className="flex flex-col items-center justify-center h-screen-80 pt-20 " >
             <Model />
             <h1 className="text-blue-500 mt-10 mb-5 dark:text-neutral-200 text-md sm:text-xl md:text-2xl lg:text-3xl">
                 Hello 👋
@@ -175,5 +175,9 @@ export default function FrontPage() {
                 </Link>
             </div>
         </div>
+
+
+
+
     );
 }
