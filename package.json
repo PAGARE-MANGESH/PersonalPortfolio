@@ -19,6 +19,7 @@
     "@react-three/drei": "^9.109.2",
     "@react-three/fiber": "^8.16.8",
     "@tabler/icons-react": "^3.12.0",
+    "@tinymce/tinymce-react": "^5.1.1",
     "@tsparticles/engine": "^3.5.0",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.5.0",

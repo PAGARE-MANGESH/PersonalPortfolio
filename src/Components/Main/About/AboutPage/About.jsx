@@ -34,7 +34,7 @@ const About = () => {
 
     <>
 
-      <div className="relative w-full mx-auto px-4 sm:px-6 lg:px-8 pb-20 " data-aos="fade-up" style={{ overflow: 'hidden' }}>
+      <div className="relative w-full mx-auto px-4 sm:px-6 lg:px-8 md:pb-20 " data-aos="fade-up" style={{ overflow: 'hidden' }}>
         <div className="relative flex flex-col md:flex-row md:justify-between md:items-center w-full">
           <div className="flex flex-col text-slate-400 justify-center items-center md:items-start w-full">
             <FlipWordsDemo />
@@ -42,9 +42,7 @@ const About = () => {
         </div>
       </div>
 
-
-      <div className="relative py-10 px-4 sm:px-6 lg:px-8 ">
-
+      <div className="relative md:py-10 px-4 sm:px-6 lg:px-8 ">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-y-6 lg:gap-x-8">
           {/* Profile Picture and Share Button */}
           <motion.div
@@ -103,7 +101,7 @@ const About = () => {
         </div>
 
         {/* Scroll to Top Button */}
-        <div className="flex justify-center mt-12">
+        <div className="flex justify-center m-0">
           <button
             onClick={scrollToTop}
             className="flex items-center justify-center p-2 rounded-full bg-blue-500 hover:bg-blue-600 text-white transition duration-300 transform hover:scale-110 hover:rotate-12"

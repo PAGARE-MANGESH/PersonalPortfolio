@@ -1,9 +1,16 @@
 import React from 'react'
-import FrontPage from './FrontPage'
+import SparklesPreview from './Animation/HomePage'
+import CardsCarouselDemo from './CardsAnimation/Cads'
 
 function Home() {
-  return (    
-  <FrontPage />
+  return (
+    // <FrontPage />
+    <>
+      <SparklesPreview />
+
+      {/* <CardsCarouselDemo /> */}
+
+    </>
   )
 }
 

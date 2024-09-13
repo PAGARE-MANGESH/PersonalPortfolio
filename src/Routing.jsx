@@ -310,7 +310,7 @@ function Routing() {
   }, []);
 
   return (
-    <div className="container min-h-screen w-full bg-black text-white font-bold overflow-hidden">
+    <div className="container min-h-screen w-full  text-white font-bold overflow-hidden">
       <main className="text-white relative">
         <div className="container relative">
           <AnimatePresence mode="wait">

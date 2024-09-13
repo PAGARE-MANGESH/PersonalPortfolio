@@ -29,7 +29,7 @@ export default function FlipWordsDemo() {
   const words = ["Mangesh", "Student", "Web Developer", "UI/UX Designer"];
 
   return (
-    <div className="h-60 w-full mt-48 mb-28 flex flex-col justify-center items-center px-4 space-y-5">
+    <div className="h-60 w-full md:mt-48 mt-20 mb-20 flex flex-col justify-center items-center px-4 space-y-5">
       <div className="text-center">
         <h5 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
           I'm{" "}
