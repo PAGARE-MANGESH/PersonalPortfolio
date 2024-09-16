@@ -212,7 +212,7 @@ const ContactForm = () => {
                 <div className="flex justify-center items-center">
                     <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-10">
                         {/* Name Input */}
-
+/}
                         {/* <div className="relative flex-1 " data-aos="fade-up" style={{ overflow: 'hidden' }}>
                             <input
                                 type="text"
@@ -232,7 +232,7 @@ const ContactForm = () => {
                             >
                                 Name 😇
                             </label>
-                        </div> */}
+                        </div> *
 
                         <div className="relative flex-1" data-aos="fade-up" style={{ overflow: 'hidden' }}>
                             <input
