@@ -1,56 +1,46 @@
-//                 apiKey="5ippufnhv2b4p2cvzg3lgza97ls2tyt6g4zppazf3s1wxmro"
-
-
 
 
 
 
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Editor } from '@tinymce/tinymce-react';
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaArrowUp } from 'react-icons/fa';
 import AOS from 'aos';
-
 import 'aos/dist/aos.css';
 
 
 
-const ContactInfoItem = ({ icon: Icon, text }) => (
-    <motion.div
+// const ContactInfoItem = ({ icon: Icon, text }) => (
+//     <motion.div
 
-        className="flex items-center mb-4 border-b border-blue-500 pb-2 "
-        transition={{ duration: 0.3 }}
-    >
-        <Icon
+//         className="flex items-center mb-4 border-b border-blue-500 pb-2 "
+//         transition={{ duration: 0.3 }}
+//     >
+//         <Icon
 
-            className="cursor-pointer text-blue-100 transition duration-300 delay-200 hover:text-blue-500 mr-3 text-xl"
-        />
-        <span
-            data-aos="fade-left" style={{ overflow: 'hidden' }}
-            className="cursor-pointer text-blue-100 transition duration-300 delay-200 text-lg  hover:text-blue-500">
-            {text}
-        </span>
-    </motion.div>
-);
+//             className="cursor-pointer text-blue-100 transition duration-300 delay-200 hover:text-blue-500 mr-3 text-xl"
+//         />
+//         <span
+//             data-aos="fade-left" style={{ overflow: 'hidden' }}
+//             className="cursor-pointer text-blue-100 transition duration-300 delay-200 text-lg  hover:text-blue-500">
+//             {text}
+//         </span>
+//     </motion.div>
+// );
 
 
 // const ContactForm = () => {
-
 //     const [email, setEmail] = useState('');
-//     const editorRef = useRef(null);
+//     const [name, setName] = useState('');
 
 //     useEffect(() => {
-//         AOS.init({ duration: 1000 }); // Duration is optional
+//         AOS.init({ duration: 1000 });
 //     }, []);
-
 
 //     const handleSubmit = (e) => {
 //         e.preventDefault();
-//         setEmail('');
-//         const messageContent = editorRef.current.getContent({ format: 'text' });
 //         const form = e.target;
 //         const formData = new FormData(form);
-//         formData.append('message', messageContent);
 
 //         fetch(form.action, {
 //             method: form.method,
@@ -62,7 +52,10 @@ const ContactInfoItem = ({ icon: Icon, text }) => (
 //             .then((response) => {
 //                 if (response.ok) {
 //                     alert('Message sent successfully!');
-//                     form.reset();
+//                     // Clear the form fields
+//                     setEmail('');
+//                     setName('');
+//                     e.target.message.value = ''; // Clear message textarea
 //                 } else {
 //                     alert('Failed to send message');
 //                 }
@@ -71,92 +64,117 @@ const ContactInfoItem = ({ icon: Icon, text }) => (
 //     };
 
 //     return (
-
-//         <form
-//             onSubmit={handleSubmit}
-//             className="flex flex-col text-gray-500 border border-blue-500 p-10 rounded-lg"
-//             action="https://formspree.io/f/xovabjrp"
-//             method="POST"
-//         >
-//             <input
-//                 type="text"
-//                 name="username"
-//                 required
-//                 data-aos="fade-left" style={{ overflow: 'hidden' }}
-//                 placeholder="Name"
-//                 className="rounded-md border-b border-blue-500 p-3 mb-4 bg-transparent focus:border-blue-500 focus:outline-none transition duration-300 text-blue-500"
-//             />
-//             <input
-//                 type="email"
-//                 name="email"
-//                 required
-//                 data-aos="fade-right" style={{ overflow: 'hidden' }}
-//                 placeholder="Email"
-//                 value={email}
-//                 onChange={(e) => setEmail(e.target.value)}
-//                 className="rounded-md border-b border-blue-500 p-3 mb-4 bg-transparent focus:border-blue-500 focus:outline-none transition duration-300 text-blue-500"
-//             />
-
-//             <Editor
-
-//                 apiKey="5ippufnhv2b4p2cvzg3lgza97ls2tyt6g4zppazf3s1wxmro"
-//                 onInit={(_evt, editor) => (editorRef.current = editor)}
-//                 initialValue="<B>Enter your message here...</B>"
-//                 required
-
-//                 init={{
-//                     height: 400,
-//                     menubar: false,
-//                     plugins: [
-//                         'advlist autolink lists link image charmap preview anchor',
-//                         'searchreplace visualblocks code fullscreen',
-//                         'insertdatetime media table paste code help wordcount',
-//                     ],
-//                     toolbar:
-//                         'undo redo | formatselect | bold italic backcolor | ' +
-//                         'alignleft aligncenter alignright alignjustify | ' +
-//                         'bullist numlist outdent indent | removeformat | help',
-//                     content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
-//                 }}
-//             />
-
-
-
-//             <motion.button
-//                 type="submit"
-//                 className="text-blue-500 transition duration-400 delay-400 mt-10 border border-blue-500 py-3 rounded-lg hover:text-white hover:bg-blue-500 transition duration-300"
-//                 transition={{ duration: 0.30 }}
+//         <fieldset className="border border-blue-500 mt-4 p-6 rounded-lg">
+//             <legend className="text-blue-500 text-lg font-semibold px-2">
+//                 Contact Me 👩‍💻
+//             </legend>
+//             <form
+//                 onSubmit={handleSubmit}
+//                 className="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-500 p-4"
+//                 action="https://formspree.io/f/xovabjrp"
+//                 method="POST"
 //             >
+//                 <div className="flex justify-center items-center">
+//                     <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-10">
+//                         {/* Name Input */}
+//                         <div className="relative flex-1" data-aos="fade-up" style={{ overflow: 'hidden' }}>
+//                             <input
+//                                 type="text"
+//                                 id="username"
+//                                 name="username"
+//                                 required
+//                                 placeholder=" "
+//                                 value={name}
+//                                 onChange={(e) => setName(e.target.value)}
+//                                 data-aos="fade-left"
+//                                 className="w-full peer rounded-md border-b border-blue-500 p-3 bg-transparent focus:border-blue-500 focus:outline-none transition duration-300 text-blue-500"
+//                             />
+//                             <label
+//                                 htmlFor="username"
+//                                 data-aos="fade-down" style={{ overflow: 'hidden' }}
+//                                 className="absolute left-3 top-1 text-blue-500 transition-all duration-300 transform -translate-y-6 scale-100 origin-left peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:-translate-y-5 peer-focus:scale-75 peer-not-placeholder-shown:-translate-y-5 peer-not-placeholder-shown:scale-75 pointer-events-none"
+//                             >
+//                                 Name 😇
+//                             </label>
+//                         </div>
 
-//                 Send Message
+//                         {/* Email Input */}
+//                         <div className="relative flex-1" data-aos="fade-up" >
+//                             <input
+//                                 type="email"
+//                                 id="email"
+//                                 name="email"
+//                                 required
+//                                 placeholder=" "
+//                                 value={email}
+//                                 onChange={(e) => setEmail(e.target.value)}
+//                                 // data-aos="fade-right"
+//                                 className="w-full peer rounded-md border-b border-blue-500 p-3 bg-transparent focus:border-blue-500 focus:outline-none transition duration-300 text-blue-500"
+//                             />
+//                             <label
+//                                 htmlFor="email"
+//                                 data-aos="fade-down"
+//                                 className="absolute left-3 top-1 text-blue-500 transition-all duration-300 transform -translate-y-6 scale-100 origin-left peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:-translate-y-5 peer-focus:scale-75 peer-not-placeholder-shown:-translate-y-5 peer-not-placeholder-shown:scale-75 pointer-events-none"
+//                             >
+//                                 Email 📧
+//                             </label>
+//                         </div>
+//                     </div>
+//                 </div>
 
-//             </motion.button>
-//         </form>
+//                 {/* Message Editor */}
+
+//                 <div className="col-span-1 md:col-span-2 relative" data-aos="fade-up">
+//                     <textarea
+//                         required
+//                         className="w-full peer rounded-md border-x mt-10 border-b border-blue-500 p-3 bg-transparent focus:border-blue-500 focus:outline-none transition duration-300 text-blue-500"
+//                         rows="4"
+//                         id="message"
+//                         name="message"
+//                         placeholder=" "
+//                         data-aos="fade-up"
+//                     />
+//                     <label
+//                         htmlFor="message"
+//                         className="absolute left-3 top-3 text-blue-500 transition-all duration-300 transform -translate-y-0 scale-100 origin-left peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:-translate-y-5 peer-focus:scale-75 peer-not-placeholder-shown:-translate-y-5 peer-not-placeholder-shown:scale-75 pointer-events-none"
+//                     >
+//                         Message 📃
+//                     </label>
+//                 </div>
 
 
+//                 {/* Submit Button */}
 
+//                 <div className="col-span-1 md:col-span-2 flex justify-center">
+//                     <motion.button
+//                         type="submit"
+//                         className="text-blue-500 transition duration-400 delay-400 mt-10 border border-blue-500 py-3 px-6 rounded-lg hover:text-white hover:bg-blue-500 transition duration-300"
+//                         transition={{ duration: 0.30 }}
+//                     >
+//                         Send Message
+//                     </motion.button>
+//                 </div>
+
+
+//             </form>
+//         </fieldset>
 //     );
 // };
-
-// Map Component with bottom border
-
 
 
 const ContactForm = () => {
     const [email, setEmail] = useState('');
-    const editorRef = useRef(null);
+    const [name, setName] = useState('');
+    const [phone, setPhone] = useState(''); // Added state for phone number
 
     useEffect(() => {
-        AOS.init({ duration: 1000 }); // Initialize AOS for animations
+        AOS.init({ duration: 1000 });
     }, []);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setEmail('');
-        const messageContent = editorRef.current.getContent({ format: 'text' });
         const form = e.target;
         const formData = new FormData(form);
-        formData.append('message', messageContent);
 
         fetch(form.action, {
             method: form.method,
@@ -168,7 +186,11 @@ const ContactForm = () => {
             .then((response) => {
                 if (response.ok) {
                     alert('Message sent successfully!');
-                    form.reset();
+                    // Clear the form fields
+                    setEmail('');
+                    setName('');
+                    setPhone(''); // Clear phone number field
+                    e.target.message.value = ''; // Clear message textarea
                 } else {
                     alert('Failed to send message');
                 }
@@ -177,88 +199,139 @@ const ContactForm = () => {
     };
 
     return (
-        <form
-            onSubmit={handleSubmit}
-            className="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-500 border border-blue-500 p-10 rounded-lg"
-            action="https://formspree.io/f/xovabjrp"
-            method="POST"
-        >
+        <fieldset className="border border-blue-500 mt-4 p-6 rounded-lg">
+            <legend className="text-blue-500 text-lg font-semibold px-2">
+                Contact Me 👩‍💻
+            </legend>
+            <form
+                onSubmit={handleSubmit}
+                className="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-500 p-4"
+                action="https://formspree.io/f/xovabjrp"
+                method="POST"
+            >
+                <div className="flex justify-center items-center">
+                    <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-10">
+                        {/* Name Input */}
 
-            <div className="flex justify-center items-center">
-                <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-10">
+                        {/* <div className="relative flex-1 " data-aos="fade-up" style={{ overflow: 'hidden' }}>
+                            <input
+                                type="text"
+                                id="username"
+                                name="username"
+                                required
+                                placeholder=" "
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                                data-aos="fade-left"
+                                className="w-full peer rounded-md border-b border-blue-500 p-3 bg-transparent focus:border-blue-500 focus:outline-none transition duration-300 text-blue-500"
+                            />
+                            <label
+                                htmlFor="username"
+                                className="absolute left-3 top-1 text-blue-500 transition-all duration-300 transform -translate-y-6 scale-100 origin-left peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:-translate-y-4 peer-focus:scale-75 peer-not-placeholder-shown:-translate-y-5 peer-not-placeholder-shown:scale-75 pointer-events-none"
 
-                    <div className="flex-1">
-                        <input
-                            type="text"
-                            name="username"
-                            required
-                            data-aos="fade-left"
-                            style={{ overflow: 'hidden' }}
-                            placeholder="Name"
-                            className="w-full rounded-md border-b border-blue-500 p-3 bg-transparent focus:border-blue-500 focus:outline-none transition duration-300 text-blue-500"
-                        />
+                            >
+                                Name 😇
+                            </label>
+                        </div> */}
+
+                        <div className="relative flex-1" data-aos="fade-up" style={{ overflow: 'hidden' }}>
+                            <input
+                                type="text"
+                                id="username"
+                                name="username"
+                                required
+                                placeholder=" "
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                                className="w-full peer rounded-md border-b border-blue-500 p-3 bg-transparent focus:border-blue-500 focus:outline-none transition duration-300 text-blue-500"
+                            />
+                            <label
+                                htmlFor="username"
+                                className="absolute left-3 top-1 text-blue-500 transition-all duration-300 transform -translate-y-4 scale-75 origin-left peer-placeholder-shown:translate-y-1 peer-placeholder-shown:scale-100 peer-focus:-translate-y-4 peer-focus:scale-75 peer-not-placeholder-shown:-translate-y-4 peer-not-placeholder-shown:scale-75 pointer-events-none"
+                            >
+                                Name 😇
+                            </label>
+                        </div>
+
+
+
+                        {/* Email Input */}
+                        <div className="relative flex-1" data-aos="fade-up">
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required
+                                placeholder=" "
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                className="w-full peer rounded-md border-b border-blue-500 p-3 bg-transparent focus:border-blue-500 focus:outline-none transition duration-300 text-blue-500"
+                            />
+                            <label
+                                htmlFor="email"
+                                className="absolute left-3 top-1 text-blue-500 transition-all duration-300 transform -translate-y-6 scale-100 origin-left peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:-translate-y-5 peer-focus:scale-75 peer-not-placeholder-shown:-translate-y-5 peer-not-placeholder-shown:scale-75 pointer-events-none"
+
+                            >
+                                Email 📧
+                            </label>
+                        </div>
                     </div>
-
-
-                    <div className="flex-1">
-                        <input
-                            type="email"
-                            name="email"
-                            required
-                            data-aos="fade-right"
-                            style={{ overflow: 'hidden' }}
-                            placeholder="Email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            className="w-full rounded-md border-b border-blue-500 p-3 bg-transparent focus:border-blue-500 focus:outline-none transition duration-300 text-blue-500"
-                        />
-                    </div>
-
                 </div>
-            </div>
 
+                {/* Phone Number Input */}
+                <div className="relative flex-1" data-aos="fade-up">
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder=" "
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
+                        className="w-full peer rounded-md border-b border-blue-500 p-3 bg-transparent focus:border-blue-500 focus:outline-none transition duration-300 text-blue-500"
+                    />
+                    <label
+                        htmlFor="phone"
+                        className="absolute left-3 top-1 text-blue-500 transition-all duration-300 transform -translate-y-6 scale-100 origin-left peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:-translate-y-5 peer-focus:scale-75 peer-not-placeholder-shown:-translate-y-5 peer-not-placeholder-shown:scale-75 pointer-events-none"
 
-            {/* Message Editor */}
-            <div className="col-span-1 md:col-span-2">
-                <Editor
-                    apiKey="5ippufnhv2b4p2cvzg3lgza97ls2tyt6g4zppazf3s1wxmro"
-                    onInit={(_evt, editor) => (editorRef.current = editor)}
-                    initialValue="<B>Enter your message here...</B>"
-                    required
-                    init={{
-                        height: 400,
-                        menubar: false,
-                        plugins: [
-                            'advlist autolink lists link image charmap preview anchor',
-                            'searchreplace visualblocks code fullscreen',
-                            'insertdatetime media table paste code help wordcount',
-                        ],
-                        toolbar:
-                            'undo redo | formatselect | bold italic backcolor | ' +
-                            'alignleft aligncenter alignright alignjustify | ' +
-                            'bullist numlist outdent indent | removeformat | help',
-                        content_style:
-                            'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
-                    }}
-                />
-            </div>
+                    >
+                        Phone Number 📞
+                    </label>
+                </div>
 
-            {/* Submit Button */}
-            <div className="col-span-1 md:col-span-2 flex justify-center">
-                <motion.button
-                    type="submit"
-                    className="text-blue-500 transition duration-400 delay-400 mt-10 border border-blue-500 py-3 px-6 rounded-lg hover:text-white hover:bg-blue-500 transition duration-300"
-                    transition={{ duration: 0.30 }}
-                >
-                    Send Message
-                </motion.button>
-            </div>
-        </form>
+                {/* Message Editor */}
+
+                <div className="col-span-1 md:col-span-2 relative" data-aos="fade-up">
+                    <textarea
+                        required
+                        className="w-full peer rounded-md border-x mt-10 border-b border-blue-500 p-3 bg-transparent focus:border-blue-500 focus:outline-none transition duration-300 text-blue-500"
+                        rows="4"
+                        id="message"
+                        name="message"
+                        placeholder=" "
+                        data-aos="fade-up"
+                    />
+                    <label
+                        htmlFor="message"
+                        className="absolute left-3 top-3 text-blue-500 transition-all duration-300 transform -translate-y-0 scale-100 origin-left peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:-translate-y-5 peer-focus:scale-75 peer-not-placeholder-shown:-translate-y-5 peer-not-placeholder-shown:scale-75 pointer-events-none"
+                    >
+                        Message 📃
+                    </label>
+                </div>
+
+                {/* Submit Button */}
+                <div className="col-span-1 md:col-span-2 flex justify-center">
+                    <motion.button
+                        type="submit"
+                        className="text-blue-500 transition duration-400 delay-400 mt-10 border border-blue-500 py-3 px-6 rounded-lg hover:text-white hover:bg-blue-500 transition duration-300"
+                        transition={{ duration: 0.30 }}
+                    >
+                        Send Message
+                    </motion.button>
+                </div>
+            </form>
+        </fieldset>
     );
 };
-
-
-
 
 
 const GoogleMap = () => (
@@ -274,6 +347,7 @@ const GoogleMap = () => (
         />
     </div>
 );
+
 
 const ScrollToTopButton = () => {
 
@@ -299,9 +373,10 @@ const ScrollToTopButton = () => {
 };
 
 // Contact Page Component
+
 const ContactPage = () => (
 
-    <div className="h-full w-full mt-20 flex flex-col items-center justify-center px-2">
+    <div className="h-full w-full mt-40 flex flex-col items-center justify-center px-2">
 
         {/* <div className="h-40 w-40 mb-4">
             <img src={ContactSvg} alt="contactSvg" />
@@ -314,7 +389,9 @@ const ContactPage = () => (
             transition={{ duration: 0.5 }}
         >
             <GoogleMap />
+
             <ContactForm />
+
         </motion.div>
 
         <ScrollToTopButton />
