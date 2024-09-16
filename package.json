@@ -30,6 +30,7 @@
     "emailjs-com": "^3.2.0",
     "framer-motion": "^11.3.16",
     "gsap": "^3.12.5",
+    "lenis": "^1.1.13",
     "matter-js": "^0.20.0",
     "matter-wrap": "^0.2.0",
     "mini-svg-data-uri": "^1.4.4",

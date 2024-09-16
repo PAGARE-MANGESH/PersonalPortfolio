@@ -5,7 +5,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Resume from '../../../../assets/Resume.pdf';
 import ProfilePic from '../../../../assets/ProfileImg.jpg';
 import { FaArrowUp } from "react-icons/fa";
@@ -57,6 +57,9 @@ const About = () => {
               className="rounded-full w-64 h-64 object-cover lg:w-94 lg:h-94 mb-4"
               data-aos="fade-up" style={{ overflow: 'hidden' }}
             />
+
+            <p className='text-blue-500 font-extrabold py-4 text-2xl'> Mangesh Pagare </p>
+
             <div className="mt-2 " data-aos="fade-left" style={{ overflow: 'hidden' }}>
               <ShareButton />
             </div>
@@ -101,7 +104,7 @@ const About = () => {
         </div>
 
         {/* Scroll to Top Button */}
-        <div className="flex justify-center m-0">
+        <div className="flex justify-center mb-20">
           <button
             onClick={scrollToTop}
             className="flex items-center justify-center p-2 rounded-full bg-blue-500 hover:bg-blue-600 text-white transition duration-300 transform hover:scale-110 hover:rotate-12"
