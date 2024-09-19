@@ -7,6 +7,8 @@ import { Link, useLocation } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+import LogoImg from '../../assets/ProfileImg.jpg'
+
 import { FaBars, FaTimes, FaMoon, FaSun, FaGithub } from 'react-icons/fa';
 
 export default function Navbar() {
@@ -59,13 +61,18 @@ export default function Navbar() {
 
   return (
 
-    <nav className="fixed top-0 z-50 w-full p-4 rounded-lg shadow-lg cursor-pointer drop-blur-lg">
+    <nav className="fixed top-0 z-50 w-full p-2 rounded-lg shadow-lg cursor-pointer drop-blur-lg">
 
       <div className="container flex items-center justify-between mx-auto">
-        <div className="text-lg font-bold text-blue-500 " data-aos="fade-down" style={{ overflow: 'hidden' }}>
-          Mangesh
+
+        <div className="flex p-2 text-lg font-bold text-blue-500 " data-aos="fade-down" style={{ overflow: 'hidden' }}>
+          <img src={LogoImg} height='40px' width='40px' />
+          <h2 className='ml-4 tracking-widest'>
+            Mangesh
+          </h2>
         </div>
-        <div className="md:hidden">
+
+        <div className="pl-2 md:hidden">
           <button onClick={toggleMenu} aria-label="Toggle menu">
             {isOpen ? (
               <FaTimes className="w-6 h-6 text-gray-200 transition-transform duration-300 dark:text-gray-100" />
