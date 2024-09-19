@@ -13,9 +13,9 @@
 
 // function Rounting() {
 //   return (
-//     <div className='container min-h-screen w-full bg-black text-white font-bold'>
+//     <div className='container w-full min-h-screen font-bold text-white bg-black'>
 
-//       <main className='text-white relative'>
+//       <main className='relative text-white'>
 //         <div className='container relative'>
 //           <Router>
 //             <Navbar />
@@ -161,8 +161,8 @@
 
 // function Rounting() {
 //   return (
-//     <div className="container min-h-screen w-full bg-black text-white font-bold overflow-hidden">
-//       <main className="text-white relative">
+//     <div className="container w-full min-h-screen overflow-hidden font-bold text-white bg-black">
+//       <main className="relative text-white">
 //         <div className="container relative">
 //           <div>
 //             {loading ? (
@@ -310,8 +310,8 @@ function Routing() {
   }, []);
 
   return (
-    <div className="container min-h-screen w-full  text-white font-bold overflow-hidden">
-      <main className="text-white relative">
+    <div className="container w-full min-h-screen overflow-hidden font-bold text-white">
+      <main className="relative text-white">
         <div className="container relative">
           <AnimatePresence mode="wait">
 

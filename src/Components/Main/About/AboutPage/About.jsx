@@ -34,16 +34,17 @@ const About = () => {
 
     <>
 
-      <div className="relative w-full mx-auto px-4 sm:px-6 lg:px-8 md:pb-20 " data-aos="fade-up" style={{ overflow: 'hidden' }}>
-        <div className="relative flex flex-col md:flex-row md:justify-between md:items-center w-full">
-          <div className="flex flex-col text-slate-400 justify-center items-center md:items-start w-full">
+      <div className="relative w-full px-4 mx-auto sm:px-6 lg:px-8 md:pb-20 " data-aos="fade-up" style={{ overflow: 'hidden' }}>
+        <div className="relative flex flex-col w-full md:flex-row md:justify-between md:items-center">
+          <div className="flex flex-col items-center justify-center w-full text-slate-400 md:items-start">
             <FlipWordsDemo />
           </div>
         </div>
       </div>
 
-      <div className="relative md:py-10 px-4 sm:px-6 lg:px-8 ">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-y-6 lg:gap-x-8">
+      <div className="relative px-4 md:py-10 sm:px-6 lg:px-8 ">
+
+        <div className="grid grid-cols-1 pb-8 mx-auto max-w-7xl lg:grid-cols-2 gap-y-6 lg:gap-x-8">
           {/* Profile Picture and Share Button */}
           <motion.div
             className="flex flex-col items-center lg:items-center"
@@ -54,11 +55,11 @@ const About = () => {
             <img
               src={ProfilePic}
               alt="Profile"
-              className="rounded-full w-64 h-64 object-cover lg:w-94 lg:h-94 mb-4"
+              className="object-cover w-64 h-64 mb-4 rounded-full lg:w-94 lg:h-94"
               data-aos="fade-up" style={{ overflow: 'hidden' }}
             />
 
-            <p className='text-blue-500 font-extrabold py-4 text-2xl'> Mangesh Pagare </p>
+            <p className='py-4 text-2xl font-extrabold text-blue-500'> Mangesh Pagare </p>
 
             <div className="mt-2 " data-aos="fade-left" style={{ overflow: 'hidden' }}>
               <ShareButton />
@@ -73,19 +74,19 @@ const About = () => {
             transition={{ duration: 0.6 }}
             data-aos="fade-up" style={{ overflow: 'hidden' }}
           >
-            <h2 className="text-3xl mb-8 font-extrabold text-blue-500 sm:text-4xl">
+            <h2 className="mb-8 text-3xl font-extrabold text-blue-500 sm:text-4xl">
               About Me
             </h2>
-            <p className="mt-2 text-lg text-gray-500 hover:text-gray-300 text-center lg:text-left">
+            <p className="mt-2 text-lg text-center text-gray-500 hover:text-gray-300 lg:text-left">
               "As a fresher web developer, I'm eager to bring creativity and technical expertise together to build engaging, user-friendly web applications. My goal is to grow and contribute to projects that prioritize innovation and user satisfaction."
             </p>
 
 
-            <div className="flex space-x-10 mt-6 mb-20">
+            <div className="flex mt-6 mb-20 space-x-10">
               <a
                 href={Resume}
                 target='_blank'
-                className="inline-block px-2 py-3 mr-2  text-white text-sm font-medium rounded-md transition duration-300 text-center"
+                className="inline-block px-2 py-3 mr-2 text-sm font-medium text-center text-white transition duration-300 rounded-md"
               >
                 <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-blue-500 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors hover:text-white focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
                   Resume
@@ -99,15 +100,16 @@ const About = () => {
 
         </div>
 
-        <div className="mt-12 mb-20" data-aos="fade-up" style={{ overflow: 'hidden' }}>
+
+        <div className="mt-12 mb-20 " data-aos="fade-up" style={{ overflow: 'hidden' }}>
           <TimelineDemo />
         </div>
 
         {/* Scroll to Top Button */}
-        <div className="flex justify-center mb-20">
+        <div className="flex justify-center mb-20 ">
           <button
             onClick={scrollToTop}
-            className="flex items-center justify-center p-2 rounded-full bg-blue-500 hover:bg-blue-600 text-white transition duration-300 transform hover:scale-110 hover:rotate-12"
+            className="flex items-center justify-center p-2 text-white transition duration-300 transform bg-blue-500 rounded-full hover:bg-blue-600 hover:scale-110 hover:rotate-12"
           >
             <FaArrowUp className="text-xl animate-bounce" />
           </button>

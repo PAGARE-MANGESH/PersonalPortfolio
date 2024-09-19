@@ -59,25 +59,25 @@ export default function Navbar() {
 
   return (
 
-    <nav className="w-full cursor-pointer fixed top-0 p-4 shadow-lg z-50 backdrop-blur-lg  rounded-lg">
+    <nav className="fixed top-0 z-50 w-full p-4 rounded-lg shadow-lg cursor-pointer drop-blur-lg">
 
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="text-blue-500 text-lg font-bold " data-aos="fade-down" style={{ overflow: 'hidden' }}>
+      <div className="container flex items-center justify-between mx-auto">
+        <div className="text-lg font-bold text-blue-500 " data-aos="fade-down" style={{ overflow: 'hidden' }}>
           Mangesh
         </div>
         <div className="md:hidden">
           <button onClick={toggleMenu} aria-label="Toggle menu">
             {isOpen ? (
-              <FaTimes className="h-6 w-6 text-gray-200 dark:text-gray-100 transition-transform duration-300" />
+              <FaTimes className="w-6 h-6 text-gray-200 transition-transform duration-300 dark:text-gray-100" />
             ) : (
-              <FaBars className="h-6 w-6 text-gray-200 dark:text-gray-100 transition-transform duration-300" />
+              <FaBars className="w-6 h-6 text-gray-200 transition-transform duration-300 dark:text-gray-100" />
             )}
           </button>
         </div>
 
         {isOpen && (
           <div
-            className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
+            className="fixed inset-0 z-40 bg-black bg-opacity-50 md:hidden"
             onClick={closeMenu}
           ></div>
         )}
@@ -87,7 +87,7 @@ export default function Navbar() {
         >
           {['/', '/about', '/projects', '/contact'].map((path, index) => (
 
-            <li key={index} className="md:mt-0 mt-10" data-aos="fade-down" style={{ overflow: 'hidden' }}>
+            <li key={index} className="mt-10 md:mt-0" data-aos="fade-down" style={{ overflow: 'hidden' }}>
               <Link
                 to={path}
                 className={`block text-lg md:text-base font-medium hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200 ${location.pathname === path ? 'font-semibold text-blue-500' : 'text-gray-500'
