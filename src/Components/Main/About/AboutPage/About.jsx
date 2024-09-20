@@ -5,19 +5,23 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { motion } from 'framer-motion';
-// import { Link } from 'react-router-dom';
 import Resume from '../../../../assets/Resume.pdf';
 import ProfilePic from '../../../../assets/ProfileImg.jpg';
 import { FaArrowUp } from "react-icons/fa";
 import ShareButton from './SocialTimeLine';
 import FlipWordsDemo from './TextAnim/flip';
 import TimelineDemo from '../TimeLine/TimeLine';
-// import Counter from '../Try';
+
+
+import AnimatedModalDemo from '../ShortInfo/ShortInfo'
+
 
 const About = () => {
 
   useEffect(() => {
+
     AOS.init({ duration: 1000 }); // Duration is optional
+
   }, []);
 
 
@@ -61,12 +65,15 @@ const About = () => {
 
             <p className='py-4 text-2xl font-extrabold text-blue-500'> Mangesh Pagare </p>
 
+
+
+
             <div className="mt-2 " data-aos="fade-left" style={{ overflow: 'hidden' }}>
               <ShareButton />
             </div>
+
           </motion.div>
 
-          {/* About and Details Section */}
           <motion.div
             className="flex flex-col items-center lg:items-start"
             initial={{ opacity: 0, x: 20 }}
@@ -74,13 +81,14 @@ const About = () => {
             transition={{ duration: 0.6 }}
             data-aos="fade-up" style={{ overflow: 'hidden' }}
           >
+
             <h2 className="mb-8 text-3xl font-extrabold text-blue-500 sm:text-4xl">
               About Me
             </h2>
+
             <p className="mt-2 text-lg text-center text-gray-500 hover:text-gray-300 lg:text-left">
               "As a fresher web developer, I'm eager to bring creativity and technical expertise together to build engaging, user-friendly web applications. My goal is to grow and contribute to projects that prioritize innovation and user satisfaction."
             </p>
-
 
             <div className="flex mt-6 mb-20 space-x-10">
               <a
@@ -93,11 +101,14 @@ const About = () => {
                 </button>
               </a>
 
+              <div>
+                <AnimatedModalDemo />
+              </div>
+
             </div>
 
 
           </motion.div>
-
         </div>
 
 
@@ -105,7 +116,7 @@ const About = () => {
           <TimelineDemo />
         </div>
 
-        {/* Scroll to Top Button */}
+
         <div className="flex justify-center mb-20 ">
           <button
             onClick={scrollToTop}
@@ -114,6 +125,8 @@ const About = () => {
             <FaArrowUp className="text-xl animate-bounce" />
           </button>
         </div>
+
+
 
       </div>
 

@@ -24,10 +24,10 @@ function Projects() {
         <div data-aos="fade-down" style={{ overflow: 'hidden' }} className='px-4'>
             <ProjectTimelineDemo />
             <InfiniteMovingCardsDemo />
-            <div className="flex justify-center  m-20">
+            <div className="flex justify-center m-20">
                 <button
                     onClick={scrollToTop}
-                    className="flex items-center justify-center p-2 rounded-full bg-blue-500 hover:bg-blue-600 text-white transition duration-300 transform hover:scale-110 hover:rotate-12"
+                    className="flex items-center justify-center p-2 text-white transition duration-300 transform bg-blue-500 rounded-full hover:bg-blue-600 hover:scale-110 hover:rotate-12"
                 >
                     <FaArrowUp className="text-xl animate-bounce" />
                 </button>

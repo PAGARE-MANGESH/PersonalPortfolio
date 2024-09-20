@@ -1,6 +1,10 @@
-"use client";;
+
+"use client";
+
 import { cn } from "../../../../utils/cn";
+
 import { AnimatePresence, motion } from "framer-motion";
+
 import React, { createContext, useContext, useEffect, useRef, useState } from "react";
 
 const ModalContext = createContext(undefined);
@@ -48,7 +52,6 @@ export const ModalTrigger = ({
     );
 };
 
-
 export const ModalBody = ({
     children,
     className
@@ -88,7 +91,7 @@ export const ModalBody = ({
                     <motion.div
                         ref={modalRef}
                         className={cn(
-                            "mx-2 min-h-[50%] max-h-[90%] md:max-w-[40%] bg-white dark:bg-neutral-950 border border-transparent dark:border-neutral-800 md:rounded-2xl relative z-50 flex flex-col flex-1 overflow-hidden",
+                            "min-h-[50%] max-h-[90%] md:max-w-[40%] bg-[rgba(255, 255, 255, 0.1)] backdrop-blur-sm border border-blue-500 dark:border-neutral-800 md:rounded-2xl relative z-50 flex flex-col flex-1 overflow-hidden",
                             className
                         )}
                         initial={{
@@ -122,13 +125,12 @@ export const ModalBody = ({
     );
 };
 
-
 export const ModalContent = ({
     children,
     className
 }) => {
     return (
-        (<div className={cn("flex  flex-col flex-1 p-8 mx-10 md:p-10", className)}>
+        (<div className={cn("flex flex-col flex-1 p-8 md:p-10", className)}>
             {children}
         </div>)
     );
@@ -180,7 +182,7 @@ const CloseIcon = () => {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="text-black dark:text-white h-4 w-4 group-hover:scale-125 group-hover:rotate-3 transition duration-200">
+                className="w-4 h-4 text-blue-400 transition duration-200 dark:text-white group-hover:scale-125 group-hover:rotate-3">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M18 6l-12 12" />
                 <path d="M6 6l12 12" />
@@ -213,5 +215,3 @@ export const useOutsideClick = (
         };
     }, [ref, callback]);
 };
-
-
