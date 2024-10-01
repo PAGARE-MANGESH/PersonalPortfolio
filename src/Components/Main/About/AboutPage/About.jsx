@@ -90,7 +90,7 @@ const About = () => {
               "As a fresher web developer, I'm eager to bring creativity and technical expertise together to build engaging, user-friendly web applications. My goal is to grow and contribute to projects that prioritize innovation and user satisfaction."
             </p>
 
-            <div className="flex mt-6 mb-20 space-x-10">
+            <div className="flex mt-4 mb-20 ">
               <a
                 href={Resume}
                 target='_blank'

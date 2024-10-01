@@ -149,7 +149,7 @@ export default function AnimatedModalDemo() {
   const images = [Img1];
 
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center mt-1">
 
       <Modal>
         <ModalTrigger className="flex justify-center text-blue-500 bg-black dark:bg-white dark:text-black group/modal-btn">
@@ -230,7 +230,7 @@ export default function AnimatedModalDemo() {
             </div>
           </ModalContent>
         </ModalBody>
-        
+
       </Modal>
 
     </div>

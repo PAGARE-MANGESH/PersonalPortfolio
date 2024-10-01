@@ -307,9 +307,11 @@ function Routing() {
       setLoading(false);
     }, 3000);
     return () => clearTimeout(timer);
+    
   }, []);
 
   return (
+    
     <div className="container w-full min-h-screen overflow-hidden font-bold text-white">
       <main className="relative text-white">
         <div className="container relative">
