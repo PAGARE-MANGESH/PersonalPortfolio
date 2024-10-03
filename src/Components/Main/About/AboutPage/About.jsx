@@ -11,9 +11,9 @@ import { FaArrowUp } from "react-icons/fa";
 import ShareButton from './SocialTimeLine';
 import FlipWordsDemo from './TextAnim/flip';
 import TimelineDemo from '../TimeLine/TimeLine';
-
-
 import AnimatedModalDemo from '../ShortInfo/ShortInfo'
+import { ShimmerCircularImage } from "react-shimmer-effects";
+
 
 
 const About = () => {
@@ -23,7 +23,6 @@ const About = () => {
     AOS.init({ duration: 1000 }); // Duration is optional
 
   }, []);
-
 
 
   const scrollToTop = () => {
@@ -47,7 +46,6 @@ const About = () => {
       </div>
 
       <div className="relative px-4 md:py-10 sm:px-6 lg:px-8 ">
-
         <div className="grid grid-cols-1 pb-8 mx-auto max-w-7xl lg:grid-cols-2 gap-y-6 lg:gap-x-8">
           {/* Profile Picture and Share Button */}
           <motion.div
@@ -56,12 +54,25 @@ const About = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <img
-              src={ProfilePic}
-              alt="Profile"
-              className="object-cover w-64 h-64 mb-4 rounded-full lg:w-94 lg:h-94"
-              data-aos="fade-up" style={{ overflow: 'hidden' }}
-            />
+
+            {/* <img
+                src={ProfilePic}
+                alt="Profile"
+                className="object-cover w-64 h-64 mb-4 rounded-full lg:w-94 lg:h-94"
+                data-aos="fade-up" style={{ overflow: 'hidden' }}
+              /> */}
+
+            <div className="relative flex items-center justify-center">
+              <ShimmerCircularImage size={250} />
+
+              <img
+                src={ProfilePic}
+                alt="Profile"
+                className="absolute object-cover w-64 h-64 mb-4 rounded-full lg:w-94 lg:h-94"
+                data-aos="fade-up"
+                style={{ overflow: 'hidden' }}
+              />
+            </div>
 
             <p className='py-4 text-2xl font-extrabold text-blue-500'> Mangesh Pagare </p>
 
@@ -109,6 +120,7 @@ const About = () => {
 
 
           </motion.div>
+
         </div>
 
 
@@ -125,8 +137,6 @@ const About = () => {
             <FaArrowUp className="text-xl animate-bounce" />
           </button>
         </div>
-
-
 
       </div>
 

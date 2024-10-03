@@ -148,7 +148,7 @@ module.exports = {
 
   },
   plugins: [
-    
+
     addVariablesForColors,
 
 
@@ -162,12 +162,13 @@ module.exports = {
       );
 
       // Add the CSS variables to the base styles
+
       addBase({
         ":root": newVars,
       });
     },
 
-    
+
 
     function ({ matchUtilities, theme }: any) {
       matchUtilities(
@@ -202,7 +203,7 @@ function addVariablesForColors({ addBase, theme }: any) {
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
- 
+
   addBase({
     ":root": newVars,
   });

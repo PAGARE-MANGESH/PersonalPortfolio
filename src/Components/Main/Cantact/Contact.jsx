@@ -6,16 +6,26 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 
+
+
+
 const ContactForm = () => {
 
     // hello  
 
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
-    const [phone, setPhone] = useState(''); // Added state for phone number
+    const [phone, setPhone] = useState('');  // Added state for phone number
+    const [Loading, setLoading] = useState(true);   // Added state for phone number
 
     useEffect(() => {
+
         AOS.init({ duration: 1000 });
+
+        setTimeout(() => {
+            setLoading(false)
+        }, 1000)
+
     }, []);
 
     const handleSubmit = (e) => {
@@ -48,7 +58,9 @@ const ContactForm = () => {
 
     return (
 
+
         <fieldset className="p-2 mt-4 border-b border-blue-500 rounded-lg rounded-b-xl border-x">
+
             <legend className="px-2 mb-10 text-lg font-semibold text-blue-500">
                 Contact Me 👩‍💻
             </legend>
@@ -173,7 +185,7 @@ const ContactForm = () => {
                 </div>
 
             </form>
-            
+
 
         </fieldset>
 
@@ -181,22 +193,30 @@ const ContactForm = () => {
 };
 
 
-const GoogleMap = () => (
-    <Suspense fallback={<div> 'Loading... '</div>}>
-        <div className='w-full p-2 border-b border-blue-500 rounded-b-xl border-x'>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50482.83394857099!2d75.31261088478634!3d19.87550342981866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb9815a369bc63%3A0x712d538b29a2a73e!2sChhatrapati%20Sambhajinagar%20(Aurangabad)%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1725380343536!5m2!1sen!2sin"
-                width="100%"
-                height="450"
-                className="transition-opacity duration-300 rounded-lg opacity-60 hover:opacity-80"
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-            />
-        </div>
 
-    </Suspense>
+
+
+
+const GoogleMap = () => (
+
+
+    <div className='w-full p-2 border-b border-blue-500 rounded-b-xl border-x'>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50482.83394857099!2d75.31261088478634!3d19.87550342981866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb9815a369bc63%3A0x712d538b29a2a73e!2sChhatrapati%20Sambhajinagar%20(Aurangabad)%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1725380343536!5m2!1sen!2sin"
+            width="100%"
+            height="450"
+            className="transition-opacity duration-300 rounded-lg opacity-60 hover:opacity-80"
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+        />
+    </div>
+
+
 );
+
+
+
 
 
 const ScrollToTopButton = () => {
@@ -223,36 +243,67 @@ const ScrollToTopButton = () => {
 };
 
 
-const ContactPage = () => (
+// function ContactPage() {
+//     return (
 
-    <div className="flex flex-col items-center justify-center w-full h-full px-2 mt-40">
+//         <div className="flex flex-col items-center justify-center w-full h-full px-2 mt-40">
 
-        {/* <div className="w-40 h-40 mb-4">
-            <img src={ContactSvg} alt="contactSvg" />
-        </div> */}
+//             {/* <div className="w-40 h-40 mb-4">
+//                 <img src={ContactSvg} alt="contactSvg" />
+//             </div> */}
 
-        <motion.div
-            className="grid w-full max-w-6xl grid-cols-1 gap-6 p-2 rounded-lg shadow-lg lg:grid-cols-1"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-        >
-            <GoogleMap />
+//             <motion.div
+//                 className="grid w-full max-w-6xl grid-cols-1 gap-6 p-2 rounded-lg shadow-lg lg:grid-cols-1"
+//                 initial={{ opacity: 0, scale: 0.9 }}
+//                 animate={{ opacity: 1, scale: 1 }}
+//                 transition={{ duration: 0.5 }}
+//             >
+
+//                 {Loading ? 'hello' :
+
+//                     <GoogleMap />}
+
+//                 <ContactForm />
+
+//             </motion.div>
+
+//             <ScrollToTopButton />
+//         </div>
+//     );
+// }
 
 
-            <ContactForm />
+// export default ContactPage;
 
-        </motion.div>
 
-        <ScrollToTopButton />
-    </div>
-);
 
+function ContactPage() {
+    return (
+        <div className="flex flex-col items-center justify-center w-full h-full px-2 mt-40">
+
+            <motion.div
+                className="grid w-full max-w-6xl grid-cols-1 gap-6 p-2 rounded-lg shadow-lg lg:grid-cols-1 backdrop-blur-lg bg-opacity-30"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+            >
+                
+                    <div className="relative">
+                    <div className="absolute inset-0 border rounded-lg bg-white/10 backdrop-blur-lg border-white/20" />
+                        <GoogleMap />
+                    </div>
+            
+
+                <ContactForm />
+
+            </motion.div>
+
+            <ScrollToTopButton />
+        </div>
+    );
+}
 
 export default ContactPage;
-
-
-
 
 
 
