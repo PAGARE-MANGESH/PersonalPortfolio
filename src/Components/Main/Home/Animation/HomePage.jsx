@@ -2,12 +2,12 @@
 
 
 "use client";
-import { SparklesCore } from "./HomePageCof";
 import { Link } from "react-router-dom";
 import React, { useEffect } from "react";
 import Model from "../../Model";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { SparklesCore } from "./HomePageCof";
 
 
 export default function SparklesPreview() {
@@ -20,6 +20,7 @@ export default function SparklesPreview() {
   return (
 
     <div className="relative flex flex-col items-center justify-center w-full h-auto mt-20 mb-10">
+
       <div className="relative flex flex-col items-center w-full px-4 mt-1 lg:px-8" data-aos="fade-up">
 
         {/* Left side - Text */}
@@ -47,6 +48,7 @@ export default function SparklesPreview() {
       </div>
 
       {/* Sparkles and Gradients section */}
+      
       <div className="relative w-full h-auto px-1 mt-28 sm:px-1 md:px-10 lg:px-8">
         {/* Gradients */}
         <div className="absolute inset-x-10 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-[90%] blur-sm" />
@@ -64,6 +66,7 @@ export default function SparklesPreview() {
           particleColor="#FFFFFF"
         />
       </div>
+
     </div>
 
   );
