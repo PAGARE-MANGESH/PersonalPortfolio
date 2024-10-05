@@ -46,8 +46,10 @@ const About = () => {
       </div>
 
       <div className="relative px-4 md:py-10 sm:px-6 lg:px-8 ">
+
         <div className="grid grid-cols-1 pb-8 mx-auto max-w-7xl lg:grid-cols-2 gap-y-6 lg:gap-x-8">
           {/* Profile Picture and Share Button */}
+
           <motion.div
             className="flex flex-col items-center lg:items-center"
             initial={{ opacity: 0, x: -20 }}
@@ -75,8 +77,6 @@ const About = () => {
             </div>
 
             <p className='py-4 text-2xl font-extrabold text-blue-500'> Mangesh Pagare </p>
-
-
 
 
             <div className="mt-2 " data-aos="fade-left" style={{ overflow: 'hidden' }}>
@@ -112,7 +112,7 @@ const About = () => {
                 </button>
               </a>
 
-              <div>
+              <div className='mt-1'>
                 <AnimatedModalDemo />
               </div>
 

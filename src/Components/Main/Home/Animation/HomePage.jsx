@@ -13,7 +13,7 @@ import { SparklesCore } from "./HomePageCof";
 export default function SparklesPreview() {
 
   useEffect(() => {
-    AOS.init({ duration: 1000 }); // Duration is optional
+    AOS.init({ duration: 1000 });  // Duration is optional
   }, []);
 
 
@@ -47,8 +47,8 @@ export default function SparklesPreview() {
 
       </div>
 
-      {/* Sparkles and Gradients section */}
-      
+   
+
       <div className="relative w-full h-auto px-1 mt-28 sm:px-1 md:px-10 lg:px-8">
         {/* Gradients */}
         <div className="absolute inset-x-10 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-[90%] blur-sm" />
