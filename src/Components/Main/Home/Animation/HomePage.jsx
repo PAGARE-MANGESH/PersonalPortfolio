@@ -3,14 +3,21 @@
 
 "use client";
 import { Link } from "react-router-dom";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Model from "../../Model";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { SparklesCore } from "./HomePageCof";
 
 
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
+
+
+
 export default function SparklesPreview() {
+
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   useEffect(() => {
     AOS.init({ duration: 1000 });  // Duration is optional
@@ -41,13 +48,15 @@ export default function SparklesPreview() {
         </div>
 
         {/* Right side - Model */}
-        <div className="relative flex justify-center float-right w-full mt-60 md:mt-0 z-1 ">
+        <div className="relative flex justify-center float-right w-full mt-60 md:mt-0 z-1 " onLoad={() => setIsImageLoaded(true)}>
+          {!isImageLoaded && <Skeleton className="w-full h-full" />}
           <Model className="w-full h-auto max-w-none" />
+
         </div>
 
       </div>
 
-   
+
 
       <div className="relative w-full h-auto px-1 mt-28 sm:px-1 md:px-10 lg:px-8">
         {/* Gradients */}

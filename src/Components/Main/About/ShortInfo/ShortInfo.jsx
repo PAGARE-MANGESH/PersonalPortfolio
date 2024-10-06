@@ -127,26 +127,18 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 "use client";
-
-import React from "react";
+import React, { useState } from "react";
 import { Modal, ModalBody, ModalContent, ModalFooter, ModalTrigger } from "./ShortInfoConf";
 import Img1 from '../../../../assets/ProfileImg.jpg';
-import { motion } from "framer-motion";
+
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
+
 
 export default function AnimatedModalDemo() {
 
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
 
   return (
@@ -173,7 +165,8 @@ export default function AnimatedModalDemo() {
               </span>
             </h4>
 
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center" onLoad={() => setIsImageLoaded(true)}>
+              {!isImageLoaded && <Skeleton className="w-full h-full" />}
 
               <img
                 src={Img1}

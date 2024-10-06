@@ -11,6 +11,10 @@ import LogoImg from '../../assets/ProfileImg.jpg'
 
 import { FaBars, FaTimes, FaMoon, FaSun, FaGithub } from 'react-icons/fa';
 
+
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
+
 export default function Navbar() {
 
   useEffect(() => {
@@ -20,7 +24,10 @@ export default function Navbar() {
 
   const [isOpen, setIsOpen] = useState(false); // Start with the menu closed
   const [darkMode, setDarkMode] = useState(false);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
   const location = useLocation();
+
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -59,13 +66,15 @@ export default function Navbar() {
   }, [isOpen]);
 
 
+
   return (
 
     <nav className="fixed top-0 z-50 w-full p-2 rounded-lg shadow-lg cursor-pointer drop-blur-lg">
 
       <div className="container flex items-center justify-between mx-auto">
 
-        <div className="flex p-2 text-lg font-bold text-blue-500 " data-aos="fade-down" style={{ overflow: 'hidden' }}>
+        <div className="flex p-2 text-lg font-bold text-blue-500 " data-aos="fade-down" style={{ overflow: 'hidden' }} onLoad={() => setIsImageLoaded(true)}>
+          {!isImageLoaded && <Skeleton className="w-full h-full" />}
           <img src={LogoImg} height='40px' width='40px' />
           <h2 className='ml-4 tracking-widest'>
             Mangesh

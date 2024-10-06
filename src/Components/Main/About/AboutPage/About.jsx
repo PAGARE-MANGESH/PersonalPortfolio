@@ -1,7 +1,7 @@
 
 
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { motion } from 'framer-motion';
@@ -12,8 +12,9 @@ import ShareButton from './SocialTimeLine';
 import FlipWordsDemo from './TextAnim/flip';
 import TimelineDemo from '../TimeLine/TimeLine';
 import AnimatedModalDemo from '../ShortInfo/ShortInfo'
-import { ShimmerCircularImage } from "react-shimmer-effects";
-
+// import { ShimmerCircularImage } from "react-shimmer-effects";
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 
 const About = () => {
@@ -24,6 +25,7 @@ const About = () => {
 
   }, []);
 
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -64,17 +66,52 @@ const About = () => {
                 data-aos="fade-up" style={{ overflow: 'hidden' }}
               /> */}
 
-            <div className="relative flex items-center justify-center">
-              <ShimmerCircularImage size={250} />
+
+
+            {/* <div className="relative flex items-center justify-center">
+
+              {!isImageLoaded && <Skeleton className="relative w-full h-full " circle width={100} height={80} />}
 
               <img
                 src={ProfilePic}
                 alt="Profile"
-                className="absolute object-cover w-64 h-64 mb-4 rounded-full lg:w-94 lg:h-94"
+                className="absolute w-64 h-64 mb-4 rounded-full bject-cover a lg:w-94 lg:h-94"
                 data-aos="fade-up"
-                style={{ overflow: 'hidden' }}
+                // style={{ overflow: 'hidden' }}
+                onLoad={() => setIsImageLoaded(true)}
               />
+
+            </div> */}
+
+
+            <div className="relative flex items-center justify-center">
+              {/* Skeleton loader while the image is loading */}
+              {!isImageLoaded && (
+                <div className="absolute w-64 h-64 mb-4 bg-gray-200 rounded-full lg:w-94 lg:h-94 animate-pulse" />
+              )}
+
+              {/* Profile Image */}
+              {ProfilePic && (
+                <img
+                  src={ProfilePic}
+                  alt="Profile"
+                  className={` -mt-14 w-64 h-64 mb-4 rounded-full object-cover lg:w-94 lg:h-94 transition-transform duration-500 ease-in-out ${isImageLoaded ? 'scale-100 hover:scale-110' : 'scale-0'
+                    }`}
+                  data-aos="fade-up"
+                  onLoad={() => setIsImageLoaded(true)}
+                  onError={() => setIsImageLoaded(false)}  // fallback if image fails to load
+                />
+              )}
+
+              {/* Fallback in case image doesn't load */}
+              {!isImageLoaded && !ProfilePic && (
+                <div className="absolute flex items-center justify-center w-64 h-64 mb-4 text-white bg-red-200 rounded-full lg:w-94 lg:h-94">
+                  Image not available
+                </div>
+              )}
             </div>
+
+
 
             <p className='py-4 text-2xl font-extrabold text-blue-500'> Mangesh Pagare </p>
 

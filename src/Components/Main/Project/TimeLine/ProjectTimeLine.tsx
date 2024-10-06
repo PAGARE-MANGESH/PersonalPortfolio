@@ -2,7 +2,7 @@
 
 
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import AOS from 'aos';
 
@@ -19,6 +19,8 @@ import Project2Dark from "../../../../assets/EcommDark.jpg"
 import Project3 from "../../../../assets/Carpe.jpg"
 import Project3Dark from "../../../../assets/CarPenterzDark.jpg"
 
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 
 
@@ -30,7 +32,7 @@ export default function ProjectTimelineDemo() {
         AOS.init({ duration: 1000 }); // Duration is optional
     }, []);
 
-
+    const [isImageLoaded, setIsImageLoaded] = useState(false);
     const data = [
 
 
@@ -43,41 +45,59 @@ export default function ProjectTimelineDemo() {
                     </p>
 
 
-                    <div className="grid grid-cols-2 gap-4">
-                        <img
-                            src={Project3}
-                            alt="Portfolio project"
-                            width={500}
-                            height={500}
-                            className="rounded-lg object-contain h-20 md:h-44 lg:h-60 w-full transition-transform transform hover:scale-105 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-                        />
-                        <img
-                            src={Project3Dark}
-                            alt="Portfolio project"
-                            width={500}
-                            height={500}
-                            className="rounded-lg object-contain h-20 md:h-44 lg:h-60 w-full transition-transform transform hover:scale-105 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-                        />
-                    </div>
-
-
-
                     {/* <div className="grid grid-cols-2 gap-4">
-                        <img
-                            src={Project3}
-                            alt="Portfolio project"
-                            width={500}
-                            height={500}
-                            className="rounded-lg object-contain h-20 md:h-44 lg:h-60 w-full transition-transform transform hover:scale-105 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-                        />
-                        <img
-                            src={Project3Dark}
-                            alt="Portfolio project"
-                            width={500}
-                            height={500}
-                            className="rounded-lg object-contain h-20 md:h-44 lg:h-60 w-full transition-transform transform hover:scale-105 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-                        />
-                    </div> */}
+
+
+                            <img
+                                src={Project3}
+                                alt="Portfolio project"
+                                width={500}
+                                height={500}
+                                className="rounded-lg object-contain h-20 md:h-44 lg:h-60 w-full transition-transform transform hover:scale-105 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                            />
+
+
+
+                            <img
+                                src={Project3Dark}
+                                alt="Portfolio project"
+                                width={500}
+                                height={500}
+                                className="rounded-lg object-contain h-20 md:h-44 lg:h-60 w-full transition-transform transform hover:scale-105 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                            />
+
+
+
+                        </div> */}
+
+
+                    <div className="grid grid-cols-2 gap-4">
+                        {/* First Image with Conditional Skeleton */}
+                            {!isImageLoaded && <Skeleton className="w-full h-20 md:h-44 lg:h-60" />}
+                        <div className="w-full h-20 md:h-44 lg:h-60">
+                            <img
+                                src={Project3}
+                                alt="Portfolio project"
+                                width={500}
+                                height={500}
+                                className={`rounded-lg object-contain h-20 md:h-44 lg:h-60 w-full transition-transform transform hover:scale-105 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] ${isImageLoaded ? '' : 'hidden'}`}
+                                onLoad={() => setIsImageLoaded(true)}
+                            />
+                        </div>
+
+                        {/* Second Image with Conditional Skeleton */}
+                        <div className="w-full h-20 md:h-44 lg:h-60">
+                            {!isImageLoaded && <Skeleton className="w-full h-full" />}
+                            <img
+                                src={Project3Dark}
+                                alt="Portfolio project"
+                                width={500}
+                                height={500}
+                                className={`rounded-lg object-contain h-20 md:h-44 lg:h-60 w-full transition-transform transform hover:scale-105 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] ${isImageLoaded ? '' : 'hidden'}`}
+                                onLoad={() => setIsImageLoaded(true)}
+                            />
+                        </div>
+                    </div>
 
 
                     <p className="mt-4 text-xs text-neutral-400 dark:text-neutral-400 md:text-lg">
@@ -106,6 +126,7 @@ export default function ProjectTimelineDemo() {
 
 
                     <div className="grid grid-cols-2 gap-4">
+                        
                         <img
                             src={Project2}
                             alt="Portfolio project"
@@ -187,6 +208,7 @@ export default function ProjectTimelineDemo() {
         },
 
     ];
+
     return (
         <div className="w-full">
             <ProjectTimeline data={data} />

@@ -6,6 +6,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 
 
@@ -201,6 +203,7 @@ const GoogleMap = () => (
 
 
     <div className='w-full p-2 border-b border-blue-500 rounded-b-xl border-x'>
+
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50482.83394857099!2d75.31261088478634!3d19.87550342981866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb9815a369bc63%3A0x712d538b29a2a73e!2sChhatrapati%20Sambhajinagar%20(Aurangabad)%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1725380343536!5m2!1sen!2sin"
             width="100%"
@@ -209,6 +212,7 @@ const GoogleMap = () => (
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
+
         />
     </div>
 
@@ -278,7 +282,12 @@ const ScrollToTopButton = () => {
 
 
 function ContactPage() {
+
+
+    const [isImageLoaded, setIsImageLoaded] = useState(false);
+
     return (
+
         <div className="flex flex-col items-center justify-center w-full h-full px-2 mt-40">
 
             <motion.div
@@ -286,13 +295,15 @@ function ContactPage() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
+
             >
-                
-                    <div className="relative">
+
+                <div className="relative" onLoad={() => setIsImageLoaded(true)}>
+
                     <div className="absolute inset-0 border rounded-lg bg-white/10 backdrop-blur-lg border-white/20" />
-                        <GoogleMap />
-                    </div>
-            
+                    {!isImageLoaded && <Skeleton className="w-full h-full" />}
+                    <GoogleMap />
+                </div>
 
                 <ContactForm />
 
