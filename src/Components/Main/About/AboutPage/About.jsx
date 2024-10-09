@@ -16,6 +16,7 @@ import AnimatedModalDemo from '../ShortInfo/ShortInfo'
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 
+import InfiniteMovingCardsDemo from '../../Project/ProjectCards'
 
 const About = () => {
 
@@ -161,10 +162,11 @@ const About = () => {
         </div>
 
 
-        <div className="mt-12 mb-20 " data-aos="fade-up" style={{ overflow: 'hidden' }}>
+        <div className="mt-12 " data-aos="fade-up" style={{ overflow: 'hidden' }}>
           <TimelineDemo />
         </div>
 
+        <InfiniteMovingCardsDemo />
 
         <div className="flex justify-center mb-20 ">
           <button
