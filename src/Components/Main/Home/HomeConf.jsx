@@ -21,6 +21,7 @@
 
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import svg from '../../../assets/girl.svg'
 
 function HomeConf() {
@@ -47,9 +48,11 @@ function HomeConf() {
         <h1 className="text-3xl font-bold text-blue-600 transition-transform duration-300 transform md:text-4xl lg:text-6xl hover:text-blue-500">
           My Portfolio
         </h1>
-        <button className=" mt-4 inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-blue-500 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors hover:text-white focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-          Resume
-        </button>
+        <Link to="/about">
+          <button className="mt-4 inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-blue-500 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors hover:text-white focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+            About
+          </button>
+        </Link>
       </div>
     </div>
 
