@@ -114,7 +114,7 @@ const About = () => {
 
 
 
-            <p className='py-4 text-2xl font-extrabold text-blue-500'> Mangesh Pagare </p>
+            <p className='py-4 text-2xl font-extrabold text-gray-500'> Mangesh Pagare 😇 </p>
 
 
             <div className="mt-2 " data-aos="fade-left" style={{ overflow: 'hidden' }}>
@@ -131,11 +131,11 @@ const About = () => {
             data-aos="fade-up" style={{ overflow: 'hidden' }}
           >
 
-            <h2 className="mb-8 text-3xl font-extrabold text-blue-500 sm:text-4xl">
+            <h2 className="mb-8 text-3xl font-extrabold text-gray-500 sm:text-4xl">
               About Me
             </h2>
 
-            <p className="mt-2 text-lg text-center text-gray-500 hover:text-gray-300 lg:text-left">
+            <p className="mt-2 text-lg text-center text-gray-500 lg:text-left">
               "As a fresher web developer, I'm eager to bring creativity and technical expertise together to build engaging, user-friendly web applications. My goal is to grow and contribute to projects that prioritize innovation and user satisfaction."
             </p>
 
