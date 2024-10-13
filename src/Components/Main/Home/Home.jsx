@@ -5,7 +5,7 @@ import HomeCom from './HomeConf'
 // import LampDemo from './Lamp/Lamp'
 
 
-import SparklesPreview from './Animation/HomePage'
+// import SparklesPreview from './Animation/HomePage'
 
 
 function Home() {
@@ -19,7 +19,8 @@ function Home() {
 
       <HomeCom />
 
-      <SparklesPreview />
+      {/* <SparklesPreview /> */}
+
     </>
   )
 }

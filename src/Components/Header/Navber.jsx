@@ -8,7 +8,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import LogoImg from '../../assets/ProfileImg.jpg'
-
 import { FaBars, FaTimes, FaMoon, FaSun, FaGithub } from 'react-icons/fa';
 
 
@@ -18,7 +17,9 @@ import 'react-loading-skeleton/dist/skeleton.css'
 export default function Navbar() {
 
   useEffect(() => {
+    
     AOS.init({ duration: 1000 }); // Duration is optional
+    
   }, []);
 
 

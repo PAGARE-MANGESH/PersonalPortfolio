@@ -13,8 +13,9 @@ import FlipWordsDemo from './TextAnim/flip';
 import TimelineDemo from '../TimeLine/TimeLine';
 import AnimatedModalDemo from '../ShortInfo/ShortInfo'
 // import { ShimmerCircularImage } from "react-shimmer-effects";
-import Skeleton from 'react-loading-skeleton'
-import 'react-loading-skeleton/dist/skeleton.css'
+
+// import Skeleton from 'react-loading-skeleton'
+// import 'react-loading-skeleton/dist/skeleton.css'
 
 import InfiniteMovingCardsDemo from '../../Project/ProjectCards'
 
