@@ -61,29 +61,6 @@ const About = () => {
             transition={{ duration: 0.6 }}
           >
 
-            {/* <img
-                src={ProfilePic}
-                alt="Profile"
-                className="object-cover w-64 h-64 mb-4 rounded-full lg:w-94 lg:h-94"
-                data-aos="fade-up" style={{ overflow: 'hidden' }}
-              /> */}
-
-
-
-            {/* <div className="relative flex items-center justify-center">
-
-              {!isImageLoaded && <Skeleton className="relative w-full h-full " circle width={100} height={80} />}
-
-              <img
-                src={ProfilePic}
-                alt="Profile"
-                className="absolute w-64 h-64 mb-4 rounded-full bject-cover a lg:w-94 lg:h-94"
-                data-aos="fade-up"
-                // style={{ overflow: 'hidden' }}
-                onLoad={() => setIsImageLoaded(true)}
-              />
-
-            </div> */}
 
 
             <div className="relative flex items-center justify-center">
@@ -132,29 +109,30 @@ const About = () => {
             data-aos="fade-up" style={{ overflow: 'hidden' }}
           >
 
-            <h2 className="mb-8 text-3xl font-extrabold text-gray-500 sm:text-4xl">
-              About Me
-            </h2>
+            <div>
+              <h2 className="mb-8 text-3xl font-extrabold text-blue-500 sm:text-4xl">
+                About Me
+              </h2>
 
-            <p className="mt-2 text-lg text-center text-gray-500 lg:text-left">
-              "As a fresher web developer, I'm eager to bring creativity and technical expertise together to build engaging, user-friendly web applications. My goal is to grow and contribute to projects that prioritize innovation and user satisfaction."
-            </p>
+              <p className="mt-2 text-lg text-center text-gray-500 lg:text-left">
+                "As a fresher web developer, I'm eager to bring creativity and technical expertise together to build engaging, user-friendly web applications. My goal is to grow and contribute to projects that prioritize innovation and user satisfaction."
+              </p>
+              <div className="flex mt-4 mb-20 ">
+                <a
+                  href={Resume}
+                  target='_blank'
+                  className="inline-block px-2 py-3 mr-2 text-sm font-medium text-center text-white transition duration-300 rounded-md"
+                >
+                  <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-blue-500 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors hover:text-white focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                    Resume
+                  </button>
+                </a>
 
-            <div className="flex mt-4 mb-20 ">
-              <a
-                href={Resume}
-                target='_blank'
-                className="inline-block px-2 py-3 mr-2 text-sm font-medium text-center text-white transition duration-300 rounded-md"
-              >
-                <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-blue-500 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors hover:text-white focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-                  Resume
-                </button>
-              </a>
+                <div className='mt-1'>
+                  <AnimatedModalDemo />
+                </div>
 
-              <div className='mt-1'>
-                <AnimatedModalDemo />
               </div>
-
             </div>
 
 
@@ -166,7 +144,7 @@ const About = () => {
         <div className="mt-12 " data-aos="fade-up" style={{ overflow: 'hidden' }}>
           <TimelineDemo />
         </div>
-        
+
         <div>
           <InfiniteMovingCardsDemo />
         </div>
