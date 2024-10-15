@@ -21,7 +21,7 @@ function Projects() {
     };
 
     return (
-        <div data-aos="fade-down" style={{ overflow: 'hidden' }} className='px-4'>
+        <div data-aos="fade-down" style={{ overflow: 'hidden' }} className='px-2'>
             <ProjectTimelineDemo />
             <InfiniteMovingCardsDemo />
             <div className="flex justify-center m-20">

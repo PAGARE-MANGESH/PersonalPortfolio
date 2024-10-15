@@ -8,6 +8,7 @@ import 'aos/dist/aos.css';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
+
 const ContactForm = () => {
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
@@ -82,6 +83,33 @@ const ContactForm = () => {
 
 
                 <div className="relative flex-1" data-aos="fade-up">
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        required
+                        name="phone"
+                        placeholder=" "
+                        maxLength={12}
+                        value={phone}
+                        onChange={(e) => {
+                            const onlyNums = e.target.value.replace(/[^0-9]/g, ''); // Allow only digits
+                            setPhone(onlyNums);
+                        }}
+
+                        className="w-full p-3 text-blue-500 transition duration-300 bg-transparent border-b border-blue-500 rounded-md peer border-x focus:border-blue-500 focus:outline-none"
+                    />
+
+                    <label
+                        htmlFor="phone"
+                        className="absolute text-blue-500 transition-all duration-300 origin-left transform scale-100 -translate-y-6 pointer-events-none left-3 top-1 peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:-translate-y-5 peer-focus:scale-75 peer-not-placeholder-shown:-translate-y-5 peer-not-placeholder-shown:scale-75"
+                    >
+                        Phone Number 📞
+                    </label>
+                </div>
+
+
+                <div className="relative flex-1 mt-4" data-aos="fade-up">
                     <input
                         type="email"
                         id="email"
@@ -101,33 +129,8 @@ const ContactForm = () => {
                     </label>
                 </div>
 
-                <div className="relative flex-1" data-aos="fade-up">
 
-                    <input
-                        type="tel"
-                        id="phone"
-                        required
-                        name="phone"
-                        placeholder=" "
-                        maxLength={12}
-                        value={phone}
-                        onChange={(e) => {
-                            const onlyNums = e.target.value.replace(/[^0-9]/g, ''); // Allow only digits
-                            setPhone(onlyNums);
-                        }}
-
-                        className="w-full p-3 mt-2 text-blue-500 transition duration-300 bg-transparent border-b border-blue-500 rounded-md peer border-x focus:border-blue-500 focus:outline-none"
-                    />
-
-                    <label
-                        htmlFor="phone"
-                        className="absolute text-blue-500 transition-all duration-300 origin-left transform scale-100 -translate-y-6 pointer-events-none left-3 top-1 peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:-translate-y-5 peer-focus:scale-75 peer-not-placeholder-shown:-translate-y-5 peer-not-placeholder-shown:scale-75"
-                    >
-                        Phone Number 📞
-                    </label>
-                </div>
-
-                <div className="relative flex-1" data-aos="fade-up">
+                <div className="relative flex-1 mt-4" data-aos="fade-up">
                     <input
                         type="text"
                         id="address"
@@ -183,7 +186,11 @@ const ContactForm = () => {
 };
 
 const GoogleMap = () => (
-    <div className="w-full p-2 mt-6 border border-blue-500 rounded-lg">
+
+    <div className="flex w-full p-2 mt-6 border border-blue-500 rounded-lg">
+
+
+
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50482.83394857099!2d75.31261088478634!3d19.87550342981866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb9815a369bc63%3A0x712d538b29a2a73e!2sChhatrapati%20Sambhajinagar%20(Aurangabad)%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1725380343536!5m2!1sen!2sin"
             width="100%"
@@ -226,12 +233,13 @@ const ContactPage = () => {
     return (
         <div className="flex flex-col items-center justify-center w-full h-full px-4 mt-20">
             <motion.div
-                className="grid w-full max-w-6xl grid-cols-1 gap-6 p-6 rounded-lg shadow-lg"
+                className="grid w-full max-w-6xl grid-cols-1 gap-6 rounded-lg shadow-lg md:p-6"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
             >
                 {loading ? <Skeleton className="h-96" /> : <GoogleMap />}
+
                 <ContactForm />
             </motion.div>
             <ScrollToTopButton />

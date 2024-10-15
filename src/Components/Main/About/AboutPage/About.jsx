@@ -49,7 +49,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="relative px-4 md:py-10 sm:px-6 lg:px-8 ">
+      <div className="relative px-2 md:py-10 sm:px-6 lg:px-8 ">
 
         <div className="grid grid-cols-1 pb-8 mx-auto max-w-7xl lg:grid-cols-2 gap-y-6 lg:gap-x-8">
           {/* Profile Picture and Share Button */}
@@ -166,8 +166,10 @@ const About = () => {
         <div className="mt-12 " data-aos="fade-up" style={{ overflow: 'hidden' }}>
           <TimelineDemo />
         </div>
-
-        <InfiniteMovingCardsDemo />
+        
+        <div>
+          <InfiniteMovingCardsDemo />
+        </div>
 
         <div className="flex justify-center mb-20 ">
           <button

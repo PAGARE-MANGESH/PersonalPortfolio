@@ -26,7 +26,9 @@ export const InfiniteMovingCards = ({
   useEffect(() => {
     addAnimation();
   }, []);
+
   const [start, setStart] = useState(false);
+
   function addAnimation() {
     if (containerRef.current && scrollerRef.current) {
       const scrollerContent = Array.from(scrollerRef.current.children);
@@ -43,6 +45,7 @@ export const InfiniteMovingCards = ({
       setStart(true);
     }
   }
+
   const getDirection = () => {
     if (containerRef.current) {
       if (direction === "left") {
@@ -58,6 +61,7 @@ export const InfiniteMovingCards = ({
       }
     }
   };
+
   const getSpeed = () => {
     if (containerRef.current) {
       if (speed === "fast") {
@@ -77,10 +81,11 @@ export const InfiniteMovingCards = ({
         className
       )}
     >
+      
       <ul
         ref={scrollerRef}
         className={cn(
-          " flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
+          " flex min-w-full shrink-0 gap-4  w-max flex-nowrap",
           start && "animate-scroll ",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
@@ -92,7 +97,7 @@ export const InfiniteMovingCards = ({
               background:
                 "linear-gradient(180deg, var(--slate-800), var(--slate-900)",
             }}
-            key={item.id}
+            key={idx}
           >
             <blockquote>
               <div
