@@ -5,6 +5,7 @@ import './index.css'
 // import GridBackgroundDemo from './Components/BG/Bg'
 import Layout from './LenisScoll'
 
+import './Script'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 

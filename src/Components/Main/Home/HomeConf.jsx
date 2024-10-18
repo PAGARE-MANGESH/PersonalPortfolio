@@ -1,24 +1,3 @@
-// import React from 'react'
-
-// function HomeConf() {
-//   return (
-//     <div>
-//          <div className="left-0 z-10 w-auto mb-10 ml-4 text-left h-96">
-//           <h1 className="mt-6 mb-3 text-blue-500 dark:text-blue-200 text-md sm:text-xl md:text-2xl lg:text-2xl">
-//             Hello
-//           </h1>
-//           <p className="text-slate-400">Well Come To</p>
-//           <h1 className="text-3xl font-bold ~text-blue-500 md:text-4xl lg:text-6xl">My Portfolio</h1>
-//         </div>
-//     </div>
-//   )
-// }
-
-// export default HomeConf
-
-
-
-
 
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -109,3 +88,6 @@ function HomeConf() {
 }
 
 export default HomeConf;
+
+
+
