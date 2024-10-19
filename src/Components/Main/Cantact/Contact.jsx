@@ -206,8 +206,8 @@ const GoogleMap = () => (
     <div className="w-full gap-6 p-2 mt-6 border border-blue-500 rounded-lg ">
 
 
-      
-      
+
+
 
         <div className="flex">
             <iframe
@@ -250,13 +250,16 @@ const ContactPage = () => {
     useEffect(() => {
 
         AOS.init({ duration: 1000 });
+
         setTimeout(() => {
             setLoading(false);
         }, 1000);
+
     }, []);
 
     return (
         <div className="flex flex-col items-center justify-center w-full h-full px-4 mt-20">
+
             <motion.div
                 className="grid w-full max-w-6xl grid-cols-1 gap-6 rounded-lg shadow-lg md:p-6"
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -265,24 +268,26 @@ const ContactPage = () => {
             >
 
                 {loading ? <Skeleton className="w-40 h-96" /> : <GoogleMap />}
-                
-                <div className="flex flex-col items-center justify-center p-4 mt-4 border-blue-500 rounded-lg border-x">
-                    <h2 className="mb-4 text-xl font-semibold text-blue-500">Contact Information ☎</h2>
-                    <p className="mb-2 text-gray-500">
-                        <span className="font-semibold">Name: </span> Mangesh Pagare
+
+                <div className="flex flex-col items-center justify-center p-4 mt-4 text-2xl border-blue-500 rounded-lg border-x">
+                    <h2 className="mb-4 text-4xl font-semibold text-blue-500">Contact Information ☎</h2>
+                    <p className="mb-2 text-blue-500">
+                        <span className="font-semibold text-gray-500">Name: </span> Mangesh Pagare
+                    </p>
+                    <p className="mb-2 text-blue-500">
+                        <span className="font-semibold text-gray-500">Phone: </span>8668325464
                     </p>
                     <p className="mb-2 text-gray-500">
-                        <span className="font-semibold">Phone: </span>8668325464
-                    </p>
-                    <p className="mb-2 text-gray-500">
-                        <span className="font-semibold">Email: </span>
+                        <span className="font-semibold ">Email: </span>
                         <a href="mailto:mangeshpagare011@gmail.com" className="text-blue-500 hover:underline">
                             mangeshpagare011@gmail.com
                         </a>
                     </p>
 
                 </div>
+
                 {/* <GoogleMap /> */}
+
                 <ContactForm />
             </motion.div>
             <ScrollToTopButton />

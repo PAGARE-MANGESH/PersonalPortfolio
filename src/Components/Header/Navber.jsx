@@ -1,6 +1,4 @@
 
-
-
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -17,9 +15,9 @@ import 'react-loading-skeleton/dist/skeleton.css'
 export default function Navbar() {
 
   useEffect(() => {
-    
+
     AOS.init({ duration: 1000 }); // Duration is optional
-    
+
   }, []);
 
 
