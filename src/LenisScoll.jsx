@@ -22,13 +22,12 @@ function Layout() {
 
     useEffect(() => {
         function animate(time) {
-            lenis.raf(time) // Update Lenis on every frame for smooth scrolling
+            lenis.raf(time)
             requestAnimationFrame(animate)
         }
         requestAnimationFrame(animate)
 
         return () => {
-            // Cleanup the animation frame when the component unmounts
             cancelAnimationFrame(animate)
         }
     }, [lenis])

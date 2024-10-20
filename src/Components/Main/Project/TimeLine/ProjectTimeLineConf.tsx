@@ -42,6 +42,7 @@ export const ProjectTimeline = ({ data }: { data: TimelineEntry[] }) => {
 
 
     return (
+        
         <div
             className="w-full pt-20 font-sans box md:px-10"
             ref={containerRef}
@@ -55,6 +56,7 @@ export const ProjectTimeline = ({ data }: { data: TimelineEntry[] }) => {
                     all  about of my project journey. 
                 </p>
             </div>
+            
             <div ref={ref} className="relative pb-20 mx-auto max-w-7xl">
                 {data.map((item, index) => (
                     <div

@@ -5,13 +5,13 @@ import React, { useEffect, useState } from 'react';
 export default function Preloader() {
     const [loading, setLoading] = useState(true);
 
-    // Simulate loading for a few seconds
+
     useEffect(() => {
-        const timer = setTimeout(() => setLoading(false), 5000); // Adjust the time as needed
+        const timer = setTimeout(() => setLoading(false), 5000);
         return () => clearTimeout(timer);
     }, []);
 
-    if (!loading) return null; // Hide the loader once loading is complete
+    if (!loading) return null;
 
     return (
         <div className="flex flex-col items-center justify-center h-screen transition-all duration-500 ease-in-out">

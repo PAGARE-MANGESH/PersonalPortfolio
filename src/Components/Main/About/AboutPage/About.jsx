@@ -12,10 +12,13 @@ import ShareButton from './SocialTimeLine';
 import FlipWordsDemo from './TextAnim/flip';
 import TimelineDemo from '../TimeLine/TimeLine';
 import AnimatedModalDemo from '../ShortInfo/ShortInfo'
-// import { ShimmerCircularImage } from "react-shimmer-effects";
+// import Model  from '../../Model'
 
-// import Skeleton from 'react-loading-skeleton'
-// import 'react-loading-skeleton/dist/skeleton.css'
+
+import { ShimmerCircularImage } from "react-shimmer-effects";
+
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 import InfiniteMovingCardsDemo from '../../Project/ProjectCards'
 
@@ -64,12 +67,16 @@ const About = () => {
 
 
             <div className="relative flex items-center justify-center">
-              {/* Skeleton loader while the image is loading */}
+
+
+            {/* <Model/> */}
+
+              
               {!isImageLoaded && (
                 <div className="absolute w-64 h-64 mb-4 bg-gray-200 rounded-full lg:w-94 lg:h-94 animate-pulse" />
               )}
 
-              {/* Profile Image */}
+
               {ProfilePic && (
                 <img
                   src={ProfilePic}
@@ -82,12 +89,14 @@ const About = () => {
                 />
               )}
 
-              {/* Fallback in case image doesn't load */}
+
               {!isImageLoaded && !ProfilePic && (
                 <div className="absolute flex items-center justify-center w-64 h-64 mb-4 text-white bg-red-200 rounded-full lg:w-94 lg:h-94">
                   Image not available
                 </div>
               )}
+
+              
             </div>
 
 
@@ -109,15 +118,16 @@ const About = () => {
             data-aos="fade-up" style={{ overflow: 'hidden' }}
           >
 
-            <div className='text-center '>
+            <div className='text-start '>
+
               <h2 className="mb-8 text-3xl font-extrabold text-blue-500 sm:text-4xl">
                 About Me
               </h2>
 
-              <p className="mt-2 text-lg text-center text-gray-500 lg:text-center">
+              <p className="mt-2 text-lg text-gray-500 text-start lg:text-start">
                 "As a fresher web developer, I'm eager to bring creativity and technical expertise together to build engaging, user-friendly web applications. My goal is to grow and contribute to projects that prioritize innovation and user satisfaction."
               </p>
-              <div className="flex justify-center mt-4 mb-20">
+              <div className="flex justify-start mt-4 mb-20">
                 <a
                   href={Resume}
                   target='_blank'
@@ -133,10 +143,12 @@ const About = () => {
                 </div>
 
               </div>
+
             </div>
 
 
           </motion.div>
+
 
         </div>
 
