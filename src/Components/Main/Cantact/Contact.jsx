@@ -181,7 +181,6 @@ const ContactForm = () => {
 
             </form>
         </fieldset>
-
     );
 };
 
@@ -269,8 +268,8 @@ const ContactPage = () => {
 
                 {loading ? <Skeleton className="w-40 h-96" /> : <GoogleMap />}
 
-                <div className="flex flex-col items-center justify-center p-4 mt-4 text-2xl border-blue-500 rounded-lg border-x">
-                    <h2 className="mb-4 text-4xl font-semibold text-blue-500">Contact Information ☎</h2>
+                <div className="flex flex-col items-center justify-center p-4 mt-4 border-blue-500 rounded-lg md:text-2xl border-x">
+                    <h2 className="mb-4 font-semibold text-blue-500 md:text-4xl">Contact Information ☎</h2>
                     <p className="mb-2 text-blue-500">
                         <span className="font-semibold text-gray-500">Name: </span> Mangesh Pagare
                     </p>
