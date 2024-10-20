@@ -7,19 +7,14 @@ import HomeCom from './HomeConf'
 
 // import SparklesPreview from './Animation/HomePage'
 
+import SparklesPreview from './HomeAni/Sparkles'
 
 function Home() {
   return (
 
     <>
 
-      {/* <div className='w-full h-auto '>
-        <LampDemo />
-      </div> */}
-
-      <HomeCom />
-
-      {/* <SparklesPreview /> */}
+      <SparklesPreview />
 
     </>
   )

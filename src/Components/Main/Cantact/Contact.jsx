@@ -353,39 +353,18 @@ const ContactForm = () => {
 
 const GoogleMap = () => (
 
-    // <div className="flex w-full p-2 mt-6 border border-blue-500 rounded-lg">
-
-    //     <iframe
-    //         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50482.83394857099!2d75.31261088478634!3d19.87550342981866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb9815a369bc63%3A0x712d538b29a2a73e!2sChhatrapati%20Sambhajinagar%20(Aurangabad)%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1725380343536!5m2!1sen!2sin"
-    //         width="100%"
-    //         height="450"
-    //         className="transition-opacity duration-300 rounded-lg opacity-60 hover:opacity-80"
-    //         allowFullScreen=""
-    //         loading="lazy"
-    //         referrerPolicy="no-referrer-when-downgrade"
-    //     />
-    // </div>
-
-
-
-
     <div className="w-full gap-6 p-2 mt-6 border border-blue-500 rounded-lg ">
 
 
-
-
-
-        <div className="flex">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50482.83394857099!2d75.31261088478634!3d19.87550342981866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb9815a369bc63%3A0x712d538b29a2a73e!2sChhatrapati%20Sambhajinagar%20(Aurangabad)%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1725380343536!5m2!1sen!2sin"
-                width="100%"
-                height="450"
-                className="transition-opacity duration-300 rounded-lg opacity-60 hover:opacity-80"
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-            />
-        </div>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50482.83394857099!2d75.31261088478634!3d19.87550342981866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb9815a369bc63%3A0x712d538b29a2a73e!2sChhatrapati%20Sambhajinagar%20(Aurangabad)%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1725380343536!5m2!1sen!2sin"
+            width="100%"
+            height="450"
+            className="transition-opacity duration-300 rounded-lg opacity-60 hover:opacity-80"
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+        />
 
 
     </div>
@@ -424,7 +403,7 @@ const ContactPage = () => {
     }, []);
 
     return (
-        <div className="flex flex-col items-center justify-center w-full h-full px-4 mt-20">
+        <div className="flex flex-col items-center justify-center w-full h-full px-1 mt-20">
 
             <motion.div
                 className="grid w-full max-w-6xl grid-cols-1 gap-6 rounded-lg shadow-lg md:p-6"
@@ -432,29 +411,9 @@ const ContactPage = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
             >
-                {/* 
-                {loading ? <Skeleton className="w-40 h-96" /> : <GoogleMap />}
 
-                <div className="flex flex-col items-center justify-center p-4 mt-4 border-blue-500 rounded-lg md:text-2xl border-x">
-                    <h2 className="mb-4 font-semibold text-blue-500 md:text-4xl">Contact Information ☎</h2>
-                    <p className="mb-2 text-blue-500">
-                        <span className="font-semibold text-gray-500">Name: </span> Mangesh Pagare
-                    </p>
-                    <p className="mb-2 text-blue-500">
-                        <span className="font-semibold text-gray-500">Phone: </span>8668325464
-                    </p>
-                    <p className="mb-2 text-gray-500">
-                        <span className="font-semibold ">Email: </span>
-                        <a href="mailto:mangeshpagare011@gmail.com" className="text-blue-500 hover:underline">
-                            mangeshpagare011@gmail.com
-                        </a>
-                    </p>
-
-                </div> */}
-
-
-                <div className="flex flex-col items-center justify-center gap-6 p-4 mt-6 rounded-lg md:flex-row md:text-2xl ">
-                    <div className="flex flex-col items-center justify-center p-4 border-blue-500 rounded-lg border-x">
+                <div className="flex flex-col items-center justify-center gap-6 p-4 mt-6 rounded-lg text-start md:flex-row md:text-2xl ">
+                    <div className="flex flex-col items-start justify-center p-4 border-blue-500 rounded-lg border-x">
                         <h2 className="mb-4 font-semibold text-blue-500 md:text-4xl">Contact Information ☎</h2>
                         <p className="mb-2 text-blue-500">
                             <span className="font-semibold text-gray-500">Name: </span> Mangesh Pagare
@@ -462,6 +421,10 @@ const ContactPage = () => {
                         <p className="mb-2 text-blue-500">
                             <span className="font-semibold text-gray-500">Phone: </span>8668325464
                         </p>
+                        <p className="mb-2 text-blue-500">
+                            <span className="font-semibold text-gray-500">Address: </span> Maharastra, 431109 Gangapur
+                        </p>
+
                         <p className="mb-2 text-gray-500">
                             <span className="font-semibold ">Email: </span>
                             <a href="mailto:mangeshpagare011@gmail.com" className="text-blue-500 hover:underline">
@@ -471,13 +434,9 @@ const ContactPage = () => {
                     </div>
 
                     <div className="w-full md:w-1/2">
-                        {loading ? <Skeleton className="w-40 h-96" /> : <GoogleMap />}
+                        {loading ? <Skeleton className="w-full h-96" /> : <GoogleMap />}
                     </div>
                 </div>
-
-
-
-                {/* <GoogleMap /> */}
 
                 <ContactForm />
 

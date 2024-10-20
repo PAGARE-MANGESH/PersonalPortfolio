@@ -68,7 +68,7 @@ export default function Navbar() {
 
   return (
 
-    <nav className="fixed top-0 z-50 w-full p-2 rounded-lg shadow-lg cursor-pointer drop-blur-lg">
+    <nav className="fixed top-0 z-10 w-full p-2 transition-all duration-300 ease-in-out border-b-2 border-blue-500 rounded-lg shadow-lg cursor-pointer hover:border-b-4 drop-blur-xl ">
 
       <div className="container flex items-center justify-between mx-auto">
 
@@ -98,11 +98,11 @@ export default function Navbar() {
         )}
 
         <ul
-          className={`flex flex-col  md:translate-x-1 md:flex-row justify-center bg-gray-800 md:bg-transparent text-center md:space-x-8 items-center fixed md:static top-0 left-0 h-screen w-1/2 md:w-auto md:h-auto transform  mr-20 ${isOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out z-50`}
+          className={`flex  flex-col md:translate-x-1 md:flex-row justify-center bg-gray-800 md:bg-transparent text-center md:space-x-8 items-center fixed md:static top-0 left-0 h-screen w-1/2 md:w-auto md:h-auto transform  mr-20 ${isOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out z-50`}
         >
           {['/', '/about', '/projects', '/contact'].map((path, index) => (
 
-            <li key={index} className="mt-10 md:mt-0" data-aos="fade-down" style={{ overflow: 'hidden' }}>
+            <li key={index} className="mt-10 md:mt-0 " data-aos="fade-down" style={{ overflow: 'hidden' }}>
               <Link
                 to={path}
                 className={`block text-lg md:text-base font-medium hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200 ${location.pathname === path ? 'font-semibold text-blue-500' : 'text-gray-500'
@@ -117,20 +117,6 @@ export default function Navbar() {
           ))}
 
         </ul>
-
-        {/* <a
-          href={}
-          className={`block text-lg md:text-base font-medium hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200 ${location.pathname === path ? 'font-semibold text-blue-500' : 'text-gray-500'}`}
-        >
-
-          <button className="ml-4">
-            gitHub
-          </button>
-        </a> */}
-
-
-
-
 
 
 
