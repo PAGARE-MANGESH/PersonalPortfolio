@@ -15,7 +15,7 @@ export default function Preloader() {
     if (!loading) return null;
 
     return (
-    
+
 
         <>
             <div id="div1" className="flex translate-y-48 md:-mb-24">
@@ -40,12 +40,12 @@ export default function Preloader() {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col items-center justify-center h-screen transition-all duration-500 ease-in-out">
+            {/* <div className="flex flex-col items-center justify-center h-screen transition-all duration-500 ease-in-out">
                 <div className="w-32 h-32 mb-4 transition-transform duration-700 ease-in-out border-b-4 border-blue-500 rounded-full animate-spin hover:scale-110 hover:border-blue-700"></div>
                 <p className="mt-2 text-xl font-semibold text-blue-500 transition-colors duration-500 ease-in-out opacity-0 animate-fadeIn hover:text-blue-700">
                     Loading...
                 </p>
-            </div>
+            </div> */}
 
         </>
     );

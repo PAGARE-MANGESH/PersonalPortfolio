@@ -1,16 +1,13 @@
+
 "use client";
 import React from "react";
 import { SparklesCore } from "./SparklesConf";
-
-import HomeConf from '../HomeConf'
-import About from '../../About/AboutPage/About'
-
+import HomeConf from '../HomeConf';
 
 export default function SparklesPreview() {
     return (
-        (<div
-            className="relative flex flex-col items-center justify-center w-full h-[40rem] overflow-hidden bg-black rounded-md">
-            <div className="absolute inset-0 w-full h-screen">
+        <div className="relative flex w-full  h-screen flex-col items-center justify-center w-full h-[40rem] sm:h-[30rem] md:h-[35rem] lg:h-[40rem] overflow-hidden bg-black rounded-md transition-all duration-500 ease-in-out transform">
+            <div className="absolute inset-0 w-full h-auto">
                 <SparklesCore
                     id="tsparticlesfullpage"
                     background="transparent"
@@ -18,19 +15,13 @@ export default function SparklesPreview() {
                     maxSize={1.4}
                     particleDensity={100}
                     className="w-full h-full"
-                    particleColor="#FFFFFF" />
+                    particleColor="#FFFFFF"
+                />
             </div>
 
-            {/* <h1
-                className="relative z-20 text-3xl font-bold text-center text-white md:text-7xl lg:text-6xl">
-                Build great products
-            </h1> */}
-
-            <div>
+            <div className="relative z-10 p-4">
                 <HomeConf />
             </div>
-
-
-        </div>)
+        </div>
     );
 }

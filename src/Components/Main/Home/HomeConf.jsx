@@ -1,26 +1,24 @@
 
+
+
 import React from 'react';
 import { Link } from 'react-router-dom';
-import svg from '../../../assets/girl.svg'
-
+import svg from '../../../assets/girl.svg';
 
 function HomeConf() {
   return (
-
-    <div className="grid items-center md:h-[100rem] grid-cols-1 gap-12 px-6 mt-40 md:-mt-24 md:grid-cols-1 lg:grid-cols-2 md:h-auto lg:h-96">
-
-      <div className="relative h-[20rem] md:h-[30rem]   flex items-center justify-center order-2 md:order-1">
-
+    <div className="grid items-center h-auto grid-cols-1 gap-12 px-6 mt-20 md:grid-cols-2 lg:h-auto lg:gap-20 md:mt-0">
+      {/* Image Section */}
+      <div className="relative flex items-center justify-center order-2 h-[20rem] md:h-[25rem] lg:h-[30rem] xl:h-[35rem] md:order-1">
         <img
           src={svg}
           alt="Portfolio Image"
-          className="object-cover w-full md:h-[35rem] h-auto rounded-lg shadow-lg hover:shadow-xl md:w-full lg:w-full"
+          className="object-cover w-full h-full rounded-lg shadow-lg md:w-auto md:h-auto lg:h-full hover:shadow-xl"
         />
-
       </div>
 
-
-      <div className="left-0 z-10 order-1 text-start -mt-18 md:-mt-20 md:order-2">
+      {/* Text Section */}
+      <div className="left-0 z-10 order-1 text-start md:order-2">
         <h1 className="mt-6 mb-3 text-lg text-blue-500 transition-all duration-300 dark:text-blue-200 sm:text-xl md:text-2xl lg:text-3xl">
           Hello 👋
         </h1>
@@ -32,7 +30,7 @@ function HomeConf() {
         </h1>
 
         <Link to="/about">
-          <div className="container flex items-start justify-start mt-4 md:mt-10 ">
+          <div className="container flex items-start justify-start mt-4 md:mt-10">
             <div className="relative group">
               <button
                 className="relative inline-block w-full h-12 p-px font-semibold text-white transition-transform duration-300 ease-in-out bg-gray-800 shadow-2xl cursor-pointer rounded-xl shadow-zinc-900 hover:scale-105 active:scale-95"
@@ -66,16 +64,9 @@ function HomeConf() {
             </div>
           </div>
         </Link>
-
-
-
       </div>
-
     </div>
-
   );
 }
 
 export default HomeConf;
-
-

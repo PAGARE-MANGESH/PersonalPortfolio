@@ -44,7 +44,7 @@ export const SparklesCore = (props) => {
             {init && (
                 <Particles
                     id={id || generatedId}
-                    className={cn("h-full w-full")}
+                    className={cn("h-screen w-full")}
                     particlesLoaded={particlesLoaded}
                     options={{
                         background: {

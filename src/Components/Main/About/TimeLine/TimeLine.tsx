@@ -6,11 +6,55 @@ import { Timeline } from "./TimeLineConf";
 import HSC from '../../../../assets/HSCMarks.pdf';
 import SSC from '../../../../assets/SSCMarks.pdf';
 
+import BharatIntern from '../../../../assets/BharatIntern.pdf';
+import CodeSoft from '../../../../assets/CodeSoft.pdf';
+
+
 
 export default function TimelineDemo() {
 
     const data = [
+        {
+            title: "Experience / Achievements 📝",
+            content: (
+                <div data-aos="fade-left" style={{ overflow: 'hidden' }}>
+                    <p className="mb-4 text-xs text-neutral-400 dark:text-neutral-400 md:text-lg">
+                        I've completed some virtual internships. Here they are:
+                    </p>
+                    <div className="mb-8 overflow-x-auto">
+                        <table className="w-full text-sm text-left border-collapse md:text-base">
+                            <thead>
+                                <tr className="border-b border-neutral-300 text-neutral-400 dark:text-neutral-300">
+                                    <th className="px-4 py-3">Organization</th>
+                                    <th className="px-4 py-3">Period</th>
+                                    <th className="px-4 py-3">Certificate</th>
 
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr className="transition-all border-b border-neutral-300 hover:bg-neutral-800 ">
+                                    <td className="px-4 py-3">✅ Bharat Intern</td>
+                                    <td className="px-4 py-3">10-Oct-2023 to 10-Nov-2023</td>
+                                    <a href={BharatIntern} target="_blank" className="hover:text-blue-500">
+                                        <td className="px-4 py-3" > View </td>
+                                    </a>
+
+                                </tr>
+                                <tr className="transition-all border-b border-neutral-300 hover:bg-neutral-800">
+                                    <td className="px-4 py-3">✅ Code Soft</td>
+                                    <td className="px-4 py-3">25-Feb-2024 to 25-Mar-2024</td>
+                                    <a href={CodeSoft} target="_blank" className="hover:text-blue-500">
+                                        <td className="px-4 py-3"> View </td>
+                                    </a>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            ),
+        },
         {
             title: "Skills 📝",
             content: (
@@ -31,27 +75,27 @@ export default function TimelineDemo() {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr className="border-b text-neutral-400 dark:text-neutral-400">
-                                    <td className="py-2">✅Frontend :- </td>
-                                    <td className="py-2">HTML, CSS, JavaScript</td>
+                                <tr className="border-b text-neutral-400 hover:bg-neutral-800 dark:text-neutral-400">
+                                    <td className="py-2 ">✅Frontend :- </td>
+                                    <td className="py-2 ">HTML, CSS, JavaScript</td>
                                 </tr>
-                                <tr className="border-b text-neutral-400 dark:text-neutral-400">
+                                <tr className="border-b hover:bg-neutral-800 text-neutral-400 dark:text-neutral-400">
                                     <td className="py-2"> ✅Framework /  Libery :- </td>
                                     <td className="py-2"> React.js, Tailwind CSS, Bootstrap</td>
                                 </tr>
-                                <tr className="border-b text-neutral-400 dark:text-neutral-400">
+                                <tr className="border-b hover:bg-neutral-800 text-neutral-400 dark:text-neutral-400">
                                     <td className="py-2">✅Backend :- </td>
                                     <td className="py-2">MySQL</td>
                                 </tr>
-                                <tr className="border-b text-neutral-400 dark:text-neutral-400">
+                                <tr className="border-b hover:bg-neutral-800 text-neutral-400 dark:text-neutral-400">
                                     <td className="py-2">✅Version Control :- </td>
                                     <td className="py-2">Git, GitHub</td>
                                 </tr>
-                                <tr className="border-b text-neutral-400 dark:text-neutral-400">
+                                <tr className="border-b hover:bg-neutral-800 text-neutral-400 dark:text-neutral-400">
                                     <td className="py-2">✅Design Tools :- </td>
                                     <td className="py-2">Figma, Canva, Photoshop</td>
                                 </tr>
-                                <tr className="border-b text-neutral-400 dark:text-neutral-400">
+                                <tr className="border-b hover:bg-neutral-800 text-neutral-400 dark:text-neutral-400">
                                     <td className="py-2">✅Video Editing :- </td>
                                     <td className="py-2">Wondershare Filmora</td>
                                 </tr>
@@ -108,38 +152,38 @@ export default function TimelineDemo() {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr className="border-b text-neutral-400 dark:text-neutral-400">
+                                <tr className="border-b hover:bg-neutral-800 text-neutral-400 dark:text-neutral-400">
                                     <td className="px-2 py-2 md:px-4">✅ English</td>
                                     <td className="px-2 py-2 md:px-4">61</td>
                                     <td className="px-2 py-2 md:px-4">100</td>
                                 </tr>
-                                <tr className="border-b text-neutral-400 dark:text-neutral-400">
+                                <tr className="border-b hover:bg-neutral-800 text-neutral-400 dark:text-neutral-400">
                                     <td className="px-2 py-2 md:px-4">✅ HINDI</td>
                                     <td className="px-2 py-2 md:px-4">70</td>
                                     <td className="px-2 py-2 md:px-4">100</td>
                                 </tr>
-                                <tr className="border-b text-neutral-400 dark:text-neutral-400">
+                                <tr className="border-b hover:bg-neutral-800 text-neutral-400 dark:text-neutral-400">
                                     <td className="px-2 py-2 md:px-4">✅ MATHEMATICS & STATISTICS</td>
                                     <td className="px-2 py-2 md:px-4">68 </td>
                                     <td className="px-2 py-2 md:px-4">100</td>
                                 </tr>
-                                <tr className="border-b text-neutral-400 dark:text-neutral-400">
+                                <tr className="border-b hover:bg-neutral-800 text-neutral-400 dark:text-neutral-400">
                                     <td className="px-2 py-2 md:px-4">✅ PHYSICS</td>
                                     <td className="px-2 py-2 md:px-4">70 </td>
                                     <td className="px-2 py-2 md:px-4">100</td>
                                 </tr>
-                                <tr className="border-b text-neutral-400 dark:text-neutral-400">
+                                <tr className="border-b hover:bg-neutral-800 text-neutral-400 dark:text-neutral-400">
                                     <td className="px-2 py-2 md:px-4">✅ CHEMISTRY</td>
                                     <td className="px-2 py-2 md:px-4">75</td>
                                     <td className="px-2 py-2 md:px-4">100</td>
                                 </tr>
-                                <tr className="border-b text-neutral-400 dark:text-neutral-400">
+                                <tr className="border-b hover:bg-neutral-800 text-neutral-400 dark:text-neutral-400">
                                     <td className="px-2 py-2 md:px-4">✅ BIOLOGY</td>
                                     <td className="px-2 py-2 md:px-4">70</td>
                                     <td className="px-2 py-2 md:px-4">100</td>
                                 </tr>
                                 <br />
-                                <tr className="border text-neutral-400 dark:text-neutral-400 ">
+                                <tr className="border hover:bg-neutral-800 text-neutral-400 dark:text-neutral-400 ">
                                     {/* <td className="px-2 py-2 md:px-4">✅ PERCENTAGE </td> */}
                                     <td className="px-2 py-2 md:px-4">✅ PERCENTAGE </td>
 
@@ -186,38 +230,38 @@ export default function TimelineDemo() {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr className="border-b text-neutral-400 dark:text-neutral-400">
+                                <tr className="border-b hover:bg-neutral-800 text-neutral-400 dark:text-neutral-400">
                                     <td className="px-2 py-2 md:px-4">✅ MARATHI</td>
                                     <td className="px-2 py-2 md:px-4">81</td>
                                     <td className="px-2 py-2 md:px-4">100</td>
                                 </tr>
-                                <tr className="border-b text-neutral-400 dark:text-neutral-400">
+                                <tr className="border-b hover:bg-neutral-800 text-neutral-400 dark:text-neutral-400">
                                     <td className="px-2 py-2 md:px-4">✅ HINDI</td>
                                     <td className="px-2 py-2 md:px-4">72</td>
                                     <td className="px-2 py-2 md:px-4">100</td>
                                 </tr>
-                                <tr className="border-b text-neutral-400 dark:text-neutral-400">
+                                <tr className="border-b hover:bg-neutral-800 text-neutral-400 dark:text-neutral-400">
                                     <td className="px-2 py-2 md:px-4">✅ ENGLISH</td>
                                     <td className="px-2 py-2 md:px-4">67</td>
                                     <td className="px-2 py-2 md:px-4">100</td>
                                 </tr>
-                                <tr className="border-b text-neutral-400 dark:text-neutral-400">
+                                <tr className="border-b hover:bg-neutral-800 text-neutral-400 dark:text-neutral-400">
                                     <td className="px-2 py-2 md:px-4">✅ MATHEMATICS</td>
                                     <td className="px-2 py-2 md:px-4">46</td>
                                     <td className="px-2 py-2 md:px-4">100</td>
                                 </tr>
-                                <tr className="border-b text-neutral-400 dark:text-neutral-400">
+                                <tr className="border-b hover:bg-neutral-800 text-neutral-400 dark:text-neutral-400">
                                     <td className="px-2 py-2 md:px-4">✅  SCIENCE & TECHNOLOGY</td>
                                     <td className="px-2 py-2 md:px-4">74</td>
                                     <td className="px-2 py-2 md:px-4">100</td>
                                 </tr>
-                                <tr className="border-b text-neutral-400 dark:text-neutral-400">
+                                <tr className="border-b hover:bg-neutral-800 text-neutral-400 dark:text-neutral-400">
                                     <td className="px-2 py-2 md:px-4">✅ SOCIAL SCIENCES</td>
                                     <td className="px-2 py-2 md:px-4">77</td>
                                     <td className="px-2 py-2 md:px-4">100</td>
                                 </tr>
                                 <br />
-                                <tr className="border text-neutral-400 dark:text-neutral-400 ">
+                                <tr className="border hover:bg-neutral-800 text-neutral-400 dark:text-neutral-400 ">
                                     {/* <td className="px-2 py-2 md:px-4">✅ PERCENTAGE </td> */}
                                     <td className="px-2 py-2 md:px-4">✅ PERCENTAGE </td>
 

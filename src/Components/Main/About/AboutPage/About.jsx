@@ -199,8 +199,8 @@ const About = () => {
                 About Me
               </h2>
 
-              <p className="mt-2 text-lg text-gray-500 text-start lg:text-start">
-                "As a fresher web developer, I'm eager to bring creativity and technical expertise together to build engaging, user-friendly web applications. My goal is to grow and contribute to projects that prioritize innovation and user satisfaction."
+              <p className="mt-2 text-lg text-gray-400 text-start lg:text-start">
+                "I’m a passionate web developer with a strong foundation in creating responsive and interactive websites. With a focus on clean, efficient code and user-friendly design, I aim to bring innovative ideas to life. I'm eager to learn and grow while contributing to projects that enhance user experiences and deliver impactful solutions."
               </p>
               <div className="flex justify-start mt-4 mb-20">
                 <a
@@ -208,7 +208,7 @@ const About = () => {
                   target='_blank'
                   className="inline-block px-2 py-3 mr-2 text-sm font-medium text-center text-white transition duration-300 rounded-md"
                 >
-                  <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-blue-500 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors hover:text-white focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                  <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-blue-500 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
                     Resume
                   </button>
                 </a>
