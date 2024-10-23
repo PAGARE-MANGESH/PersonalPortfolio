@@ -72,9 +72,9 @@ const About = () => {
               {/* <Model/> */}
 
 
-              {!isImageLoaded && (
+              {/* {!isImageLoaded && (
                 <div className="absolute w-64 h-64 mb-4 bg-gray-200 rounded-full lg:w-94 lg:h-94 animate-pulse" />
-              )}
+              )} */}
 
 
               {ProfilePic && (
@@ -83,18 +83,17 @@ const About = () => {
                   alt="Profile"
                   className={` -mt-14 w-64 h-64 mb-4 rounded-full object-cover lg:w-94 lg:h-94 transition-transform duration-500 ease-in-out ${isImageLoaded ? 'scale-100 hover:scale-110' : 'scale-0'
                     }`}
-                  data-aos="fade-up"
+                  // data-aos="fade-up"
                   onLoad={() => setIsImageLoaded(true)}
-                  onError={() => setIsImageLoaded(false)}  // fallback if image fails to load
                 />
               )}
 
 
-              {!isImageLoaded && !ProfilePic && (
+              {/* {!isImageLoaded && !ProfilePic && (
                 <div className="absolute flex items-center justify-center w-64 h-64 mb-4 text-white bg-red-200 rounded-full lg:w-94 lg:h-94">
                   Image not available
                 </div>
-              )}
+              )} */}
 
 
             </div>
@@ -103,6 +102,7 @@ const About = () => {
 
             <p className='py-4 text-2xl font-extrabold text-gray-500 text-start'> Mangesh Pagare 😇 </p>
 
+            {/* Social Links */}
             <div className="flex my-4 space-x-1 md:my-4" data-aos="fade-left">
               <ul class="example-2">
                 <li class="icon-content">
@@ -193,7 +193,7 @@ const About = () => {
             data-aos="fade-up" style={{ overflow: 'hidden' }}
           >
 
-            <div className='text-start '>
+            <div className='text-start ' data-aos="fade-left" style={{ overflow: 'hidden' }}>
 
               <h2 className="mb-8 text-3xl font-extrabold text-blue-500 sm:text-4xl">
                 About Me
