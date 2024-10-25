@@ -91,7 +91,7 @@ export const ModalBody = ({
                     <motion.div
                         ref={modalRef}
                         className={cn(
-                            "min-h-[50%] max-h-[90%] md:max-w-[40%] bg-[rgba(255, 255, 255, 0.1)] backdrop-blur-sm border border-blue-500 dark:border-neutral-800 md:rounded-2xl relative z-50 flex flex-col flex-1 overflow-hidden",
+                            "min-h-[50%] max-h-[90%] md:max-w-[96%] bg-[rgba(255, 255, 255, 0.1)] backdrop-blur-sm border border-blue-500 dark:border-neutral-800 md:rounded-2xl relative z-50 flex flex-col flex-1 overflow-hidden -mt-96",
                             className
                         )}
                         initial={{
@@ -191,15 +191,12 @@ const CloseIcon = () => {
     );
 };
 
-// Hook to detect clicks outside of a component.
-// Add it in a separate file, I've added here for simplicity
 export const useOutsideClick = (
     ref,
     callback
 ) => {
     useEffect(() => {
         const listener = (event) => {
-            // DO NOTHING if the element being clicked is the target element or their children
             if (!ref.current || ref.current.contains(event.target)) {
                 return;
             }

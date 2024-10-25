@@ -1,6 +1,4 @@
 
-
-
 import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -213,9 +211,10 @@ const About = () => {
                   </button>
                 </a>
 
-                <div className='mt-1'>
+                <div className="mt-1 h-60">
                   <AnimatedModalDemo />
                 </div>
+
 
               </div>
 

@@ -43,7 +43,7 @@
 
 //           <ModalBody>
 //             <ModalContent>
-//               h4
+//               <h4
 //                 className="mb-8 text-lg font-bold text-center md:text-2xl text-neutral-300 dark:text-neutral-100">
 
 //                 <span
@@ -143,11 +143,11 @@ export default function AnimatedModalDemo() {
 
   return (
 
-    <div className="flex items-center justify-center ">
+    <div className="flex items-center justify-center">
 
       <Modal>
 
-        <ModalTrigger className="flex justify-center text-blue-500 bg-black dark:bg-white dark:text-black group/modal-btn">
+        <ModalTrigger className="flex justify-center w-full text-blue-500 bg-black dark:bg-white dark:text-black group/modal-btn">
           <span className="text-center">
             <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-blue-500 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
               More Info 😇
@@ -158,7 +158,6 @@ export default function AnimatedModalDemo() {
 
         <ModalBody className='m-2'>
           <ModalContent>
-
             <h4 className="mb-8 text-lg font-bold text-center md:text-2xl text-neutrl-500 dark:text-neutral-100">
               <span className="px-4 py-4 border border-gray-200 rounded-md dark:border-neutral-700">
                 Mangesh 😇
@@ -166,7 +165,7 @@ export default function AnimatedModalDemo() {
             </h4>
 
             <div className="flex items-center justify-center" onLoad={() => setIsImageLoaded(true)}>
-              {!isImageLoaded && <Skeleton className="w-full h-full" />}
+              {/* {!isImageLoaded && <Skeleton className="w-full h-full" />} */}
 
               <img
                 src={Img1}
@@ -177,8 +176,6 @@ export default function AnimatedModalDemo() {
               />
 
             </div>
-
-
 
 
 
@@ -209,13 +206,14 @@ export default function AnimatedModalDemo() {
                 🥗
                 <span className="text-md text-neutral-300 dark:text-neutral-300">Good food everyday</span>
               </div>
-
-
             </div>
-
 
           </ModalContent>
         </ModalBody>
+
+
+
+
 
 
       </Modal>
