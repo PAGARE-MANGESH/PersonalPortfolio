@@ -34,7 +34,7 @@ export default function TimelineDemo() {
                             <tbody>
                                 <tr className="transition-all border-b border-neutral-300 hover:bg-neutral-800 ">
                                     <td className="px-4 py-3">✅ Bharat Intern</td>
-                                    <td className="px-4 py-3">10-Oct-2023 to 10-Nov-2023</td>
+                                    <td className="px-0 py-3">10-Oct-2023 to 10-Nov-2023</td>
                                     <a href={BharatIntern} target="_blank" className="hover:text-blue-500">
                                         <td className="px-4 py-3" > View </td>
                                     </a>
@@ -42,7 +42,7 @@ export default function TimelineDemo() {
                                 </tr>
                                 <tr className="transition-all border-b border-neutral-300 hover:bg-neutral-800">
                                     <td className="px-4 py-3">✅ Code Soft</td>
-                                    <td className="px-4 py-3">25-Feb-2024 to 25-Mar-2024</td>
+                                    <td className="px-0 py-3">25-Feb-2024 to 25-Mar-2024</td>
                                     <a href={CodeSoft} target="_blank" className="hover:text-blue-500">
                                         <td className="px-4 py-3"> View </td>
                                     </a>
