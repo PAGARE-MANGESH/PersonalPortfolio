@@ -8,6 +8,8 @@ import 'aos/dist/aos.css';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
+import Swal from 'sweetalert2';
+
 const ContactForm = () => {
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
@@ -28,7 +30,7 @@ const ContactForm = () => {
         })
             .then((response) => {
                 if (response.ok) {
-                    alert('Message sent successfully, Thank You ❤ !');
+                    // alert('Message sent successfully, Thank You ❤ !');
 
                     setName('');
                     setPhone('');
@@ -41,6 +43,30 @@ const ContactForm = () => {
                 }
             })
             .catch((error) => console.error('Form submission error:', error));
+    };
+
+    const handleClick = () => {
+        let timerInterval;
+        Swal.fire({
+            title: "Thank You ❤",
+            html: "I will send in <b></b> milliseconds.",
+            timer: 2000,
+            timerProgressBar: true,
+            didOpen: () => {
+                Swal.showLoading();
+                const timer = Swal.getPopup().querySelector("b");
+                timerInterval = setInterval(() => {
+                    timer.textContent = `${Swal.getTimerLeft()}`;
+                }, 100);
+            },
+            willClose: () => {
+                clearInterval(timerInterval);
+            }
+        }).then((result) => {
+            if (result.dismiss === Swal.DismissReason.timer) {
+                console.log("I was closed by the timer");
+            }
+        });
     };
 
     return (
@@ -155,7 +181,7 @@ const ContactForm = () => {
                     </label>
                 </motion.div>
 
-                <div className="flex justify-center col-span-1 mt-6 md:col-span-2">
+                {/* <div className="flex justify-center col-span-1 mt-6 md:col-span-2">
                     <motion.button
                         type="submit"
                         className="px-6 py-3 text-blue-500 border border-blue-500 rounded-lg hover:text-white hover:bg-blue-500"
@@ -164,7 +190,22 @@ const ContactForm = () => {
                     >
                         Send Message
                     </motion.button>
+                </div> */}
+
+
+
+                <div className="flex justify-center col-span-1 mt-6 md:col-span-2">
+                    <motion.button
+                        type="submit"  // Change to button instead of submit to prevent form submission
+                        className="px-6 py-3 text-blue-500 border border-blue-500 rounded-lg hover:text-white hover:bg-blue-500"
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.3 }}
+                        onClick={handleClick}
+                    >
+                        Send Message
+                    </motion.button>
                 </div>
+
             </motion.form>
         </fieldset>
     );
@@ -284,8 +325,6 @@ const ContactPage = () => {
                         {loading ? <Skeleton className="w-full h-96" /> : <GoogleMap />}
                     </div>
                 </div>
-
-
                 <ContactForm />
             </motion.div>
             <ScrollToTopButton />

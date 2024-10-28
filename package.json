@@ -45,6 +45,7 @@
     "react-router-dom": "^6.25.1",
     "react-shimmer-effects": "^1.0.3",
     "simple-parallax-js": "^6.0.1",
+    "sweetalert2": "^11.14.4",
     "tailwind-merge": "^2.4.0",
     "three": "^0.167.1",
     "three-stdlib": "^2.32.1"
