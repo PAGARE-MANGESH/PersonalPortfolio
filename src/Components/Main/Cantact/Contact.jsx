@@ -274,33 +274,6 @@ const ContactPage = () => {
                 transition={{ duration: 0.5 }}
             >
 
-                {/* <div className="flex flex-col items-center justify-center gap-6 p-4 mt-6 rounded-lg text-start md:flex-row md:text-2xl ">
-                    <div className="flex flex-col items-start justify-center p-4 border-blue-500 rounded-lg border-x">
-                        <h2 className="mb-4 font-semibold text-blue-500 md:text-4xl">Contact Information ☎</h2>
-                        <p className="mb-2 text-blue-500">
-                            <span className="font-semibold text-gray-500">Name: </span> Mangesh Pagare
-                        </p>
-                        <p className="mb-2 text-blue-500">
-                            <span className="font-semibold text-gray-500">Phone: </span>8668325464
-                        </p>
-                        <p className="mb-2 text-blue-500">
-                            <span className="font-semibold text-gray-500">Address: </span> Maharastra, 431109 Gangapur
-                        </p>
-
-                        <p className="mb-2 text-gray-500">
-                            <span className="font-semibold ">Email: </span>
-                            <a href="mailto:mangeshpagare011@gmail.com" className="text-blue-500 hover:underline">
-                                mangeshpagare011@gmail.com
-                            </a>
-                        </p>
-                    </div>
-
-                    <div className="w-full md:w-1/2">
-                        {loading ? <Skeleton className="w-full h-96" /> : <GoogleMap />}
-                    </div>
-                </div> */}
-
-
                 <div className="flex flex-col items-center justify-center gap-6 p-4 mt-6 rounded-lg text-start md:flex-row md:text-2xl ">
                     <div className="flex flex-col items-start justify-center p-6 transition-all duration-300 border-blue-500 rounded-lg border-x hover:shadow-lg hover:scale-105">
                         <h2 className="mb-4 text-2xl font-semibold text-blue-500 md:text-4xl">Contact Information ☎</h2>
@@ -325,8 +298,11 @@ const ContactPage = () => {
                         {loading ? <Skeleton className="w-full h-96" /> : <GoogleMap />}
                     </div>
                 </div>
+
                 <ContactForm />
+
             </motion.div>
+
             <ScrollToTopButton />
         </div>
     );

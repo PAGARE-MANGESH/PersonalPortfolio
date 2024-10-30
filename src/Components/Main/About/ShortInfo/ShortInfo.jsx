@@ -143,7 +143,7 @@ export default function AnimatedModalDemo() {
 
   return (
 
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center ">
 
       <Modal>
 
@@ -219,5 +219,7 @@ export default function AnimatedModalDemo() {
       </Modal>
 
     </div>
+
+
   );
 }
