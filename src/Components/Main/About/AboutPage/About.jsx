@@ -8,7 +8,6 @@ import ProfilePic from '../../../../assets/ProfileImg.jpg';
 import { FaArrowUp } from "react-icons/fa";
 import FlipWordsDemo from './TextAnim/flip';
 import TimelineDemo from '../TimeLine/TimeLine';
-
 import InfiniteMovingCardsDemo from '../../Project/ProjectCards'
 
 const About = () => {
@@ -179,10 +178,10 @@ const About = () => {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            data-aos="fade-up" style={{ overflow: 'hidden' }}
+            data-aos="fade-up"
           >
 
-            <div className='text-start ' data-aos="fade-left" style={{ overflow: 'hidden' }}>
+            <div className='-mt-10 text-start' data-aos="fade-left" style={{ overflow: 'hidden' }}>
 
               <h2 className="mb-8 text-3xl font-extrabold text-blue-500 sm:text-4xl">
                 About Me
@@ -237,6 +236,7 @@ const About = () => {
 
     </>
   );
+
 };
 
 export default About;

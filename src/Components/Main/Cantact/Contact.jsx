@@ -60,6 +60,10 @@ const ContactForm = () => {
                 }, 100);
             },
             willClose: () => {
+                setName('');
+                setPhone('');
+                setEmail('');
+                setAddress('');
                 clearInterval(timerInterval);
             }
         }).then((result) => {
