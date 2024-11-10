@@ -1,9 +1,8 @@
 
-
 import React from "react";
 import { Timeline } from "./TimeLineConf";
 
-import HSC from '../../../../assets/HSCMarks.pdf';
+import pdfFileHSC from '../../../../assets/HSCMarks.pdf';
 import SSC from '../../../../assets/SSCMarks.pdf';
 
 import BharatIntern from '../../../../assets/BharatIntern.pdf';
@@ -14,6 +13,7 @@ import CodeSoft from '../../../../assets/CodeSoft.pdf';
 export default function TimelineDemo() {
 
     const data = [
+        
         {
             title: "Experience / Achievements 📝",
             content: (
@@ -22,9 +22,9 @@ export default function TimelineDemo() {
                         I've completed some virtual internships. Here they are:
                     </p>
                     <div className="mb-8 overflow-x-auto">
-                        <table className="w-full text-sm text-left border-collapse md:text-base">
+                        <table className="w-full text-left border-collapse md:text-base">
                             <thead>
-                                <tr className="border-b border-neutral-300 text-neutral-400 dark:text-neutral-300">
+                                <tr className="border-b border-neutral-300 text-neutral-400 dark:text-neutral-300 md:text-lg">
                                     <th className="px-4 py-3">Organization</th>
                                     <th className="px-4 py-3">Period</th>
                                     <th className="px-4 py-3">Certificate</th>
@@ -32,17 +32,17 @@ export default function TimelineDemo() {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr className="transition-all border-b border-neutral-300 hover:bg-neutral-800 ">
+                                <tr className="text-xs transition-all border-b border-neutral-300 text-neutral-400 hover:bg-neutral-800 md:text-lg">
                                     <td className="px-4 py-3">✅ Bharat Intern</td>
-                                    <td className="px-0 py-3">10-Oct-2023 to 10-Nov-2023</td>
+                                    <td className="px-0 py-3 text-pretty ">10-Oct-to-Nov-2023</td>
                                     <a href={BharatIntern} target="_blank" className="hover:text-blue-500">
                                         <td className="px-4 py-3" > View </td>
                                     </a>
 
                                 </tr>
-                                <tr className="transition-all border-b border-neutral-300 hover:bg-neutral-800">
+                                <tr className="text-xs transition-all border-b border-neutral-300 text-neutral-400 hover:bg-neutral-800 md:text-lg">
                                     <td className="px-4 py-3">✅ Code Soft</td>
-                                    <td className="px-0 py-3">25-Feb-2024 to 25-Mar-2024</td>
+                                    <td className="px-0 py-3">25-Feb-to-Mar-2024</td>
                                     <a href={CodeSoft} target="_blank" className="hover:text-blue-500">
                                         <td className="px-4 py-3"> View </td>
                                     </a>
@@ -199,7 +199,7 @@ export default function TimelineDemo() {
 
 
                     <a
-                        href={HSC}
+                        href={pdfFileHSC}
 
                         target="_blank"
                         className="text-xs font-medium text-blue-500 md:text-lg hover:derline"

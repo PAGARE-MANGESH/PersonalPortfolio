@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* for  img   */
+
 body {
   padding: 0;
   margin: 0;
@@ -24,7 +26,6 @@ body::-webkit-scrollbar {
 }
 
 /* preloader Animation  */
-
 
 #div1 {
   width: 100%;
@@ -121,6 +122,11 @@ body::-webkit-scrollbar {
 /* Home Social btns  */
 
 /* From Uiverse.io by wilsondesouza */
+
+#AboutImg {
+  filter: drop-shadow(15px 50px 50px #39383a);
+}
+
 ul {
   list-style: none;
 }
