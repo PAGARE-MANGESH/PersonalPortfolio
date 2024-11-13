@@ -47,7 +47,6 @@ const About = () => {
           {/* Profile Picture and Share Button */}
 
           <motion.div
-
             className="flex flex-col items-center lg:items-center"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -69,7 +68,6 @@ const About = () => {
                 />
               )}
             </div>
-
 
 
             <p className='py-4 font-mono text-2xl font-extrabold text-gray-200 text-start'> Mangesh Pagare 😇 </p>
@@ -164,7 +162,7 @@ const About = () => {
             data-aos="fade-up"
           >
 
-            <div className='mt-16 text-start' data-aos="fade-left">
+            <div className='mt-16 capitalize text-start text-pretty ' data-aos="fade-left">
 
               <h2 className="mb-8 text-3xl font-extrabold text-blue-500 md:-mt-28 sm:text-4xl">
                 About Me
@@ -184,9 +182,6 @@ const About = () => {
                     Resume
                   </button>
                 </a>
-
-
-
               </div>
 
             </div>

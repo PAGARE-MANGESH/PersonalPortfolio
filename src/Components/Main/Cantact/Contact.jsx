@@ -315,7 +315,7 @@ const ContactPage = () => {
                         </p>
 
                         <p className="mb-3 text-base text-gray-500 md:text-lg">
-                            <span className="font-medium text-gray-400">Phone: </span> 8668325464
+                            <span className="font-medium text-gray-400 ">Phone: </span> 8668325464
                         </p>
 
                         <p className="mb-3 text-base text-gray-500 md:text-lg">
