@@ -258,7 +258,7 @@ export default function ProjectTimelineDemo() {
                         <strong>Technologies:</strong> REACT, TAILWIND CSS, JAVASCRIPT
                     </p>
                     <a
-                        href="https://head-phones-lovat.vercel.app/"
+                        href="https://e-comm-ruddy.vercel.app/shopping"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="font-medium text-blue-500 text-md hover:underline"
@@ -311,6 +311,7 @@ export default function ProjectTimelineDemo() {
                 </div>
             ),
         },
+
     ];
     return (
         <div className="w-full h-auto overflow-hidden">
