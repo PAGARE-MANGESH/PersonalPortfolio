@@ -3,13 +3,9 @@
 "use client";
 import AOS from 'aos';
 import React, { useEffect } from "react";
-
-// import MyImg from '../../../../assets/ProfileImg.jpg'
-
-import { FaCode, FaVideo, FaPaintBrush } from 'react-icons/fa';
-
 import { CanvasRevealEffect } from "./CardsConf";
 import { AnimatePresence, motion } from "framer-motion";
+import { FaCode, FaVideo, FaPaintBrush } from 'react-icons/fa';
 
 export default function CanvasRevealEffectDemo() {
 
@@ -65,11 +61,11 @@ const Card = ({
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
             className="border border-blue/[0.2] group/canvas-card flex items-center justify-center dark:border-white/[0.2]  max-w-sm w-full mx-auto p-4 relative h-[30rem] relative">
-            <Icon className="absolute w-6 h-6 text-blue-500 -top-3 -left-3 dark:text-white" />
-            <Icon className="absolute w-6 h-6 text-blue-500 -bottom-3 -left-3 dark:text-white" />
-            <Icon className="absolute w-6 h-6 text-blue-500 -top-3 -right-3 dark:text-white" />
+            <Icon className="absolute w-6 h-6 text-white -top-3 -left-3" />
+            <Icon className="absolute w-6 h-6 text-white -bottom-3 -left-3" />
+            <Icon className="absolute w-6 h-6 text-white -top-3 -right-3" />
             <Icon
-                className="absolute w-6 h-6 text-blue-500 -bottom-3 -right-3 dark:text-white" />
+                className="absolute w-6 h-6 text-white -bottom-3 -right-3" />
             <AnimatePresence>
                 {hovered && (
                     <motion.div

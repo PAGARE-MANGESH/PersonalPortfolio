@@ -5,6 +5,7 @@ import './index.css'
 // import GridBackgroundDemo from './Components/BG/Bg'
 import Layout from './LenisScoll'
 
+
 import './Script'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -12,11 +13,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
 
 
-    {/* <Rounting /> */}
 
-    {/* <GridBackgroundDemo /> */}
-
-    <Layout/>
+    <Layout />
 
 
   </React.StrictMode>

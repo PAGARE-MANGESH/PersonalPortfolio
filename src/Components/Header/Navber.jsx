@@ -11,6 +11,7 @@ import { FaBars, FaTimes, FaMoon, FaSun, FaGithub } from 'react-icons/fa';
 
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
+import { motion, useScroll } from "framer-motion";
 
 export default function Navbar() {
 
@@ -21,11 +22,16 @@ export default function Navbar() {
   }, []);
 
 
+
+
   const [isOpen, setIsOpen] = useState(false); // Start with the menu closed
   const [darkMode, setDarkMode] = useState(false);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   const location = useLocation();
+
+  const { scrollYProgress } = useScroll();
+
 
 
   const toggleMenu = () => {
@@ -126,7 +132,8 @@ export default function Navbar() {
 
 
 
-    <nav className="fixed top-0 z-10 w-full p-2 transition-all duration-300 ease-in-out border-b-2 border-blue-500 rounded-lg shadow-lg cursor-pointer hover:border-b-4 backdrop-blur-xl">
+    <nav className="fixed top-0 z-20 w-full p-2 transition-all duration-300 ease-in-out border-b-2 border-blue-500 rounded-lg shadow-lg cursor-pointer hover:border-b-4 backdrop-blur-xl">
+
       <div className="container flex items-center justify-between mx-auto">
 
         {/* Logo Section */}
@@ -171,6 +178,8 @@ export default function Navbar() {
         </ul>
 
       </div>
+      <motion.div style={{ scaleX: scrollYProgress }} className="progress-bar" />
+
     </nav>
 
   );

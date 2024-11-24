@@ -9,6 +9,11 @@ body {
   margin: 0;
 }
 
+* {
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 body::-webkit-scrollbar {
   display: none;
 }
@@ -223,15 +228,6 @@ ul {
   background-color: #ff0000;
 }
 
-
-
-
-
-
-
-
-
-
 .scrolldown {
   --color: white;
   --sizeX: 20px;
@@ -239,7 +235,7 @@ ul {
   position: relative;
   width: var(--sizeX);
   height: var(--sizeY);
-  margin-left: var(sizeX /);
+  margin-left: var(sizeX);
   border: calc(var(--sizeX) / 10) solid var(--color);
   border-radius: 50px;
   box-sizing: border-box;
@@ -342,4 +338,14 @@ ul {
 #scollbtn4 {
   opacity: 0.5;
   margin-top: -90px;
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #008cff;
+  transform-origin: 0%;
 }
