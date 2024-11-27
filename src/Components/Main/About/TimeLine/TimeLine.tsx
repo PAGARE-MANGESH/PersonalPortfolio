@@ -25,9 +25,9 @@ export default function TimelineDemo() {
                         <table className="w-full text-left border-collapse md:text-base">
                             <thead>
                                 <tr className="text-sm border-b border-neutral-300 text-neutral-400 dark:text-neutral-300 md:text-lg">
-                                    <th className="px-4 py-3">Organization</th>
-                                    <th className="px-4 py-3">Period</th>
-                                    <th className="px-4 py-3">Certificate</th>
+                                    <th className="px-2 py-3">Organization</th>
+                                    <th className="px-2 py-3">Period</th>
+                                    <th className="px-2 py-3">Certificate</th>
 
                                 </tr>
                             </thead>

@@ -6,12 +6,12 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import LogoImg from '../../assets/ProfileImg.jpg'
-import { FaBars, FaTimes, FaMoon, FaSun, FaGithub } from 'react-icons/fa';
+import { FaBars, FaTimes, } from 'react-icons/fa';
 
 
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
-import { motion, useScroll } from "framer-motion";
+import { motion, useScroll, useSpring } from "framer-motion";
 
 export default function Navbar() {
 
@@ -31,7 +31,11 @@ export default function Navbar() {
   const location = useLocation();
 
   const { scrollYProgress } = useScroll();
-
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  })
 
 
   const toggleMenu = () => {
@@ -168,7 +172,7 @@ export default function Navbar() {
             <li key={index} className="mx-4 mt-10 md:mt-0" data-aos="fade-down" style={{ overflow: 'hidden' }}>
               <Link
                 to={path}
-                className={`block text-lg md:text-base font-medium hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200 ${location.pathname === path ? 'font-semibold text-blue-500' : 'text-gray-500'}`}
+                className={`block text-lg md:text-base font-medium hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200 ${location.pathname === path ? `font-semibold text-blue-500 sm:text-blue-500 ` : 'text-gray-500'}`}
                 onClick={closeMenu}
               >
                 {path === '/' ? 'Home' : path.replace('/', '').charAt(0).toUpperCase() + path.slice(2)}
@@ -178,7 +182,7 @@ export default function Navbar() {
         </ul>
 
       </div>
-      <motion.div style={{ scaleX: scrollYProgress }} className="progress-bar" />
+      <motion.div style={{ scaleX }} className="progress-bar" />
 
     </nav>
 

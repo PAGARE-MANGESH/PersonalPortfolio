@@ -42,21 +42,21 @@ export const ProjectTimeline = ({ data }: { data: TimelineEntry[] }) => {
 
 
     return (
-        
+
         <div
-            className="w-full pt-20 font-sans box md:px-10"
+            className="w-full pt-20 font-sans md:px-10"
             ref={containerRef}
         >
-            <div className="px-4 py-20 mx-auto max-w-7xl md:px-8 lg:px-10"  data-aos="fade-up">
+            <div className="py-20 mx-auto max-w-7xl md:px-10 lg:px-10" data-aos="fade-up">
                 <h2 className="max-w-4xl mb-4 text-lg md:text-4xl text-neutral-400 dark:text-neutral-400">
                     My Projects Journey 😇
                 </h2>
                 <p className="max-w-sm text-sm text-neutral-400 dark:text-neutral-300 md:text-base">
                     I&apos;ve been working on Projects form the past 2 years. Here&apos;s
-                    all  about of my project journey. 
+                    all  about of my project journey.
                 </p>
             </div>
-            
+
             <div ref={ref} className="relative pb-20 mx-auto max-w-7xl">
                 {data.map((item, index) => (
                     <div

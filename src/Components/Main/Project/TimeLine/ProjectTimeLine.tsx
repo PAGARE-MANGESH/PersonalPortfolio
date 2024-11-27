@@ -164,6 +164,7 @@ export default function ProjectTimelineDemo() {
         },
 
     ];
+
     return (
         <div className="w-full h-auto overflow-hidden">
             <ProjectTimeline data={data} />

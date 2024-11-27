@@ -9,7 +9,7 @@ import { FaArrowUp } from "react-icons/fa";
 function Projects() {
 
     useEffect(() => {
-        AOS.init({ duration: 1000 }); // Duration is optional
+        AOS.init({ duration: 1000 });
     }, []);
 
 
