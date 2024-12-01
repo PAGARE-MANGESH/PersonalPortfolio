@@ -1,19 +1,19 @@
 
-import React from "react";
-import { Timeline } from "./TimeLineConf";
-
-import pdfFileHSC from '../../../../assets/HSCMarks.pdf';
 import SSC from '../../../../assets/SSCMarks.pdf';
+import pdfFileHSC from '../../../../assets/HSCMarks.pdf';
 
 import BharatIntern from '../../../../assets/BharatIntern.pdf';
 import CodeSoft from '../../../../assets/CodeSoft.pdf';
 
 
+import React from "react";
+import { Timeline } from "./TimeLineConf";
 
 export default function TimelineDemo() {
 
+
     const data = [
-        
+
         {
             title: "Experience / Achievements 📝",
             content: (
@@ -46,8 +46,6 @@ export default function TimelineDemo() {
                                     <a href={CodeSoft} target="_blank" className="hover:text-blue-500">
                                         <td className="px-4 py-3"> View </td>
                                     </a>
-
-
                                 </tr>
                             </tbody>
                         </table>
@@ -131,9 +129,11 @@ export default function TimelineDemo() {
                 </div>
             ),
         },
+
         {
             title: "2022 - HSC 📖",
             content: (
+
                 <div className="flex flex-col items-start space-y-4"
                     data-aos="fade-left" style={{ overflow: 'hidden' }}
 
@@ -288,8 +288,8 @@ export default function TimelineDemo() {
     ];
 
     return (
-        <div className="w-full">
+        (<div className="w-full">
             <Timeline data={data} />
-        </div>
+        </div>)
     );
 }

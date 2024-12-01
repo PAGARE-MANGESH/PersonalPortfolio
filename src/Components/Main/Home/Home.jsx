@@ -17,7 +17,6 @@ function Home() {
 
   return (
     <>
-
       <SparklesPreview />
 
       <div className='-mb-2 md:-mb-20' >

@@ -70,7 +70,7 @@ const About = () => {
             </div>
 
 
-            <p className='py-4 font-mono text-2xl font-extrabold text-gray-200 text-start'> Mangesh Pagare 😇 </p>
+            <p className='py-4 text-2xl font-extrabold text-blue-500 text-start'> Mangesh Pagare 😇 </p>
 
             <div className="flex my-4 space-x-1 md:my-4" data-aos="fade-left">
               <ul class="example-2">
@@ -164,11 +164,11 @@ const About = () => {
 
             <div className='mt-16 capitalize text-start text-pretty ' data-aos="fade-left">
 
-              <h2 className="mb-8 text-3xl font-extrabold text-blue-500 md:-mt-28 sm:text-4xl">
+              <h2 className="p-4 mb-8 text-3xl font-extrabold text-blue-500 md:-mt-28 sm:text-4xl">
                 About Me
               </h2>
 
-              <p className="mt-2 text-lg text-gray-400 text-start lg:text-start">
+              <p className="p-4 mt-2 text-lg text-gray-400 text-start lg:text-start">
                 "I’m a passionate web developer with a strong foundation in creating responsive and interactive websites. With a focus on clean, efficient code and user-friendly design, I aim to bring innovative ideas to life. I'm eager to learn and grow while contributing to projects that enhance user experiences and deliver impactful solutions."
               </p>
 

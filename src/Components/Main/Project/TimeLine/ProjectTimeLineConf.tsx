@@ -51,7 +51,7 @@ export const ProjectTimeline = ({ data }: { data: TimelineEntry[] }) => {
                 <h2 className="max-w-4xl mb-4 text-lg md:text-4xl text-neutral-400 dark:text-neutral-400">
                     My Projects Journey 😇
                 </h2>
-                <p className="max-w-sm text-sm text-neutral-400 dark:text-neutral-300 md:text-base">
+                <p className="max-w-sm text-md text-neutral-400 dark:text-neutral-300 md:text-base">
                     I&apos;ve been working on Projects form the past 2 years. Here&apos;s
                     all  about of my project journey.
                 </p>

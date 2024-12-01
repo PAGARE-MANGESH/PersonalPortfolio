@@ -8,7 +8,9 @@ import svg from '../../../assets/girl.svg';
 function HomeConf() {
   return (
     <div className="grid items-center h-auto grid-cols-1 gap-12 px-6 mt-20 md:grid-cols-2 lg:h-auto lg:gap-20 md:mt-0">
+
       {/* Image Section */}
+
       <div className="relative flex items-center justify-center order-2 h-[20rem] md:h-[25rem] lg:h-[30rem] xl:h-[35rem] md:order-1">
         <img
           src={svg}
@@ -18,14 +20,16 @@ function HomeConf() {
       </div>
 
       {/* Text Section */}
+
       <div className="left-0 z-10 order-1 text-start md:order-2">
+
         <h1 className="mt-6 mb-3 text-lg text-blue-500 transition-all duration-300 dark:text-blue-200 sm:text-xl md:text-2xl lg:text-3xl">
           Hello 👋
         </h1>
         <p className="transition-all duration-300 text-slate-400 text-md md:text-lg lg:text-xl">
           Welcome To
         </p>
-        <h1 className="text-3xl font-bold text-blue-600 transition-transform duration-300 transform md:text-4xl lg:text-6xl hover:text-blue-500">
+        <h1 className="text-3xl font-bold text-blue-400 transition-transform duration-300 transform md:text-4xl lg:text-6xl hover:text-blue-500">
           My Portfolio
         </h1>
 
@@ -64,6 +68,7 @@ function HomeConf() {
             </div>
           </div>
         </Link>
+
       </div>
     </div>
   );
