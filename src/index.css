@@ -4,14 +4,19 @@
 
 /* for  img   */
 
+@font-face {
+  font-family: Game_Of_Squids;
+  src: url("assets/Game\ Of\ Squids.woff");
+}
+
 body {
   padding: 0;
   margin: 0;
 }
 
 * {
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Game_Of_Squids, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 body::-webkit-scrollbar {

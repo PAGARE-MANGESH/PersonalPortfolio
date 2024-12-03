@@ -257,7 +257,7 @@ const ShaderMaterial = ({
     );
 };
 
-const Shader = ({ source, uniforms, maxFps = 60 }) => {
+const Shader = ({ source, uniforms, maxFps = 80 }) => {
     return (
         (<Canvas className="absolute inset-0 w-full h-full text-blue-500 border border-blue-400 ">
             <ShaderMaterial source={source} uniforms={uniforms} maxFps={maxFps} />

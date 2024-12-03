@@ -3,13 +3,19 @@
 import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
 import { ProjectTimeline } from './ProjectTimeLineConf';
-import Project1 from '../../../../assets/Portfolio.jpg';
-import Project1Dark from '../../../../assets/PortfolioDark.jpg';
-import Project2 from '../../../../assets/Ecomm.jpg';
-import Project2Dark from '../../../../assets/EcommDark.jpg';
-import Project3 from '../../../../assets/Carpe.jpg';
-import Project3Dark from '../../../../assets/CarPenterzDark.jpg';
+
+
+
+import Project1 from '../../../../assets/Portfolio.webp';
+import Project1Dark from '../../../../assets/PortfolioDark.webp';
+import Project2 from '../../../../assets/Ecomm.webp';
+import Project2Dark from '../../../../assets/EcommDark.webp';
+import Project3 from '../../../../assets/Carpe.webp';
+import Project3Dark from '../../../../assets/CarPenterzDark.webp';
+
+
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
