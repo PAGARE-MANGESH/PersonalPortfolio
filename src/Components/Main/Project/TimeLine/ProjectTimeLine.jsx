@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
 import { ProjectTimeline } from './ProjectTimeLineConf';
 
 
@@ -17,9 +16,11 @@ import Project3Dark from '../../../../assets/CarPenterzDark.webp';
 
 
 import Skeleton from 'react-loading-skeleton';
+
 import 'react-loading-skeleton/dist/skeleton.css';
 
 export default function ProjectTimelineDemo() {
+
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -156,6 +157,7 @@ export default function ProjectTimelineDemo() {
                     </div>
                     <p className="mt-4 text-xs text-neutral-400 dark:text-neutral-400 md:text-lg">
                         <strong>Technologies:</strong> HTML, CSS, JAVASCRIPT, BOOTSTRAP
+
                     </p>
                     <a
                         href="https://pagare-mangesh.github.io/FirstPortfolio/"

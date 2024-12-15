@@ -19,7 +19,8 @@ import GridBackgroundDemo from './Components/BG/Bg'
 
 
 
-function Layout() {
+function 
+Layout() {
     const lenis = useLenis()
 
     useEffect(() => {

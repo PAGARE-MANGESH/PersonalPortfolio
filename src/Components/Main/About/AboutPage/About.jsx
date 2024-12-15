@@ -6,9 +6,15 @@ import { motion } from 'framer-motion';
 import Resume from '../../../../assets/Resume.pdf';
 import ProfilePic from '../../../../assets/ProfileImg.jpg';
 import { FaArrowUp } from "react-icons/fa";
-import FlipWordsDemo from './TextAnim/flip';
+// import FlipWordsDemo from './TextAnim/flip';
 import TimelineDemo from '../TimeLine/TimeLine';
 import InfiniteMovingCardsDemo from '../../Project/ProjectCards'
+
+import ImgSwape from './ImgCarousel'
+
+
+import HeroScrollDemo from '../Parallx/Parallax'
+
 
 const About = () => {
 
@@ -34,45 +40,51 @@ const About = () => {
 
       <div className="relative w-full px-4 mx-auto sm:px-6 lg:px-8 md:pb-20 " data-aos="fade-up" style={{ overflow: 'hidden' }}>
         <div className="relative flex flex-col w-full md:flex-row md:justify-between md:items-center">
-          <div className="flex flex-col items-center justify-center w-full text-slate-400 md:items-start">
-            <FlipWordsDemo />
+          <div className="flex flex-col items-center justify-center w-full text-slate-400 md:items-start ">
+            {/* <FlipWordsDemo /> */}
+            <HeroScrollDemo />
           </div>
         </div>
       </div>
 
-      <div className="relative px-2 md:py-10 sm:px-6 lg:px-8 ">
+      <div className="relative px-2 mt-20 md:py-10 sm:px-6 lg:px-8 ">
 
         <div className="grid grid-cols-1 pb-8 mx-auto max-w-7xl lg:grid-cols-2 gap-y-6 lg:gap-x-8">
 
           {/* Profile Picture and Share Button */}
 
           <motion.div
-            className="flex flex-col items-center lg:items-center"
+            className="flex flex-col items-center my-0 lg:items-center"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
 
-            <div className="relative flex items-center justify-center md:-mt-4">
+            <div className="relative flex items-center justify-center mt-10 md:-mt-4">
 
               {ProfilePic && (
-                <img
-                  src={ProfilePic}
-                  alt="Profile"
-                  id='AboutImg'
-                  loading='lazy'
-                  className={` -mt-14 w-64 h-64 mb-4 rounded-full object-cover lg:w-94 lg:h-94 transition-transform duration-500 ease-in-out ${isImageLoaded ? 'scale-100 hover:scale-110' : 'scale-0'
-                    }`}
-                  // data-aos="fade-up"
-                  onLoad={() => setIsImageLoaded(true)}
-                />
+
+                // <img
+                //   src={ProfilePic}
+                //   alt="Profile"
+                //   id='AboutImg'
+                //   loading='lazy'
+                //   className={` -mt-14 w-64 h-64 mb-4 rounded-full object-cover lg:w-94 lg:h-94 transition-transform duration-500 ease-in-out ${isImageLoaded ? 'scale-100 hover:scale-110' : 'scale-0'
+                //     }`}
+                //   // data-aos="fade-up"
+                //   onLoad={() => setIsImageLoaded(true)}
+                // />
+
+                <ImgSwape />
+
               )}
+
             </div>
 
 
-            <p className='py-4 text-2xl font-extrabold text-blue-500 text-start'> Mangesh Pagare 😇 </p>
+            <p className='py-4 text-2xl font-extrabold text-blue-500 text-pretty text-start' data-aos="fade-up"> Mangesh Pagare 😇 </p>
 
-            <div className="flex my-4 space-x-1 md:my-4" data-aos="fade-left">
+            <div className="flex my-4 space-x-1 md:my-4 " >
               <ul class="example-2">
                 <li class="icon-content">
                   <a
@@ -162,7 +174,7 @@ const About = () => {
             data-aos="fade-up"
           >
 
-            <div className='mt-16 capitalize text-start text-pretty ' data-aos="fade-left">
+            <div className='mt-16 capitalize md:-mt-20 text-start text-pretty ' data-aos="fade-left">
 
               <h2 className="p-4 mb-8 text-3xl font-extrabold text-blue-500 md:-mt-28 sm:text-4xl">
                 About Me
@@ -172,7 +184,7 @@ const About = () => {
                 "I’m a passionate web developer with a strong foundation in creating responsive and interactive websites. With a focus on clean, efficient code and user-friendly design, I aim to bring innovative ideas to life. I'm eager to learn and grow while contributing to projects that enhance user experiences and deliver impactful solutions."
               </p>
 
-              <div className="flex justify-start mt-4">
+              <div className="flex justify-start mx-4 mt-4">
                 <a
                   href={Resume}
                   target='_blank'

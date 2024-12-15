@@ -308,23 +308,23 @@ const ContactPage = () => {
                 {/* Contact Section */}
                 <div className="flex flex-col items-center justify-center gap-8 p-4 mt-8 border-blue-500 rounded-lg border-y text-start md:flex-row md:text-lg">
                     <div className="flex flex-col items-start justify-center w-full px-8 transition-all duration-300 bg-transparent border-blue-500 rounded-lg shadow-md border-x h-96 hover:shadow-xl hover:scale-105 md:max-w-md">
-                        <h2 className="mb-5 font-semibold text-blue-600 text-1xl md:text-3xl">Contact Information ☎</h2>
+                        <h2 className="mb-5 text-xl font-semibold text-blue-600 md:text-3xl">Contact Information ☎</h2>
 
                         <p className="mb-3 text-base text-gray-500 md:text-lg">
-                            <span className="font-medium text-gray-400">Name: </span> Mangesh Pagare
+                            <span className="font-medium text-blue-500">Name: </span> Mangesh Pagare
                         </p>
 
                         <p className="mb-3 text-base text-gray-500 md:text-lg">
-                            <span className="font-medium text-gray-400 ">Phone: </span> 8668325464
+                            <span className="font-medium text-blue-500 ">Phone: </span> +91 8668325464
                         </p>
 
                         <p className="mb-3 text-base text-gray-500 md:text-lg">
-                            <span className="font-medium text-gray-400">Address: </span> Maharashtra, 431109 Gangapur
+                            <span className="font-medium text-blue-500">Address: </span> Maharashtra, 431109 Gangapur
                         </p>
 
                         <p className="text-base text-gray-500 md:text-lg">
-                            <span className="font-medium text-gray-400">Email: </span>
-                            <a href="mailto:mangeshpagare011@gmail.com" className="text-blue-600 hover:underline">
+                            <span className="font-medium text-blue-500">Email: </span>
+                            <a href="mailto:mangeshpagare011@gmail.com" className="text-gray-500 hover:underline">
                                 mangeshpagare011@gmail.com
                             </a>
                         </p>

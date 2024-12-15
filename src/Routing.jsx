@@ -13,6 +13,33 @@ import Preloader from './PreLoader';
 import { SkeletonTheme } from 'react-loading-skeleton';
 
 
+// const pageVariants = {
+//   initial: {
+//     opacity: 0,
+//     y: 50,
+//     scale: 0.9,
+//   },
+//   animate: {
+//     opacity: 1,
+//     y: 0,
+//     scale: 1,
+//     transition: {
+//       duration: 0.7,
+//       ease: [0.43, 0.13, 0.23, 0.96],
+//     },
+//   },
+//   exit: {
+//     opacity: 0,
+//     y: -50,
+//     scale: 0.95,
+//     transition: {
+//       duration: 0.5,
+//       ease: 'easeInOut',
+//     },
+//   },
+// };
+
+
 const pageVariants = {
   initial: {
     opacity: 0,
@@ -34,14 +61,15 @@ const pageVariants = {
     scale: 0.95,
     transition: {
       duration: 0.5,
-      ease: 'easeInOut',
+      ease: "easeInOut",
     },
   },
 };
 
+
 function AnimatedRoutes() {
   const { pathname } = useLocation();
-  const location = useLocation(); // You need this for the `Routes` key
+  const location = useLocation();  // You need this for the `Routes` key
 
   useEffect(() => {
     window.scrollTo(0, 0);
