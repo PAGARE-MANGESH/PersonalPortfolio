@@ -21,6 +21,7 @@ import GridBackgroundDemo from './Components/BG/Bg'
 
 function 
 Layout() {
+    
     const lenis = useLenis()
 
     useEffect(() => {
@@ -38,11 +39,7 @@ Layout() {
     return (
         <ReactLenis root options={{ smooth: true }} >
 
-
             <GridBackgroundDemo />
-
-
-
         </ReactLenis>
     )
 }

@@ -1,196 +1,125 @@
 
+// import { useState, useEffect } from 'react';
+// import { Link, useLocation } from 'react-router-dom';
+
+// import AOS from 'aos';
+// import 'aos/dist/aos.css';
+
+// import LogoImg from '../../assets/ProfileImg.jpg'
+
+// import 'react-loading-skeleton/dist/skeleton.css'
+// import { motion, useScroll, useSpring } from "framer-motion";
+
+// import FloatingNavDemo from './FloatingNavbar/FloatingNav'
+
+// export default function Navbar() {
+
+//   useEffect(() => {
+
+//     AOS.init({ duration: 1000 }); // Duration is optional
+
+//   }, []);
+
+
+//   const { scrollYProgress } = useScroll();
+//   const scaleX = useSpring(scrollYProgress, {
+//     stiffness: 100,
+//     damping: 30,
+//     restDelta: 0.001
+//   })
+
+
+//   return (
+
+//     <nav className="fixed top-0 z-20 w-full p-2 transition-all duration-300 ease-in-out border-b-2 border-blue-500 rounded-lg shadow-lg cursor-pointer hover:border-b-4 backdrop-blur-xl">
+//       <div className="container flex items-center justify-between ">
+
+
+//         <div className="flex items-center p-2 text-lg font-bold text-blue-500" data-aos="fade-down" style={{ overflow: 'hidden' }}>
+//           <img src={LogoImg} alt="Logo" className="w-10 h-10" />
+//           <h2 className="text-center"> Mangesh </h2>
+//         </div>
+
+
+//         <FloatingNavDemo />
+
+
+//         <div className="flex items-center space-x-1">
+//           <a href="https://github.com/PAGARE-MANGESH" target="_blank" rel="noopener noreferrer" title='Github' className="text-blue-500 hover:text-blue-700">
+//             <svg
+//               xmlns="http://www.w3.org/2000/svg"
+//               fill="currentColor"
+//               viewBox="0 0 24 24"
+//               className="w-8 h-8"
+//             >
+//               <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.744.083-.729.083-.729 1.205.084 1.838 1.238 1.838 1.238 1.07 1.835 2.807 1.305 3.495.997.108-.776.418-1.305.76-1.605-2.665-.304-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.125-.303-.535-1.524.115-3.176 0 0 1.01-.322 3.3 1.23.96-.267 1.985-.399 3.005-.404 1.02.005 2.045.137 3.005.404 2.29-1.552 3.3-1.23 3.3-1.23.65 1.653.24 2.874.115 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.805 5.625-5.475 5.92.43.372.815 1.102.815 2.22 0 1.605-.015 2.895-.015 3.286 0 .32.22.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+//             </svg>
+//           </a>
+//         </div>
+
+//         {/* Progress Bar */}
+//         <motion.div style={{ scaleX }} className="progress-bar" />
+//       </div>
+//     </nav>
+
+//   );
+// }
+
+
+
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import LogoImg from '../../assets/ProfileImg.jpg'
-import { FaBars, FaTimes, } from 'react-icons/fa';
+import LogoImg from '../../assets/ProfileImg.jpg';
 
-
-import Skeleton from 'react-loading-skeleton'
-import 'react-loading-skeleton/dist/skeleton.css'
+import 'react-loading-skeleton/dist/skeleton.css';
 import { motion, useScroll, useSpring } from "framer-motion";
+
+import FloatingNavDemo from './FloatingNavbar/FloatingNav';
 
 export default function Navbar() {
 
   useEffect(() => {
-
-    AOS.init({ duration: 1000 }); // Duration is optional
-
+    AOS.init({ duration: 1000 });
   }, []);
-
-
-
-
-  const [isOpen, setIsOpen] = useState(false); // Start with the menu closed
-  const [darkMode, setDarkMode] = useState(false);
-  const [isImageLoaded, setIsImageLoaded] = useState(false);
-
-  const location = useLocation();
 
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
     restDelta: 0.001
-  })
-
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
-
-  useEffect(() => {
-    closeMenu();
-  }, [location]);
-
-
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [darkMode]);
-
-
-  useEffect(() => {
-    // Prevent body scroll when menu is open
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
-
-  }, [isOpen]);
-
-
+  });
 
   return (
-
-    // <nav className="fixed top-0 z-10 w-full p-2 transition-all duration-300 ease-in-out border-b-2 border-blue-500 rounded-lg shadow-lg cursor-pointer hover:border-b-4 drop-blur-xl ">
-
-    //   <div className="container flex items-center justify-between mx-auto">
-
-    //     <div className="flex p-2 text-lg font-bold text-blue-500 " data-aos="fade-down" style={{ overflow: 'hidden' }} onLoad={() => setIsImageLoaded(true)}>
-    //       {!isImageLoaded && <Skeleton className="w-full h-full" />}
-    //       <img src={LogoImg} height='40px' width='40px' />
-    //       <h2 className='ml-4 tracking-widest'>
-    //         Mangesh
-    //       </h2>
-    //     </div>
-
-    //     <div className="pl-2 md:hidden">
-    //       <button onClick={toggleMenu} aria-label="Toggle menu">
-    //         {isOpen ? (
-    //           <FaTimes className="w-6 h-6 text-gray-200 transition-transform duration-300 dark:text-gray-100" />
-    //         ) : (
-    //           <FaBars className="w-6 h-6 text-gray-200 transition-transform duration-300 dark:text-gray-100" />
-    //         )}
-    //       </button>
-    //     </div>
-
-    //     {isOpen && (
-    //       <div
-    //         className="fixed inset-0 z-40 bg-black bg-opacity-50 md:hidden"
-    //         onClick={closeMenu}
-    //       ></div>
-    //     )}
-
-    //     <ul
-    //       className={`flex  flex-col md:translate-x-1 md:flex-row justify-center bg-gray-800 md:bg-transparent text-center md:space-x-8 items-center fixed md:static top-0 left-0 h-screen w-1/2 md:w-auto md:h-auto transform  mr-20 ${isOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out z-50`}
-    //     >
-    //       {['/', '/about', '/projects', '/contact'].map((path, index) => (
-
-    //         <li key={index} className="mt-10 md:mt-0 " data-aos="fade-down" style={{ overflow: 'hidden' }}>
-    //           <Link
-    //             to={path}
-    //             className={`block text-lg md:text-base font-medium hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200 ${location.pathname === path ? 'font-semibold text-blue-500' : 'text-gray-500'
-    //               }`}
-    //             onClick={closeMenu}
-    //           >
-
-    //             {path === '/' ? 'Home' : path.replace('/', '').charAt(0).toUpperCase() + path.slice(2)}
-
-    //           </Link>
-    //         </li>
-    //       ))}
-
-    //     </ul>
-
-
-
-    //   </div>
-
-    // </nav>
-
-
-
     <nav className="fixed top-0 z-20 w-full p-2 transition-all duration-300 ease-in-out border-b-2 border-blue-500 rounded-lg shadow-lg cursor-pointer hover:border-b-4 backdrop-blur-xl">
+      <div className="container grid items-center grid-cols-3 gap-6">
 
-      <div className="container flex items-center justify-between mx-auto">
-
-        {/* Logo Section */}
-        <div className="flex items-center p-2 text-lg font-bold text-blue-500" data-aos="fade-down" style={{ overflow: 'hidden' }} onLoad={() => setIsImageLoaded(true)}>
-          {!isImageLoaded && <Skeleton className="w-full h-full" />}
-          <img src={LogoImg} alt="Logo" height="40px" width="40px" />
-          <h2 className="ml-4 tracking-widest">Mangesh</h2>
+        {/* Left side (Logo) */}
+        <div className="flex items-center p-2 space-x-2 text-lg font-bold text-blue-500" data-aos="fade-down">
+          <img src={LogoImg} alt="Logo" className="w-10 h-10" />
+          <h2 className="text-center">Mangesh</h2>
         </div>
 
-        {/* Mobile Menu Toggle Button */}
-        <div className="pl-2 md:hidden">
-          <button onClick={toggleMenu} aria-label="Toggle menu">
-            {isOpen ? (
-              <FaTimes className="w-6 h-6 text-gray-200 transition-transform duration-300 dark:text-gray-100" />
-            ) : (
-              <FaBars className="w-6 h-6 text-gray-200 transition-transform duration-300 dark:text-gray-100" />
-            )}
-          </button>
+        {/* Middle (FloatingNavDemo) */}
+        <div className="flex justify-center">
+          <FloatingNavDemo />
         </div>
 
-        {/* Background Overlay for Mobile Menu */}
-        {isOpen && (
-          <div
-            className="fixed inset-0 z-40 bg-black bg-opacity-50 md:hidden"
-            onClick={closeMenu}
-          ></div>
-        )}
+        {/* Right side (Social Media Icon) */}
+        <div className="flex items-center justify-end mr-2 space-x-4">
+          <a href="https://github.com/PAGARE-MANGESH" target="_blank" rel="noopener noreferrer" title='Github' className="text-blue-500 hover:text-blue-700">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-8 h-8">
+              <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.744.083-.729.083-.729 1.205.084 1.838 1.238 1.838 1.238 1.07 1.835 2.807 1.305 3.495.997.108-.776.418-1.305.76-1.605-2.665-.304-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.125-.303-.535-1.524.115-3.176 0 0 1.01-.322 3.3 1.23.96-.267 1.985-.399 3.005-.404 1.02.005 2.045.137 3.005.404 2.29-1.552 3.3-1.23 3.3-1.23.65 1.653.24 2.874.115 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.805 5.625-5.475 5.92.43.372.815 1.102.815 2.22 0 1.605-.015 2.895-.015 3.286 0 .32.22.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+            </svg>
+          </a>
+        </div>
 
-        {/* Navigation Links */}
-        <ul className={`fixed top-0 left-0 h-screen w-1/2 md:w-auto md:h-auto bg-gray-800 md:bg-transparent flex flex-col md:flex-row justify-center items-center md:items-center md:static transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 transition-transform duration-300 ease-in-out z-50`}>
-          {['/', '/about', '/projects', '/contact'].map((path, index) => (
-            <li key={index} className="mx-4 mt-10 md:mt-0" data-aos="fade-down" style={{ overflow: 'hidden' }}>
-              <Link
-                to={path}
-                className={`block text-lg md:text-base font-medium hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200 ${location.pathname === path ? `font-semibold text-blue-500 sm:text-blue-500 ` : 'text-gray-500'}`}
-                onClick={closeMenu}
-              >
-                {path === '/' ? 'Home' : path.replace('/', '').charAt(0).toUpperCase() + path.slice(2)}
-              </Link>
-            </li>
-          ))}
-        </ul>
-
+        {/* Progress Bar */}
+        <motion.div style={{ scaleX }} className="progress-bar" />
       </div>
-      <motion.div style={{ scaleX }} className="progress-bar" />
-
     </nav>
-
   );
 }
-
-
-
-
-
-

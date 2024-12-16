@@ -82,7 +82,12 @@ const About = () => {
             </div>
 
 
-            <p className='py-4 text-2xl font-extrabold text-blue-500 text-pretty text-start' data-aos="fade-up"> Mangesh Pagare 😇 </p>
+            {/* <p className='py-4 text-2xl font-extrabold text-blue-500 text-pretty text-start' data-aos="fade-up"> Mangesh Pagare 😇 </p> */}
+            <p className='py-4 text-2xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 md:text-3xl' data-aos="fade-up">
+              Mangesh Pagare <span className='text-white'>😇</span>
+            </p>
+
+
 
             <div className="flex my-4 space-x-1 md:my-4 " >
               <ul class="example-2">
