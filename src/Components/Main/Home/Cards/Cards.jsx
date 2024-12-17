@@ -5,7 +5,8 @@ import AOS from 'aos';
 import React, { useEffect } from "react";
 import { CanvasRevealEffect } from "./CardsConf";
 import { AnimatePresence, motion } from "framer-motion";
-import { FaCode, FaVideo, FaPaintBrush } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact } from "react-icons/fa";
+import { SiFigma, SiTailwindcss } from "react-icons/si";
 
 export default function CanvasRevealEffectDemo() {
 
@@ -19,16 +20,43 @@ export default function CanvasRevealEffectDemo() {
         <>
 
             <div className="flex flex-col items-center justify-center w-full gap-4 px-8 py-20 mx-auto text-blue-500 lg:flex-row dark:bg-black">
-                <Card title="Web Development" icon={<FaCode size={40} />}>
+                {/* <Card title="UI Design" icon={<FaPaintBrush size={40} />}  >
                     <CanvasRevealEffect animationSpeed={5.1} containerClassName="bg-emerald-900 " />
-                </Card>
-                <Card title="UI Design" icon={<FaPaintBrush size={40} />} >
+                </Card> */}
+
+
+                <Card
+                    title="UI Design"
+                    icon={
+
+                        <div className="flex items-center space-x-2">
+                            <SiFigma size={30} className="text-blue-500" />
+                        </div>
+                    }
+                >
+                    <CanvasRevealEffect animationSpeed={5.1} containerClassName="bg-emerald-900 " />
+                </Card >
+
+                <Card title="Web Development" icon={
+                    <div className="flex items-center space-x-2">
+                        <FaReact size={40} className="text-blue-400" />
+                        <SiTailwindcss size={40} className="text-blue-400" />
+                    </div>
+                }>
                     <CanvasRevealEffect
                         animationSpeed={3}
                         containerClassName="bg-sky-600"
                         colors={[[125, 211, 252]]} />
-                </Card>
-                <Card title="Video Editing" icon={<FaVideo size={40} />} >
+                </Card >
+                <Card title="Front-End Development" icon={
+                    <div className="flex items-center space-x-2">
+                        <FaHtml5 size={40} className="text-orange-500" />
+                        <FaCss3Alt size={40} className="text-blue-500" />
+                        <FaJsSquare size={40} className="text-yellow-500" />
+                        <FaReact size={40} className="text-blue-400" />
+                        <SiTailwindcss size={40} className="text-blue-400" />
+                    </div>
+                }>
                     <CanvasRevealEffect
                         animationSpeed={3}
                         containerClassName="bg-black"
@@ -44,7 +72,7 @@ export default function CanvasRevealEffectDemo() {
                         className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" />
                 </Card >
 
-            </div>
+            </div >
 
         </>
     );
@@ -60,7 +88,7 @@ const Card = ({
         (<div
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
-            className="border border-blue/[0.2] group/canvas-card flex items-center justify-center dark:border-white/[0.2]  max-w-sm w-full mx-auto p-4 relative h-[30rem] relative">
+            className="border border-blue/[0.2] group/canvas-card flex items-center justify-center dark:border-white/[0.2]  max-w-sm w-full mx-auto p-4 relative h-[20rem] relative">
             <Icon className="absolute w-6 h-6 text-white -top-3 -left-3" />
             <Icon className="absolute w-6 h-6 text-white -bottom-3 -left-3" />
             <Icon className="absolute w-6 h-6 text-white -top-3 -right-3" />
@@ -82,7 +110,9 @@ const Card = ({
                     {icon}
                 </div>
                 <h2
-                    className="relative z-10 mt-4 text-xl font-bold text-black transition duration-200 opacity-0 dark:text-white group-hover/canvas-card:opacity-100 group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2">
+                    // className="relative z-10 px-8 py-2 mt-4 text-xl font-bold text-black transition duration-200 bg-gray-100 opacity-0 dark:text-white group-hover/canvas-card:opacity-100 group-hover/canvas-card:text-blue-500 group-hover/canvas-card:-translate-y-2">
+                    className="relative z-10 px-8 py-2 mt-4 text-xl font-bold text-black transition duration-200 border rounded-lg shadow-lg opacity-0 bg-gray-100/60 backdrop-blur-lg dark:text-white group-hover/canvas-card:opacity-100 group-hover/canvas-card:text-blue-800 group-hover/canvas-card:-translate-y-2 border-gray-200/40">
+
                     {title}
                 </h2>
             </div>
