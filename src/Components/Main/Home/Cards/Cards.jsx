@@ -40,6 +40,7 @@ export default function CanvasRevealEffectDemo() {
                 <Card title="Web Development" icon={
                     <div className="flex items-center space-x-2">
                         <FaReact size={40} className="text-blue-400" />
+                        <FaJsSquare size={40} className="text-yellow-500" />
                         <SiTailwindcss size={40} className="text-blue-400" />
                     </div>
                 }>

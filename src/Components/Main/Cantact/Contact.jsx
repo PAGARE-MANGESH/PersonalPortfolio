@@ -11,6 +11,7 @@ import 'react-loading-skeleton/dist/skeleton.css';
 import Swal from 'sweetalert2';
 
 const ContactForm = () => {
+
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
@@ -46,31 +47,38 @@ const ContactForm = () => {
     };
 
     const handleClick = () => {
-        let timerInterval;
-        Swal.fire({
-            title: "Thank You ❤",
-            html: "I will send in <b></b> milliseconds.",
-            timer: 2000,
-            timerProgressBar: true,
-            didOpen: () => {
-                Swal.showLoading();
-                const timer = Swal.getPopup().querySelector("b");
-                timerInterval = setInterval(() => {
-                    timer.textContent = `${Swal.getTimerLeft()}`;
-                }, 100);
-            },
-            willClose: () => {
-                setName('');
-                setPhone('');
-                setEmail('');
-                setAddress('');
-                clearInterval(timerInterval);
-            }
-        }).then((result) => {
-            if (result.dismiss === Swal.DismissReason.timer) {
-                console.log("I was closed by the timer");
-            }
-        });
+
+        if (name === '' || phone === '' || email === '' || address === '') {
+            return
+        } else {
+
+            let timerInterval;
+            Swal.fire({
+                title: "Thank You ❤",
+                html: "I will send in <b></b> milliseconds.",
+                timer: 2000,
+                timerProgressBar: true,
+                didOpen: () => {
+                    Swal.showLoading();
+                    const timer = Swal.getPopup().querySelector("b");
+                    timerInterval = setInterval(() => {
+                        timer.textContent = `${Swal.getTimerLeft()}`;
+                    }, 100);
+                },
+                willClose: () => {
+                    setName('');
+                    setPhone('');
+                    setEmail('');
+                    setAddress('');
+                    clearInterval(timerInterval);
+                }
+            }).then((result) => {
+                if (result.dismiss === Swal.DismissReason.timer) {
+                    console.log("I was closed by the timer");
+                }
+            });
+
+        }
     };
 
     return (

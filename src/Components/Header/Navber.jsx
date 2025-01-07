@@ -87,13 +87,17 @@ export default function Navbar() {
   }, []);
 
   const { scrollYProgress } = useScroll();
+
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
     restDelta: 0.001
   });
 
+  
+
   return (
+
     <nav className="fixed top-0 z-20 w-full p-2 transition-all duration-300 ease-in-out border-b-2 border-blue-500 rounded-lg shadow-lg cursor-pointer hover:border-b-4 backdrop-blur-xl">
       <div className="container grid items-center grid-cols-3 gap-6">
 
