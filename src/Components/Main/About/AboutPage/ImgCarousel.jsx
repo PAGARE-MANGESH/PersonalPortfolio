@@ -12,15 +12,6 @@ import 'swiper/css/pagination';
 
 import img1 from '../../../../assets/ProfileImg.jpg';
 
-// import img2 from '../../../../assets/AImg2.jpg';
-// import img3 from '../../../../assets/AImg3.jpg';
-// import img4 from '../../../../assets/AImg4.jpg';
-
-
-
-
-
-
 import { EffectCube, Pagination } from 'swiper/modules';
 
 export default function ImgSwaper() {

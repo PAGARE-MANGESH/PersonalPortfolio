@@ -18,7 +18,7 @@ export default function TimelineDemo() {
             title: "Experience / Achievements 📝",
             content: (
                 <div data-aos="fade-left" style={{ overflow: 'hidden' }}>
-                    <p className="mb-4 text-xs text-neutral-400 dark:text-neutral-400 md:text-lg">
+                    <p className="mb-4 text-md text-neutral-400 dark:text-neutral-400 md:text-lg">
                         I've completed some virtual internships. Here they are:
                     </p>
                     <div className="mb-8 overflow-x-auto">
@@ -32,7 +32,7 @@ export default function TimelineDemo() {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr className="text-xs transition-all border-b border-neutral-300 text-neutral-400 hover:bg-neutral-800 md:text-lg">
+                                <tr className="text-md transition-all border-b border-neutral-300 text-neutral-400 hover:bg-neutral-800 md:text-lg">
                                     <td className="px-4 py-3">✅ Bharat Intern</td>
                                     <td className="px-0 py-3 text-pretty ">10-Oct-to-Nov-2023</td>
                                     <a href={BharatIntern} target="_blank" className="hover:text-blue-500">
@@ -40,7 +40,7 @@ export default function TimelineDemo() {
                                     </a>
 
                                 </tr>
-                                <tr className="text-xs transition-all border-b border-neutral-300 text-neutral-400 hover:bg-neutral-800 md:text-lg">
+                                <tr className="text-md transition-all border-b border-neutral-300 text-neutral-400 hover:bg-neutral-800 md:text-lg">
                                     <td className="px-4 py-3">✅ Code Soft</td>
                                     <td className="px-0 py-3">25-Feb-to-Mar-2024</td>
                                     <a href={CodeSoft} target="_blank" className="hover:text-blue-500">
@@ -61,11 +61,11 @@ export default function TimelineDemo() {
                     data-aos="fade-left" style={{ overflow: 'hidden' }}
 
                 >
-                    <p className="mb-4 text-xs text-neutral-400 dark:text-neutral-400 md:text-lg">
+                    <p className="mb-4 text-md text-neutral-400 dark:text-neutral-400 md:text-lg">
                         Here are some of the core skills and tools I use in my web development projects:
                     </p>
                     <div className="mb-8 ">
-                        <table className="w-full text-xs text-left border-collapse md:text-lg">
+                        <table className="w-full text-md text-left border-collapse md:text-lg">
                             <thead>
                                 <tr className="border-b text-neutral-400 dark:text-neutral-400">
                                     <th className="py-2">Category  </th>
@@ -109,7 +109,7 @@ export default function TimelineDemo() {
                 <div className="flex flex-col items-start space-y-4"
                     data-aos="fade-left" style={{ overflow: 'hidden' }}>
 
-                    <p className="text-xs text-neutral-400 dark:text-neutral-400 md:text-lg ">
+                    <p className="text-md text-neutral-400 dark:text-neutral-400 md:text-lg ">
                         Currently pursuing 3rd year of Bachelor's in Computer Science, At Dr. Babasaheb Ambedkar Marathwada University Aurangabad .
                         focusing on web development and programming.
                     </p>
@@ -120,7 +120,7 @@ export default function TimelineDemo() {
                         href="https://carprnterz-com-coders-projects-268005cc.vercel.app/"
 
                         target="_blank"
-                        className="text-xs font-medium text-blue-500 md:text-lg hover:derline"
+                        className="text-md font-medium text-blue-500 md:text-lg hover:derline"
                     >
                         View Project
                     </a>
@@ -138,12 +138,12 @@ export default function TimelineDemo() {
                     data-aos="fade-left" style={{ overflow: 'hidden' }}
 
                 >
-                    <p className="text-xs text-neutral-400 dark:text-neutral-400 md:text-lg ">
+                    <p className="text-md text-neutral-400 dark:text-neutral-400 md:text-lg ">
                         Completed Higher Secondary Education (HSC) with 69% marks, with a focus on Mathematics and Computer Science.
                     </p>
 
                     <div className="mb-8 overflow-x-auto">
-                        <table className="min-w-full text-xs text-left border-collapse md:text-lg">
+                        <table className="min-w-full text-md text-left border-collapse md:text-lg">
                             <thead>
                                 <tr className="border-b text-neutral-400 dark:text-neutral-400">
                                     <th className="px-2 py-2 md:px-4">Subject</th>
@@ -202,7 +202,7 @@ export default function TimelineDemo() {
                         href={pdfFileHSC}
 
                         target="_blank"
-                        className="text-xs font-medium text-blue-500 md:text-lg hover:derline"
+                        className="text-md font-medium text-blue-500 md:text-lg hover:derline"
                     >
                         View Project
                     </a>
@@ -216,12 +216,12 @@ export default function TimelineDemo() {
                     data-aos="fade-left" style={{ overflow: 'hidden' }}
                 >
 
-                    <p className="text-xs text-neutral-400 dark:text-neutral-400 md:text-lg ">
+                    <p className="text-md text-neutral-400 dark:text-neutral-400 md:text-lg ">
                         Completed Secondary School Certificate (SSC) with 74% marks, excelling in science and mathematics.
                     </p>
 
                     <div className="mb-8 overflow-x-auto">
-                        <table className="min-w-full text-xs text-left border-collapse md:text-lg">
+                        <table className="min-w-full text-md text-left border-collapse md:text-lg">
                             <thead>
                                 <tr className="border-b text-neutral-400 dark:text-neutral-400">
                                     <th className="px-2 py-2 md:px-4">Subject</th>
@@ -278,7 +278,7 @@ export default function TimelineDemo() {
                     <a
                         href={SSC}
                         target="_blank"
-                        className="text-xs font-medium text-blue-500 md:text-lg hover:derline"
+                        className="text-md font-medium text-blue-500 md:text-lg hover:derline"
                     >
                         View Project
                     </a>

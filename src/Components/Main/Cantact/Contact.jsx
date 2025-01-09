@@ -193,22 +193,9 @@ const ContactForm = () => {
                     </label>
                 </motion.div>
 
-                {/* <div className="flex justify-center col-span-1 mt-6 md:col-span-2">
-                    <motion.button
-                        type="submit"
-                        className="px-6 py-3 text-blue-500 border border-blue-500 rounded-lg hover:text-white hover:bg-blue-500"
-                        whileHover={{ scale: 1.05 }}
-                        transition={{ duration: 0.3 }}
-                    >
-                        Send Message
-                    </motion.button>
-                </div> */}
-
-
-
                 <div className="flex justify-center col-span-1 mt-6 md:col-span-2">
                     <motion.button
-                        type="submit"  // Change to button instead of submit to prevent form submission
+                        type="submit"
                         className="px-6 py-3 text-blue-500 border border-blue-500 rounded-lg hover:text-white hover:bg-blue-500"
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3 }}

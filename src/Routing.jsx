@@ -107,6 +107,7 @@ function AnimatedRoutes() {
 }
 
 // Main Routing Component
+
 function Routing() {
   const [loading, setLoading] = useState(true);
 

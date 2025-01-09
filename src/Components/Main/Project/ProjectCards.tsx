@@ -16,7 +16,6 @@ export default function InfiniteMovingCardsDemo() {
 }
 
 
-
 const testimonials = [
   {
     id: 1,

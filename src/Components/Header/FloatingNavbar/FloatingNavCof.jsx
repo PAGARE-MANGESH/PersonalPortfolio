@@ -9,7 +9,7 @@ import {
 } from "framer-motion";
 
 import { cn } from "../../../utils/cn";
-// import Link from "next/link";
+
 
 export const FloatingNav = ({
     navItems,
@@ -54,6 +54,7 @@ export const FloatingNav = ({
     return (
         (
             <AnimatePresence mode="wait">
+
                 <motion.div
                     initial={{
                         opacity: 1,
@@ -108,8 +109,8 @@ export const FloatingNav = ({
                         </button>
                     </Link>
 
-
                 </motion.div>
+
             </AnimatePresence>)
     );
 };

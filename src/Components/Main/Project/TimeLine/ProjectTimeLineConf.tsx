@@ -48,7 +48,7 @@ export const ProjectTimeline = ({ data }: { data: TimelineEntry[] }) => {
             ref={containerRef}
         >
             <div className="py-10 mx-auto max-w-7xl md:px-10 lg:px-10" data-aos="fade-up">
-                <h2 className="max-w-4xl mb-4 text-lg md:text-4xl text-neutral-400 dark:text-neutral-400">
+                <h2 className="max-w-4xl mb-4 text-lg md:text-4xl text-blue-500">
                     My Projects Journey 😇
                 </h2>
                 <p className="max-w-sm text-md text-neutral-400 dark:text-neutral-300 md:text-base">
@@ -95,6 +95,7 @@ export const ProjectTimeline = ({ data }: { data: TimelineEntry[] }) => {
                     />
                 </div>
             </div>
+
         </div>
     );
 };

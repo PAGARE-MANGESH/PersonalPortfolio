@@ -40,7 +40,7 @@ export default function ProjectTimelineDemo() {
             title: 'Project 3: Carpenterz E-commerce Platform 🛒',
             content: (
                 <div className="flex flex-col items-start space-y-4" data-aos="fade-left">
-                    <p className="text-xs text-neutral-400 dark:text-neutral-400 md:text-lg">
+                    <p className="text-md text-neutral-400 dark:text-neutral-400 md:text-lg">
                         A blogging platform where users can write, edit, and share their blogs with the community.
                     </p>
                     <div className="grid grid-cols-2 gap-4">
@@ -69,14 +69,14 @@ export default function ProjectTimelineDemo() {
                             </div>
                         )}
                     </div>
-                    <p className="mt-4 text-xs text-neutral-400 dark:text-neutral-400 md:text-lg">
+                    <p className="mt-4 text-md text-neutral-400 dark:text-neutral-400 md:text-lg">
                         <strong>Technologies:</strong> REACT, TAILWIND CSS, JAVASCRIPT
                     </p>
                     <a
                         href="https://carprnterz-com-coders-projects-268005cc.vercel.app/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-xs font-medium text-blue-500 md:text-lg hover:underline"
+                        className="text-md font-medium text-blue-500 md:text-lg hover:underline"
                     >
                         View Project
                     </a>
@@ -87,7 +87,7 @@ export default function ProjectTimelineDemo() {
             title: 'Project 2: E-commerce Platform 🛒',
             content: (
                 <div className="flex flex-col items-start space-y-4" data-aos="fade-left">
-                    <p className="text-xs text-neutral-400 dark:text-neutral-400 md:text-lg">
+                    <p className="text-md text-neutral-400 dark:text-neutral-400 md:text-lg">
                         An e-commerce platform where users can browse products, add to cart, and make purchases.
                     </p>
                     <div className="grid grid-cols-2 gap-4">
@@ -112,7 +112,7 @@ export default function ProjectTimelineDemo() {
                             />
                         )}
                     </div>
-                    <p className="mt-4 text-xs text-neutral-400 dark:text-neutral-400 md:text-lg">
+                    <p className="mt-4 text-md text-neutral-400 dark:text-neutral-400 md:text-lg">
                         <strong>Technologies:</strong> REACT, TAILWIND CSS, JAVASCRIPT
                     </p>
                     <a
@@ -130,7 +130,7 @@ export default function ProjectTimelineDemo() {
             title: 'Project 1: Portfolio Website 🌐',
             content: (
                 <div className="flex flex-col items-start space-y-4" data-aos="fade-left">
-                    <p className="text-xs text-neutral-400 dark:text-neutral-400 md:text-lg">
+                    <p className="text-md text-neutral-400 dark:text-neutral-400 md:text-lg">
                         A personal portfolio website showcasing my web development projects and skills.
                     </p>
                     <div className="grid grid-cols-2 gap-4">
@@ -155,7 +155,7 @@ export default function ProjectTimelineDemo() {
                             />
                         )}
                     </div>
-                    <p className="mt-4 text-xs text-neutral-400 dark:text-neutral-400 md:text-lg">
+                    <p className="mt-4 text-md text-neutral-400 dark:text-neutral-400 md:text-lg">
                         <strong>Technologies:</strong> HTML, CSS, JAVASCRIPT, BOOTSTRAP
 
                     </p>

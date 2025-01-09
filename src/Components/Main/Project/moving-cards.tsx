@@ -73,6 +73,7 @@ export const InfiniteMovingCards = ({
       }
     }
   };
+
   return (
     <div
       ref={containerRef}
@@ -124,4 +125,5 @@ export const InfiniteMovingCards = ({
 
     </div>
   );
+
 };

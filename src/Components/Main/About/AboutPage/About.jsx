@@ -6,22 +6,17 @@ import { motion } from 'framer-motion';
 import Resume from '../../../../assets/Resume.pdf';
 import ProfilePic from '../../../../assets/ProfileImg.jpg';
 import { FaArrowUp } from "react-icons/fa";
-// import FlipWordsDemo from './TextAnim/flip';
+
 import TimelineDemo from '../TimeLine/TimeLine';
 import InfiniteMovingCardsDemo from '../../Project/ProjectCards'
-
 import ImgSwape from './ImgCarousel'
-
-
 import HeroScrollDemo from '../Parallx/Parallax'
-
 
 const About = () => {
 
   useEffect(() => {
 
-    AOS.init({ duration: 1000 }); // Duration is optional
-
+    AOS.init({ duration: 1000 });
   }, []);
 
   const [isImageLoaded, setIsImageLoaded] = useState(false);
@@ -41,7 +36,7 @@ const About = () => {
       <div className="relative w-full px-4 mx-auto sm:px-6 lg:px-8 md:pb-20 " data-aos="fade-up" style={{ overflow: 'hidden' }}>
         <div className="relative flex flex-col w-full md:flex-row md:justify-between md:items-center">
           <div className="flex flex-col items-center justify-center w-full text-slate-400 md:items-start ">
-            {/* <FlipWordsDemo /> */}
+
             <HeroScrollDemo />
           </div>
         </div>
@@ -64,16 +59,6 @@ const About = () => {
 
               {ProfilePic && (
 
-                // <img
-                //   src={ProfilePic}
-                //   alt="Profile"
-                //   id='AboutImg'
-                //   loading='lazy'
-                //   className={` -mt-14 w-64 h-64 mb-4 rounded-full object-cover lg:w-94 lg:h-94 transition-transform duration-500 ease-in-out ${isImageLoaded ? 'scale-100 hover:scale-110' : 'scale-0'
-                //     }`}
-                //   // data-aos="fade-up"
-                //   onLoad={() => setIsImageLoaded(true)}
-                // />
 
                 <ImgSwape />
 
@@ -181,7 +166,7 @@ const About = () => {
 
             <div className='mt-16 capitalize md:-mt-20 text-start text-pretty ' data-aos="fade-left">
 
-              <h2 className="p-4 mb-8 text-3xl font-extrabold text-blue-500 md:-mt-28 sm:text-4xl">
+              <h2 className="p-4 mb-8 text-3xl font-extrabold text-blue-500 md:-mt-48 sm:text-4xl">
                 About Me
               </h2>
 
