@@ -48,7 +48,7 @@ export const ProjectTimeline = ({ data }: { data: TimelineEntry[] }) => {
             ref={containerRef}
         >
             <div className="py-10 mx-auto max-w-7xl md:px-10 lg:px-10" data-aos="fade-up">
-                <h2 className="max-w-4xl mb-4 text-lg md:text-4xl text-blue-500">
+                <h2 className="max-w-4xl mb-4 text-lg md:text-4xl text-blue-500 animate-bounce">
                     My Projects Journey 😇
                 </h2>
                 <p className="max-w-sm text-md text-neutral-400 dark:text-neutral-300 md:text-base">
@@ -73,7 +73,7 @@ export const ProjectTimeline = ({ data }: { data: TimelineEntry[] }) => {
                         </div>
 
                         <div className="relative w-full pl-20 pr-4 md:pl-4">
-                            <h3 className="block mb-4 text-2xl font-bold text-left md:hidden text-neutral-500 dark:text-neutral-500">
+                            <h3 className="block mb-4 text-2xl font-bold text-left md:hidden text-blue-500 dark:text-blue-500">
                                 {item.title}
                             </h3>
                             {item.content}{" "}

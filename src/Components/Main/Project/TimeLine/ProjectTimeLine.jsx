@@ -43,11 +43,11 @@ export default function ProjectTimelineDemo() {
                     <p className="text-md text-neutral-400 dark:text-neutral-400 md:text-lg">
                         A blogging platform where users can write, edit, and share their blogs with the community.
                     </p>
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-2 gap-4 animate-pulse ">
                         {loading ? (
                             <Skeleton className="w-full h-44 lg:h-60" />
                         ) : (
-                            <div className="w-full h-44 lg:h-60">
+                            <div className="w-full h-44 lg:h-60 ">
                                 <img
                                     src={Project3}
                                     alt="Portfolio project"
@@ -76,7 +76,7 @@ export default function ProjectTimelineDemo() {
                         href="https://carprnterz-com-coders-projects-268005cc.vercel.app/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-md font-medium text-blue-500 md:text-lg hover:underline"
+                        className="text-md font-medium text-blue-500 md:text-lg hover:underline animate-bounce"
                     >
                         View Project
                     </a>
@@ -90,7 +90,7 @@ export default function ProjectTimelineDemo() {
                     <p className="text-md text-neutral-400 dark:text-neutral-400 md:text-lg">
                         An e-commerce platform where users can browse products, add to cart, and make purchases.
                     </p>
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-2 gap-4 animate-pulse ">
                         {loading ? (
                             <Skeleton className="w-full h-44 lg:h-60" />
                         ) : (
@@ -119,7 +119,7 @@ export default function ProjectTimelineDemo() {
                         href="https://e-comm-ruddy.vercel.app/shopping"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="font-medium text-blue-500 text-md hover:underline"
+                        className="font-medium text-blue-500 text-md hover:underline animate-bounce"
                     >
                         View Project
                     </a>
@@ -133,7 +133,7 @@ export default function ProjectTimelineDemo() {
                     <p className="text-md text-neutral-400 dark:text-neutral-400 md:text-lg">
                         A personal portfolio website showcasing my web development projects and skills.
                     </p>
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-2 gap-4 animate-pulse ">
                         {loading ? (
                             <Skeleton className="w-full h-44 lg:h-60" />
                         ) : (
@@ -163,7 +163,7 @@ export default function ProjectTimelineDemo() {
                         href="https://pagare-mangesh.github.io/FirstPortfolio/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="font-medium text-blue-500 text-md hover:underline"
+                        className="font-medium text-blue-500 text-md hover:underline animate-bounce"
                     >
                         View Project
                     </a>

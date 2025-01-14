@@ -1,6 +1,9 @@
 
 
 import React, { useState, useEffect } from 'react';
+import { toast, ToastContainer, Bounce } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import { motion } from 'framer-motion';
 import { FaArrowUp } from 'react-icons/fa';
 import AOS from 'aos';
@@ -12,9 +15,10 @@ import Swal from 'sweetalert2';
 
 const ContactForm = () => {
 
-    const [email, setEmail] = useState('');
+
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
+    const [email, setEmail] = useState('');
     const [address, setAddress] = useState('');
 
     const handleSubmit = (e) => {
@@ -46,6 +50,27 @@ const ContactForm = () => {
             .catch((error) => console.error('Form submission error:', error));
     };
 
+
+
+
+    function notify() {
+        toast('I got your message, thank you! 😇', {
+            position: "top-center",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Bounce,
+        });
+    }
+
+
+
+
+
     const handleClick = () => {
 
         if (name === '' || phone === '' || email === '' || address === '') {
@@ -54,7 +79,7 @@ const ContactForm = () => {
 
             let timerInterval;
             Swal.fire({
-                title: "Thank You ❤",
+                title: "❤",
                 html: "I will send in <b></b> milliseconds.",
                 timer: 2000,
                 timerProgressBar: true,
@@ -66,6 +91,7 @@ const ContactForm = () => {
                     }, 100);
                 },
                 willClose: () => {
+                    notify()
                     setName('');
                     setPhone('');
                     setEmail('');
@@ -77,13 +103,14 @@ const ContactForm = () => {
                     console.log("I was closed by the timer");
                 }
             });
-
         }
+
+
     };
 
     return (
         <fieldset className="p-6 mt-8 transition-all duration-300 ease-in-out transform border-2 border-blue-500 rounded-lg hover:border-blue-700">
-            <legend className="px-6 mb-6 text-lg font-semibold text-blue-500">
+            <legend className="px-6 mb-6 text-lg font-semibold text-blue-500 animate-bounce">
                 Contact Me 👩‍💻
             </legend>
             <motion.form
@@ -193,7 +220,7 @@ const ContactForm = () => {
                     </label>
                 </motion.div>
 
-                <div className="flex justify-center col-span-1 mt-6 md:col-span-2">
+                <div className="flex justify-center col-span-1 mt-6 animate-bounce md:col-span-2">
                     <motion.button
                         type="submit"
                         className="px-6 py-3 text-blue-500 border border-blue-500 rounded-lg hover:text-white hover:bg-blue-500"
@@ -213,7 +240,7 @@ const ContactForm = () => {
 
 const GoogleMap = () => (
 
-    <div className="w-full gap-6 overflow-hidden border border-blue-500 rounded-xl h-80">
+    <div className="w-full gap-6 overflow-hidden border border-blue-500 animate-pulse rounded-xl h-80">
 
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50482.83394857099!2d75.31261088478634!3d19.87550342981866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb9815a369bc63%3A0x712d538b29a2a73e!2sChhatrapati%20Sambhajinagar%20(Aurangabad)%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1725380343536!5m2!1sen!2sin"
@@ -262,81 +289,42 @@ const ContactPage = () => {
 
     return (
 
-        <div className="flex flex-col items-center justify-center w-full h-full px-1 mt-20">
 
-            <motion.div
-                className="grid w-full max-w-6xl grid-cols-1 gap-6 rounded-lg shadow-lg md:p-6"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
-            >
+        <div className="flex flex-col items-center justify-center w-full h-full px-4 mt-4">
 
-                {/* <div className="flex flex-col items-center justify-center gap-6 p-4 mt-6 rounded-lg text-start md:flex-row md:text-2xl ">
-                    <div className="flex flex-col items-start justify-center p-6 transition-all duration-300 border-blue-500 rounded-lg border-x hover:shadow-lg hover:scale-105">
-                        <h2 className="mb-4 text-2xl font-semibold text-blue-500 md:text-4xl">Contact Information ☎</h2>
-                        <p className="mb-2 text-lg text-blue-500 md:text-xl">
-                            <span className="font-semibold text-gray-500">Name: </span> Mangesh Pagare
-                        </p>
-                        <p className="mb-2 text-lg text-blue-500 md:text-xl">
-                            <span className="font-semibold text-gray-500">Phone: </span>8668325464
-                        </p>
-                        <p className="mb-2 text-lg text-blue-500 md:text-xl">
-                            <span className="font-semibold text-gray-500">Address: </span> Maharastra, 431109 Gangapur
-                        </p>
-                        <p className="mb-2 text-lg text-gray-500 md:text-xl">
-                            <span className="font-semibold">Email: </span>
-                            <a href="mailto:mangeshpagare011@gmail.com" className="text-blue-500 hover:underline">
-                                mangeshpagare011@gmail.com
-                            </a>
-                        </p>
+            <span className='px-4'>
+                <ToastContainer />
+            </span>
+
+
+            {/* Google Map Section */}
+            <div className="w-full max-w-6xl mt-24">
+                <h1 className="text-3xl font-semibold text-center text-blue-500">
+                    Talk with me 👩‍💻
+                </h1>
+            </div>
+
+            <div className="w-full h-auto mt-4 overflow-hidden rounded-lg shadow-lg ">
+                {loading ? (
+                    <Skeleton className="w-full h-96" />
+                ) : (
+                    <div className="w-full">
+                        <GoogleMap />
                     </div>
+                )}
+            </div>
 
-                    <div className="w-full md:w-1/2">
-                        {loading ? <Skeleton className="w-full h-96" /> : <GoogleMap />}
-                    </div>
-                </div> */}
-
-
-
-                {/* Contact Section */}
-                <div className="flex flex-col items-center justify-center gap-8 p-4 mt-8 border-blue-500 rounded-lg border-y text-start md:flex-row md:text-lg">
-                    <div className="flex flex-col items-start justify-center w-full px-8 transition-all duration-300 bg-transparent border-blue-500 rounded-lg shadow-md border-x h-96 hover:shadow-xl hover:scale-105 md:max-w-md">
-                        <h2 className="mb-5 text-xl font-semibold text-blue-600 md:text-3xl">Contact Information ☎</h2>
-
-                        <p className="mb-3 text-base text-gray-500 md:text-lg">
-                            <span className="font-medium text-blue-500">Name: </span> Mangesh Pagare
-                        </p>
-
-                        <p className="mb-3 text-base text-gray-500 md:text-lg">
-                            <span className="font-medium text-blue-500 ">Phone: </span> +91 8668325464
-                        </p>
-
-                        <p className="mb-3 text-base text-gray-500 md:text-lg">
-                            <span className="font-medium text-blue-500">Address: </span> Maharashtra, 431109 Gangapur
-                        </p>
-
-                        <p className="text-base text-gray-500 md:text-lg">
-                            <span className="font-medium text-blue-500">Email: </span>
-                            <a href="mailto:mangeshpagare011@gmail.com" className="text-gray-500 hover:underline">
-                                mangeshpagare011@gmail.com
-                            </a>
-                        </p>
-                    </div>
-
-
-                    {/* Google Map Box */}
-                    <div className="w-full p-4 rounded-lg shadow-lg md:w-1/2">
-                        {loading ? <Skeleton className="w-full h-96" /> : <GoogleMap />}
-                    </div>
-                </div>
-
-
+            {/* Contact Form */}
+            <div className="w-full max-w-6xl mt-8">
                 <ContactForm />
+            </div>
 
-            </motion.div>
-
+            {/* Scroll to Top Button */}
             <ScrollToTopButton />
+
+
         </div>
+
     );
 };
 

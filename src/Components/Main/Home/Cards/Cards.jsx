@@ -29,28 +29,28 @@ export default function CanvasRevealEffectDemo() {
                     title="UI Design"
                     icon={
 
-                        <div className="flex items-center space-x-2">
+                        <div className="flex items-center space-x-2 animate-bounce">
                             <SiFigma size={30} className="text-blue-500" />
                         </div>
                     }
                 >
-                    <CanvasRevealEffect animationSpeed={5.1} containerClassName="bg-emerald-900 " />
+                    <CanvasRevealEffect animationSpeed={2} containerClassName="bg-emerald-900 " />
                 </Card >
 
                 <Card title="Web Development" icon={
-                    <div className="flex items-center space-x-2">
+                    <div className="flex items-center space-x-2 animate-bounce">
                         <FaReact size={40} className="text-blue-400" />
                         <FaJsSquare size={40} className="text-yellow-500" />
                         <SiTailwindcss size={40} className="text-blue-400" />
                     </div>
                 }>
                     <CanvasRevealEffect
-                        animationSpeed={3}
+                        animationSpeed={2}
                         containerClassName="bg-sky-600"
                         colors={[[125, 211, 252]]} />
                 </Card >
                 <Card title="Front-End Development" icon={
-                    <div className="flex items-center space-x-2">
+                    <div className="flex items-center space-x-2 animate-bounce">
                         <FaHtml5 size={40} className="text-orange-500" />
                         <FaCss3Alt size={40} className="text-blue-500" />
                         <FaJsSquare size={40} className="text-yellow-500" />
@@ -59,7 +59,7 @@ export default function CanvasRevealEffectDemo() {
                     </div>
                 }>
                     <CanvasRevealEffect
-                        animationSpeed={3}
+                        animationSpeed={2}
                         containerClassName="bg-black"
                         colors={[
                             [236, 72, 153],
@@ -89,12 +89,12 @@ const Card = ({
         (<div
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
-            className="border border-blue/[0.2] group/canvas-card flex items-center justify-center dark:border-white/[0.2]  max-w-sm w-full mx-auto p-4 relative h-[20rem] relative">
-            <Icon className="absolute w-6 h-6 text-white -top-3 -left-3" />
+            className=" border border-blue/[0.2] group/canvas-card flex items-center justify-center dark:border-white/[0.2]  max-w-sm w-full mx-auto p-4 relative h-[20rem] relative">
+            <Icon className="absolute w-6 h-6 text-white -top-3 -left-3 " />
             <Icon className="absolute w-6 h-6 text-white -bottom-3 -left-3" />
             <Icon className="absolute w-6 h-6 text-white -top-3 -right-3" />
             <Icon
-                className="absolute w-6 h-6 text-white -bottom-3 -right-3" />
+                className="absolute w-6 h-6 text-white -bottom-3 -right-3 " />
             <AnimatePresence>
                 {hovered && (
                     <motion.div

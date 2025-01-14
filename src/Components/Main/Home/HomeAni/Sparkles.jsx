@@ -6,7 +6,7 @@ import HomeConf from '../HomeConf';
 
 export default function SparklesPreview() {
     return (
-        <div className="relative flex w-full  h-screen flex-col items-center justify-center w-full h-[40rem] sm:h-[30rem] md:h-[35rem] lg:h-[40rem] overflow-hidden bg-black rounded-md transition-all duration-500 ease-in-out transform mt-2">
+        <div className="relative flex  flex-col items-center justify-center w-full h-[40rem] sm:h-[30rem] md:h-[35rem] lg:h-[40rem] overflow-hidden bg-black rounded-md transition-all duration-500 ease-in-out transform mt-2">
             <div className="absolute inset-0 w-full h-auto" >
                 <SparklesCore
                     id="tsparticlesfullpage"

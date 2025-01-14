@@ -33,48 +33,47 @@ const About = () => {
 
     <>
 
-      <div className="relative w-full px-4 mx-auto sm:px-6 lg:px-8 md:pb-20 " data-aos="fade-up" style={{ overflow: 'hidden' }}>
-        <div className="relative flex flex-col w-full md:flex-row md:justify-between md:items-center">
-          <div className="flex flex-col items-center justify-center w-full text-slate-400 md:items-start ">
 
+      <div
+        className="relative w-full px-4 mx-auto sm:px-6 lg:px-8 md:pb-20 group"
+        data-aos="fade-up"
+        style={{ overflow: "hidden" }}
+      >
+        <div className="relative flex flex-col w-full transition-transform duration-500 md:flex-row md:justify-between md:items-center group-hover:scale-105">
+          <div className="flex flex-col items-center justify-center w-full space-y-4 text-slate-400 md:items-start">
             <HeroScrollDemo />
           </div>
         </div>
       </div>
 
+
+
+
+
       <div className="relative px-2 mt-20 md:py-10 sm:px-6 lg:px-8 ">
 
-        <div className="grid grid-cols-1 pb-8 mx-auto max-w-7xl lg:grid-cols-2 gap-y-6 lg:gap-x-8">
-
+        <div className="grid grid-cols-1 pb-12 mx-auto gap-y-8 max-w-7xl lg:grid-cols-2 lg:gap-x-8">
           {/* Profile Picture and Share Button */}
-
           <motion.div
-            className="flex flex-col items-center my-0 lg:items-center"
+            className="flex flex-col items-center lg:items-center"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-
-            <div className="relative flex items-center justify-center mt-10 md:-mt-4">
-
-              {ProfilePic && (
-
-
-                <ImgSwape />
-
-              )}
-
+            <div className="relative flex items-center justify-center mt-10 md:mt-0 ">
+              {ProfilePic && <ImgSwape />}
             </div>
-
-
-            {/* <p className='py-4 text-2xl font-extrabold text-blue-500 text-pretty text-start' data-aos="fade-up"> Mangesh Pagare 😇 </p> */}
-            <p className='py-4 text-2xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 md:text-3xl' data-aos="fade-up">
-              Mangesh Pagare <span className='text-white'>😇</span>
+            <p
+              className="py-2  text-2xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 md:text-3xl"
+              data-aos="fade-up"
+            >
+              Mangesh Pagare <span className="text-white">😇</span>
             </p>
+            {/* Social Links */}
 
 
 
-            <div className="flex my-4 space-x-1 md:my-4 " >
+            <div className="flex my-4 space-x-4" >
               <ul class="example-2">
                 <li class="icon-content">
                   <a
@@ -153,46 +152,29 @@ const About = () => {
                 </li>
               </ul>
             </div>
-
           </motion.div>
 
+          {/* About Me Section */}
           <motion.div
             className="flex flex-col items-center lg:items-start"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            data-aos="fade-up"
           >
-
-            <div className='mt-16 capitalize md:-mt-20 text-start text-pretty ' data-aos="fade-left">
-
-              <h2 className="p-4 mb-8 text-3xl font-extrabold text-blue-500 md:-mt-48 sm:text-4xl">
-                About Me
-              </h2>
-
-              <p className="p-4 mt-2 text-lg text-gray-400 text-start lg:text-start">
-                "I’m a passionate web developer with a strong foundation in creating responsive and interactive websites. With a focus on clean, efficient code and user-friendly design, I aim to bring innovative ideas to life. I'm eager to learn and grow while contributing to projects that enhance user experiences and deliver impactful solutions."
+            <div className="lg:mt-80 ">
+              {/* Content for About Me Section */}
+              <h2 className="text-3xl font-bold text-blue-500 animate-bounce">About Me 👋</h2>
+              <p className="mt-4 text-gray-400 md:text-xl animate-pulse">
+                " 😇 I'm self-motivated, hardworking, and committed to achieving my goals with dedication and focus with strong foundation in
+                creating responsive and interactive websites.
+                With a focus on clean, efficient code and user-friendly design, I aim to bring innovative ideas to life.
+                I'm eager to learn and grow while contributing to projects that enhance user experiences and deliver impactful solutions."
               </p>
-
-              <div className="flex justify-start mx-4 mt-4">
-                <a
-                  href={Resume}
-                  target='_blank'
-                  className="inline-block px-2 py-3 text-sm font-medium text-center text-white transition duration-300 rounded-md"
-                >
-                  <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-blue-500 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-                    Resume
-                  </button>
-                </a>
-              </div>
-
+              {/* Add Buttons or Other Interactive Elements Here */}
             </div>
-
-
           </motion.div>
-
-
         </div>
+
 
 
         <div className="mt-12 " data-aos="fade-up" style={{ overflow: 'hidden' }}>

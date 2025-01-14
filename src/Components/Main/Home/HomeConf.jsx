@@ -73,24 +73,24 @@ function HomeConf() {
             Discover Projects, Skills, and Experience
           </motion.p>
 
-          <Link to="/about">
+          <Link to="/about" >
             <motion.div
-              className="flex justify-center mt-6 md:mt-10"
+              className="flex justify-center mt-6 md:mt-10 animate-bounce"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <button
-                className="relative px-8 py-3 text-lg font-semibold text-white transition-transform duration-300 ease-in-out bg-gray-800 shadow-lg rounded-xl group hover:scale-105"
+                className=" relative px-8 py-3 text-lg font-semibold text-white transition-transform duration-300 ease-in-out bg-gray-800 shadow-lg rounded-xl group hover:scale-105"
               >
                 <span
                   className="absolute inset-0 w-full h-full opacity-0 bg-gradient-to-r from-teal-400 via-blue-500 to-purple-500 rounded-xl group-hover:opacity-100 group-hover:animate-pulse"
                 ></span>
                 <span className="relative z-10 flex items-center space-x-2">
-                  <span className="transition-all duration-500 group-hover:translate-x-1">
+                  <span className="transition-all duration-500 group-hover:translate-x-1 animate-pulse">
                     Learn More About Me
                   </span>
                   <svg
-                    className="w-6 h-6 transition-transform duration-500 group-hover:translate-x-1"
+                    className="w-6 h-6 transition-transform duration-500 group-hover:translate-x-1 "
                     aria-hidden="true"
                     fill="currentColor"
                     viewBox="0 0 20 20"
