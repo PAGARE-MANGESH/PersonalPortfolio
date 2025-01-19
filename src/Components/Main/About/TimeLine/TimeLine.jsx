@@ -28,7 +28,6 @@ export default function TimelineDemo() {
                                     <th className="px-2 py-3">Organization</th>
                                     <th className="px-2 py-3">Period</th>
                                     <th className="px-2 py-3">Certificate</th>
-
                                 </tr>
                             </thead>
                             <tbody>
@@ -43,7 +42,7 @@ export default function TimelineDemo() {
                                 <tr className="text-md transition-all border-b border-neutral-300 text-neutral-400 hover:bg-neutral-800 md:text-lg">
                                     <td className="px-4 py-3">✅ Code Soft</td>
                                     <td className="px-0 py-3">25-Feb-to-Mar-2024</td>
-                                    <a href={CodeSoft} target="_blank" className="hover:text-blue-500">
+                                    <a href={CodeSoft} target="_blank" className="hover:text-blue-500 ">
                                         <td className="px-4 py-3"> View </td>
                                     </a>
                                 </tr>
@@ -120,7 +119,7 @@ export default function TimelineDemo() {
                         href="https://carprnterz-com-coders-projects-268005cc.vercel.app/"
 
                         target="_blank"
-                        className="text-md font-medium text-blue-500 md:text-lg hover:derline"
+                        className="text-md font-medium text-blue-500 md:text-lg hover:derline animate-bounce"
                     >
                         View Project
                     </a>
@@ -202,7 +201,7 @@ export default function TimelineDemo() {
                         href={pdfFileHSC}
 
                         target="_blank"
-                        className="text-md font-medium text-blue-500 md:text-lg hover:derline"
+                        className="text-md font-medium text-blue-500 md:text-lg hover:derline animate-bounce"
                     >
                         View Project
                     </a>
@@ -278,14 +277,14 @@ export default function TimelineDemo() {
                     <a
                         href={SSC}
                         target="_blank"
-                        className="text-md font-medium text-blue-500 md:text-lg hover:derline"
+                        className="text-md font-medium text-blue-500 md:text-lg hover:derline animate-bounce"
                     >
                         View Project
                     </a>
                 </div>
             ),
         },
-    ];
+    ]
 
     return (
         (<div className="w-full">

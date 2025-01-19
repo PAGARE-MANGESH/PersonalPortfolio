@@ -47,7 +47,7 @@ function HomeConf() {
         {/* Text Content Section */}
 
         <motion.div
-          className="z-10 flex flex-col items-center text-center"
+          className="z-10 flex flex-col items-center text-center -mt-20"
           variants={pageVariants}
           initial="initial"
           animate="animate"
