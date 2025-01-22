@@ -87,7 +87,7 @@ function HomeConf() {
                 ></span>
                 <span className="relative z-10 flex items-center space-x-2">
                   <span className="transition-all duration-500 group-hover:translate-x-1 animate-pulse">
-                    Learn More About Me
+                    Here More About Me
                   </span>
                   <svg
                     className="w-6 h-6 transition-transform duration-500 group-hover:translate-x-1 "
