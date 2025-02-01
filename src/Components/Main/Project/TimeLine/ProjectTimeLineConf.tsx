@@ -64,9 +64,12 @@ export const ProjectTimeline = ({ data }: { data: TimelineEntry[] }) => {
                         className="flex justify-start pt-10 md:pt-40 md:gap-10"
                     >
                         <div className="sticky z-40 flex flex-col items-center self-start max-w-xs md:flex-row top-40 lg:max-w-sm md:w-full">
-                            <div className="absolute flex items-center justify-center w-10 h-10 bg-white rounded-full left-3 md:left-3 dark:bg-black">
-                                <div className="w-4 h-4 p-2 border rounded-full bg-neutral-200 dark:bg-neutral-800 border-neutral-300 dark:border-neutral-700" />
+                          
+                            <div className="absolute flex items-center justify-center w-10 h-10 rounded-full left-3 md:left-3 bg-black border border-white shadow-[0_4px_10px_rgba(59,130,246,0.6),0_6px_20px_rgba(147,51,234,0.6)]">
+                                <div className="w-4 h-4 p-2 border rounded-full bg-neutral-800 border-white shadow-[0_2px_6px_rgba(147,51,234,0.5)]" />
                             </div>
+
+
                             <h3 className="hidden text-xl font-bold text-blue-500 md:block md:pl-20 md:text-3xl dark:text-blue-500 ">
                                 {item.title}
                             </h3>

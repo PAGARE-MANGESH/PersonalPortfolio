@@ -41,7 +41,9 @@ export default function ProjectTimelineDemo() {
             content: (
                 <div className="flex flex-col items-start space-y-4" data-aos="fade-left">
                     <p className="text-md text-neutral-400 dark:text-neutral-400 md:text-lg">
-                        A blogging platform where users can write, edit, and share their blogs with the community.
+                        An e-commerce platform where users can browse products, add them to their cart, and make purchases.
+                        It also supports two languages: English and Marathi.
+
                     </p>
                     <div className="grid grid-cols-2 gap-4 animate-pulse ">
                         {loading ? (

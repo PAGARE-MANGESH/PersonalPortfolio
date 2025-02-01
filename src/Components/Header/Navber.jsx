@@ -38,7 +38,7 @@ export default function Navbar() {
           <img src={LogoImg} alt="Logo" className="w-10 h-10" />
           {/* <h2 className="text-center text-2xl font-extrabold text-transparent transition-transform duration-300 transform bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-teal-400">Mangesh</h2> */}
 
-          <h2 className="text-center text-2xl font-extrabold text-transparent transition-transform duration-300 transform bg-clip-text bg-gradient-to-b from-blue-500 via-white to-blue-400 animate-bounce ">
+          <h2 className="text-center text-2xl font-extrabold text-transparent transition-transform duration-300 transform bg-clip-text bg-gradient-to-b from-blue-500 via-white to-blue-400 animate-pulse ">
             Mangesh
           </h2>
 

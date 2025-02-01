@@ -9,7 +9,7 @@ export default function FlipWordsDemo() {
   return (
     <div className="flex flex-col items-center justify-center w-full px-2 mt-4 space-y-5 md:mt-10 h-60 ">
       <div className="text-center">
-        <h5 className="mb-4 text-3xl font-bold md:text-5xl lg:text-6xl">
+        <h5 className="mb-4  tracking-wider text-blue-500 text-3xl md:text-5xl uppercase">
           I'm a{" "}
           <span className="relative inline-block font-bold text-blue-500">
             <FlipWords words={words} />
