@@ -13,6 +13,9 @@ import Project2 from '../../../../assets/Ecomm.webp';
 import Project2Dark from '../../../../assets/EcommDark.webp';
 import Project3 from '../../../../assets/Carpe.webp';
 import Project3Dark from '../../../../assets/CarPenterzDark.webp';
+import Project4 from '../../../../assets/Project4.webp'
+import Project4Dark from '../../../../assets/Project4Dark.webp'
+
 
 
 import Skeleton from 'react-loading-skeleton';
@@ -36,6 +39,57 @@ export default function ProjectTimelineDemo() {
 
 
     const data = [
+        {
+            title: 'Project 4: Task Management App 📝',
+            content: (
+                <div className="flex flex-col items-start space-y-4" data-aos="fade-left">
+                    <p className="text-md text-neutral-400 dark:text-neutral-400 md:text-lg">
+                        I developed this project during my virtual internship at Zidio Development. I handled the entire front end, while my teammate worked on the backend.
+                        I implemented authentication features, including login, signup, forgot password, and reset password. Additionally,
+                        I integrated dark and light mode for an improved user experience.
+                        The app features a clean and interactive UI, allowing users to track their state and dra
+
+                    </p>
+                    <div className="grid grid-cols-2 gap-4 animate-pulse ">
+                        {loading ? (
+                            <Skeleton className="w-full h-44 lg:h-60" />
+                        ) : (
+                            <div className="w-full h-44 lg:h-60 ">
+                                <img
+                                    src={Project4Dark}
+                                    alt="Portfolio project"
+                                    className="object-contain w-full transition-transform transform rounded-lg shadow-lg h-44 lg:h-60 hover:scale-105"
+                                    onLoad={handleImageLoad}
+                                />
+                            </div>
+                        )}
+                        {loading ? (
+                            <Skeleton className="w-full h-44 lg:h-60" />
+                        ) : (
+                            <div className="w-full h-44 lg:h-60">
+                                <img
+                                    src={Project4}
+                                    alt="Portfolio project"
+                                    className="object-contain w-full transition-transform transform rounded-lg shadow-lg h-44 lg:h-60 hover:scale-105"
+                                    onLoad={handleImageLoad}
+                                />
+                            </div>
+                        )}
+                    </div>
+                    <p className="mt-4 text-md text-neutral-400 dark:text-neutral-400 md:text-lg">
+                        <strong>Technologies:</strong> REACT, TAILWIND CSS, JAVASCRIPT, Aceternity UI, MangoDB
+                    </p>
+                    <a
+                        href="https://zidio-task-management-one.vercel.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-md font-medium text-blue-500 md:text-lg hover:underline animate-bounce"
+                    >
+                        View Project
+                    </a>
+                </div>
+            ),
+        },
         {
             title: 'Project 3: Carpenterz E-commerce Platform 🛒',
             content: (
