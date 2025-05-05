@@ -238,23 +238,23 @@ const ContactForm = () => {
 };
 
 
-const GoogleMap = () => (
+// const GoogleMap = () => (
 
-    <div className="w-full gap-6 overflow-hidden border border-blue-500 animate-pulse rounded-xl h-80">
+//     <div className="w-full gap-6 overflow-hidden border border-blue-500 animate-pulse rounded-xl h-80">
 
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50482.83394857099!2d75.31261088478634!3d19.87550342981866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb9815a369bc63%3A0x712d538b29a2a73e!2sChhatrapati%20Sambhajinagar%20(Aurangabad)%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1725380343536!5m2!1sen!2sin"
-            width="100%"
-            height="100%"
-            className="transition-opacity duration-300 rounded-xl opacity-60 hover:opacity-80"
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-        />
+//         <iframe
+//             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50482.83394857099!2d75.31261088478634!3d19.87550342981866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb9815a369bc63%3A0x712d538b29a2a73e!2sChhatrapati%20Sambhajinagar%20(Aurangabad)%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1725380343536!5m2!1sen!2sin"
+//             width="100%"
+//             height="100%"
+//             className="transition-opacity duration-300 rounded-xl opacity-60 hover:opacity-80"
+//             allowFullScreen=""
+//             loading="lazy"
+//             referrerPolicy="no-referrer-when-downgrade"
+//         />
 
-    </div>
+//     </div>
 
-);
+// );
 
 const ScrollToTopButton = () => {
     const scrollToTop = () => {
@@ -304,7 +304,7 @@ const ContactPage = () => {
                 </h1>
             </div>
 
-            <div className="w-full h-auto mt-4 overflow-hidden rounded-lg shadow-lg ">
+            {/* <div className="w-full h-auto mt-4 overflow-hidden rounded-lg shadow-lg ">
                 {loading ? (
                     <Skeleton className="w-full h-96" />
                 ) : (
@@ -312,7 +312,7 @@ const ContactPage = () => {
                         <GoogleMap />
                     </div>
                 )}
-            </div>
+            </div> */}
 
             {/* Contact Form */}
             <div className="w-full max-w-6xl mt-8">

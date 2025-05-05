@@ -30,7 +30,7 @@ export const Timeline = ({
             className="w-full font-sans md:px-10"
             ref={containerRef}>
             <div className="px-4 py-20 mx-auto max-w-7xl md:px-8 lg:px-10 ">
-                <h2 className="max-w-4xl mb-4 text-lg text-blue-500 md:text-4xl animate-bounce ">  My Journey 😇
+                <h2 className="max-w-4xl mb-4 text-3xl text-blue-500 md:text-4xl animate-bounce ">  My Journey 😇
                 </h2>
                 <p className="max-w-sm text-md text-neutral-400 dark:text-neutral-300 md:text-base">
                     I&apos;ve been learning Web Development form the past 2 years. Here&apos;s
